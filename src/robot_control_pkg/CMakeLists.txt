@@ -55,7 +55,7 @@ install(
   DESTINATION share/robot_control_pkg
 )
 install(
-  DIRECTORY bringup/launch bringup/config description
+  DIRECTORY bringup/launch bringup/config description scripts
   DESTINATION share/robot_control_pkg
 )
 install(TARGETS robot_control_pkg
