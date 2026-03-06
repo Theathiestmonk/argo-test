@@ -237,9 +237,8 @@ void parseSerial() {
     char c = Serial.read();
     if (c == '\n' || c == '\r') {
       buffer[pos] = '\0';
-      if (pos > 0) {
-        processCommand(buffer);
-      }
+      // Process even if pos is 0 (empty line) to respond with an empty line
+      processCommand(buffer);
       pos = 0;
     } else if (pos < 31) {
       buffer[pos++] = c;
@@ -257,12 +256,17 @@ void processCommand(char* cmd) {
       lastCommandTime = millis();
       setMotors(pwmR, pwmL);
       Serial.println("m"); // Ack
+    } else {
+      Serial.println("m"); // Ack anyway
     }
   } else if (cmd[0] == 'e') {
     // Encoder request
     Serial.print(totalTicksL);
     Serial.print(" ");
     Serial.println(totalTicksR);
+  } else if (cmd[0] == 'p') {
+    // PID values (e.g., "p 2.5 0.5 0.1") - Just ack for now
+    Serial.println("p"); 
   } else if (strcmp(cmd, "stop") == 0) {
     stopMotors();
     Serial.println("s");
@@ -271,5 +275,8 @@ void processCommand(char* cmd) {
     totalTicksR = totalTicksL = 0;
     interrupts();
     Serial.println("r");
+  } else {
+    // For empty or unknown commands, always send a newline to satisfy ReadLine on the Pi
+    Serial.println("ok");
   }
 }

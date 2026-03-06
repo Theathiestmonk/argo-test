@@ -11,7 +11,7 @@
         <!-- <param name="loop_rate">30</param> -->
         <param name="device">/dev/ttyUSB0</param>
         <param name="baud_rate">115200</param>
-        <param name="timeout_ms">50</param>
+        <param name="timeout_ms">100</param>
         <param name="enc_counts_per_rev">246</param>
         <param name="pid_p">2.55</param>
         <param name="pid_i">2.15</param>
