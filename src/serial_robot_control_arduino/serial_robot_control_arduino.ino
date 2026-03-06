@@ -65,11 +65,12 @@ void setup() {
   // Motors OFF on startup
   stopMotors();
 
-  // Encoder pins
-  pinMode(irPinR, INPUT);
-  pinMode(irPinL, INPUT);
-  attachInterrupt(digitalPinToInterrupt(irPinR), countRight, RISING);
-  attachInterrupt(digitalPinToInterrupt(irPinL), countLeft, RISING);
+  // Encoder pins — DISABLED (no encoders connected)
+  // Floating pins generate noise that confuses the ROS 2 controller
+  // pinMode(irPinR, INPUT);
+  // pinMode(irPinL, INPUT);
+  // attachInterrupt(digitalPinToInterrupt(irPinR), countRight, RISING);
+  // attachInterrupt(digitalPinToInterrupt(irPinL), countLeft, RISING);
 
   // OLED: show startup screen ONCE, then never touch it again
   if (display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {

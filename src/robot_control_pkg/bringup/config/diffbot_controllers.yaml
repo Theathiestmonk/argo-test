@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 50  # Hz
+    update_rate: 25  # Hz (must match loop_rate in diffbot.ros2_control.xacro)
     lock_memory: false
 
     joint_state_broadcaster:
