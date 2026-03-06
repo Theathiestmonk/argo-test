@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/slam_pkg/slam_pkg.egg-info
+writing ../../build/slam_pkg/slam_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/slam_pkg/slam_pkg.egg-info/dependency_links.txt
+writing requirements to ../../build/slam_pkg/slam_pkg.egg-info/requires.txt
+writing top-level names to ../../build/slam_pkg/slam_pkg.egg-info/top_level.txt
+writing manifest file '../../build/slam_pkg/slam_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/slam_pkg/slam_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/slam_pkg/slam_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/argo/Downloads/robot_wss/build/slam_pkg/build
+creating /home/argo/Downloads/robot_wss/build/slam_pkg/build/lib
+creating /home/argo/Downloads/robot_wss/build/slam_pkg/build/lib/slam_pkg
+copying slam_pkg/__init__.py -> /home/argo/Downloads/robot_wss/build/slam_pkg/build/lib/slam_pkg
+running install
+running install_lib
+creating /home/argo/Downloads/robot_wss/install/slam_pkg/lib/python3.12/site-packages/slam_pkg
+copying /home/argo/Downloads/robot_wss/build/slam_pkg/build/lib/slam_pkg/__init__.py -> /home/argo/Downloads/robot_wss/install/slam_pkg/lib/python3.12/site-packages/slam_pkg
+byte-compiling /home/argo/Downloads/robot_wss/install/slam_pkg/lib/python3.12/site-packages/slam_pkg/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/argo/Downloads/robot_wss/install/slam_pkg/share/ament_index
+creating /home/argo/Downloads/robot_wss/install/slam_pkg/share/ament_index/resource_index
+creating /home/argo/Downloads/robot_wss/install/slam_pkg/share/ament_index/resource_index/packages
+copying resource/slam_pkg -> /home/argo/Downloads/robot_wss/install/slam_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg
+creating /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg/launch
+copying launch/slam_sim.launch.py -> /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg/launch
+copying launch/localization_launch.py -> /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg/launch
+copying launch/slam_real.launch.py -> /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg/launch
+creating /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg/config
+copying config/mapper_params_online_async.yaml -> /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg/config
+copying config/mapper_params_localization.yaml -> /home/argo/Downloads/robot_wss/install/slam_pkg/share/slam_pkg/config
+running install_egg_info
+Copying ../../build/slam_pkg/slam_pkg.egg-info to /home/argo/Downloads/robot_wss/install/slam_pkg/lib/python3.12/site-packages/slam_pkg-1.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/argo/Downloads/robot_wss/build/slam_pkg/install.log'

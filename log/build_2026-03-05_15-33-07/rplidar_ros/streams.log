@@ -1,0 +1,1002 @@
+[0.251s] Invoking command in '/home/argo/Downloads/robot_wss/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/argo/Downloads/robot_wss/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/argo/Downloads/robot_wss/install/rplidar_ros
+[0.312s] -- The C compiler identification is GNU 13.3.0
+[0.378s] -- The CXX compiler identification is GNU 13.3.0
+[0.405s] -- Detecting C compiler ABI info
+[0.547s] -- Detecting C compiler ABI info - done
+[0.558s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.558s] -- Detecting C compile features
+[0.558s] -- Detecting C compile features - done
+[0.569s] -- Detecting CXX compiler ABI info
+[0.702s] -- Detecting CXX compiler ABI info - done
+[0.713s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.713s] -- Detecting CXX compile features
+[0.713s] -- Detecting CXX compile features - done
+[0.718s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.926s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.081s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.154s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.180s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.209s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.243s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.378s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.384s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.532s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.559s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.590s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.704s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.793s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[1.922s] -- Configuring done (1.7s)
+[1.951s] -- Generating done (0.0s)
+[1.960s] -- Build files have been written to: /home/argo/Downloads/robot_wss/build/rplidar_ros
+[2.144s] Invoked command in '/home/argo/Downloads/robot_wss/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/argo/Downloads/robot_wss/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/argo/Downloads/robot_wss/install/rplidar_ros
+[2.146s] Invoking command in '/home/argo/Downloads/robot_wss/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/argo/Downloads/robot_wss/build/rplidar_ros -- -j4 -l4
+[2.214s] [  2%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/src/rplidar_node.cpp.o[0m
+[4.959s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[4.959s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[4.959s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar.h:36[m[K,
+[4.959s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/src/rplidar_node.cpp:38[m[K:
+[4.959s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[4.959s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[4.959s]       |                [01;35m[K^[m[K
+[4.961s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[4.961s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[4.961s]       |                    [01;35m[K^[m[K
+[8.221s] [  5%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/arch/linux/net_serial.cpp.o[0m
+[8.620s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kbool rp::arch::net::raw_serial::[01;32m[Kopen[m[K(const char*, uint32_t, uint32_t)[m[K’:
+[8.620s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:97:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[8.620s]    97 | _serial::open(const char * portname, uint32_t baudrate, [01;35m[Kuint32_t flags[m[K)
+[8.620s]       |                                                         [01;35m[K~~~~~~~~~^~~~~[m[K
+[8.620s] 
+[8.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual void rp::arch::net::raw_serial::[01;32m[Kflush[m[K(_u32)[m[K’:
+[8.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:281:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[8.621s]   281 | void raw_serial::flush( [01;35m[K_u32 flags[m[K)
+[8.621s]       |                         [01;35m[K~~~~~^~~~~[m[K
+[8.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::[01;32m[Kwaitforsent[m[K(_u32, size_t*)[m[K’:
+[8.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:286:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[8.621s]   286 | int raw_serial::waitforsent([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[8.621s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[8.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::[01;32m[Kwaitforrecv[m[K(_u32, size_t*)[m[K’:
+[8.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:292:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[8.621s]   292 | int raw_serial::waitforrecv([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[8.621s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[8.622s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual void rp::arch::net::raw_serial::[01;32m[KcancelOperation[m[K()[m[K’:
+[8.622s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:427:5:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[8.622s]   427 |     [01;35m[K(int)::write(_selfpipe[1], "x", 1)[m[K;
+[8.622s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[8.723s] [  7%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/arch/linux/net_socket.cpp.o[0m
+[9.138s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[9.138s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[9.138s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[9.138s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[9.139s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[9.139s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[9.139s]       |                [01;35m[K^[m[K
+[9.139s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[9.139s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[9.139s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[9.139s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[9.139s]       |                    [01;35m[K^[m[K
+[9.175s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/arch_linux.h:42[m[K,
+[9.175s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:41[m[K:
+[9.175s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::arch::net::DGramSocketImpl::[01;32m[KsendTo[m[K(const rp::net::SocketAddress*, const void*, size_t)[m[K’:
+[9.175s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp:733:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[9.175s]   733 |             assert([01;35m[Kans == len[m[K);
+[9.176s]       |                    [01;35m[K~~~~^~~~~~[m[K
+[9.336s] [ 10%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/arch/linux/timer.cpp.o[0m
+[9.776s] [ 13%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/dataunpacker/dataunpacker.cpp.o[0m
+[10.184s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[10.184s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[10.184s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[10.185s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunnpacker_commondef.h:41[m[K,
+[10.185s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.cpp:39[m[K:
+[10.185s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.185s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[10.185s]       |                [01;35m[K^[m[K
+[10.185s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[10.185s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[10.185s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.185s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[10.185s]       |                    [01;35m[K^[m[K
+[10.264s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.cpp:40[m[K:
+[10.264s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[10.264s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.264s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[10.265s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[10.265s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.265s]    54 |    virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[10.265s]       |                                                        [01;35m[K~~~~~^~~~~~~~~~[m[K
+[10.265s] 
+[10.265s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.265s]    54 | SampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[10.265s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[10.265s] 
+[10.265s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.265s]    54 | Decoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[10.265s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[10.265s] 
+[10.265s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[10.265s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.266s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[10.266s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[10.266s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.266s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[10.266s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[10.266s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.266s]    56 | l void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[10.266s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[10.266s] 
+[10.266s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.266s]    56 | dingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[10.266s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[10.266s] 
+[10.469s] [ 15%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/dataunpacker/unpacker/handler_capsules.cpp.o[0m
+[10.882s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[10.882s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[10.882s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[10.882s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[10.883s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:39[m[K:
+[10.883s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.883s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[10.883s]       |                [01;35m[K^[m[K
+[10.883s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[10.883s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[10.883s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[10.883s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[10.883s]       |                    [01;35m[K^[m[K
+[10.962s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:40[m[K:
+[10.963s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[10.963s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.963s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[10.963s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[10.963s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.963s]    54 |    virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[10.963s]       |                                                        [01;35m[K~~~~~^~~~~~~~~~[m[K
+[10.963s] 
+[10.963s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.963s]    54 | SampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[10.963s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[10.963s] 
+[10.963s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.963s]    54 | Decoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[10.963s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[10.963s] 
+[10.964s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[10.964s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.964s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[10.964s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[10.964s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.964s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[10.964s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[10.964s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.964s]    56 | l void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[10.964s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[10.964s] 
+[10.964s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[10.964s]    56 | dingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[10.964s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[10.964s] 
+[10.972s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:[m[K In member function ‘[01m[Kvoid sl::internal::unpacker::UnpackerHandler_DenseCapsuleNode::[01;32m[K_onScanNodeDenseCapsuleData[m[K(rplidar_response_dense_capsule_measurement_nodes_t&, sl::internal::LIDARSampleDataUnpackerInner*)[m[K’:
+[10.972s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:763:30:[m[K [01;35m[Kwarning: [m[Ktype qualifiers ignored on cast result type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-qualifiers-Wignored-qualifiers]8;;[m[K]
+[10.972s]   763 |             const int dist = [01;35m[Kstatic_cast<const int>(_cached_previous_dense_capsuledata.cabins[pos].distance)[m[K;
+[10.972s]       |                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.128s] [ 18%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp.o[0m
+[11.535s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[11.535s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[11.535s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[11.535s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[11.535s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp:39[m[K:
+[11.535s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[11.535s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[11.535s]       |                [01;35m[K^[m[K
+[11.535s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[11.536s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[11.536s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[11.536s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[11.536s]       |                    [01;35m[K^[m[K
+[11.615s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp:40[m[K:
+[11.615s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[11.615s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.615s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[11.615s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[11.615s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.616s]    54 |    virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[11.616s]       |                                                        [01;35m[K~~~~~^~~~~~~~~~[m[K
+[11.616s] 
+[11.616s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.616s]    54 | SampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[11.616s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[11.616s] 
+[11.616s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.616s]    54 | Decoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[11.616s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[11.616s] 
+[11.616s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[11.616s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.616s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[11.616s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[11.616s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.617s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[11.617s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[11.617s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.617s]    56 | l void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[11.617s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[11.617s] 
+[11.617s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[11.617s]    56 | dingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[11.617s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[11.617s] 
+[11.731s] [ 21%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp.o[0m
+[12.138s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[12.139s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[12.139s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[12.139s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[12.139s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp:39[m[K:
+[12.139s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[12.139s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[12.139s]       |                [01;35m[K^[m[K
+[12.139s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[12.139s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[12.139s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[12.139s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[12.139s]       |                    [01;35m[K^[m[K
+[12.219s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp:40[m[K:
+[12.219s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[12.219s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.219s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[12.219s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[12.220s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.220s]    54 |    virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[12.220s]       |                                                        [01;35m[K~~~~~^~~~~~~~~~[m[K
+[12.220s] 
+[12.220s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.220s]    54 | SampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[12.220s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[12.220s] 
+[12.220s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.220s]    54 | Decoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[12.220s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[12.220s] 
+[12.220s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[12.220s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.220s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[12.220s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[12.221s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.221s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[12.221s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[12.221s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.221s]    56 | l void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[12.221s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[12.221s] 
+[12.221s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.221s]    56 | dingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[12.221s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[12.221s] 
+[12.336s] [ 23%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/hal/thread.cpp.o[0m
+[12.738s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[12.738s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[12.738s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[12.738s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/hal/thread.cpp:35[m[K:
+[12.738s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[12.738s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[12.738s]       |                [01;35m[K^[m[K
+[12.738s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[12.739s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[12.739s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[12.739s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[12.739s]       |                    [01;35m[K^[m[K
+[12.762s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/hal/thread.cpp:43[m[K:
+[12.762s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:[m[K In static member function ‘[01m[Kstatic rp::hal::Thread rp::hal::Thread::[01;32m[Kcreate[m[K(thread_proc_t, void*)[m[K’:
+[12.762s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:52:57:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kthread_proc_t[m[K’ {aka ‘[01m[Klong unsigned int (*)(void*)[m[K’} to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[12.762s]    52 |     pthread_create((pthread_t *)&newborn._handle, NULL, [01;35m[K(void * (*)(void *))proc[m[K, data);
+[12.762s]       |                                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[12.763s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:[m[K In member function ‘[01m[Ku_result rp::hal::Thread::[01;32m[Kjoin[m[K(long unsigned int)[m[K’:
+[12.763s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:176:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.763s]   176 | u_result Thread::join([01;35m[Kunsigned long timeout[m[K)
+[12.763s]       |                       [01;35m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[12.846s] [ 26%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/rplidar_driver.cpp.o[0m
+[13.250s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[13.250s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[13.250s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[13.250s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:33[m[K:
+[13.250s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[13.251s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[13.251s]       |                [01;35m[K^[m[K
+[13.251s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[13.251s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[13.251s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[13.251s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[13.251s]       |                    [01;35m[K^[m[K
+[13.294s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::[01;32m[Kconnect[m[K(const char*, _u32, _u32)[m[K’:
+[13.294s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:67:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.294s]    67 | lt RPlidarDriver::connect(const char *path, _u32 portOrBaud, [01;35m[K_u32 flag[m[K)
+[13.294s]       |                                                              [01;35m[K~~~~~^~~~[m[K
+[13.294s] 
+[13.294s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::[01;32m[Kreset[m[K(_u32)[m[K’:
+[13.294s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:101:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.295s]   101 |     u_result RPlidarDriver::reset([01;35m[K_u32 timeout[m[K)
+[13.295s]       |                                   [01;35m[K~~~~~^~~~~~~[m[K
+[13.295s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::[01;32m[KgetScanDataWithInterval[m[K(rplidar_response_measurement_node_t*, size_t&)[m[K’:
+[13.295s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:180:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knodebuffer[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.295s]   180 | tScanDataWithInterval([01;35m[Krplidar_response_measurement_node_t * nodebuffer[m[K, size_t & count)
+[13.295s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[13.295s] 
+[13.295s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:180:112:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcount[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.295s]   180 | erval(rplidar_response_measurement_node_t * nodebuffer, [01;35m[Ksize_t & count[m[K)
+[13.295s]       |                                                         [01;35m[K~~~~~~~~~^~~~~[m[K
+[13.296s] 
+[13.397s] [ 28%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/sl_async_transceiver.cpp.o[0m
+[13.802s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[13.802s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[13.802s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[13.802s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.cpp:35[m[K:
+[13.802s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[13.802s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[13.802s]       |                [01;35m[K^[m[K
+[13.803s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[13.803s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[13.803s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[13.803s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[13.803s]       |                    [01;35m[K^[m[K
+[13.875s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.cpp:44[m[K:
+[13.875s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::[01;32m[KonChannelError[m[K(u_result)[m[K’:
+[13.875s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[13.875s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[13.875s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[14.018s] [ 31%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/sl_crc.cpp.o[0m
+[14.037s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[14.037s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_crc.h:36[m[K,
+[14.037s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_crc.cpp:33[m[K:
+[14.037s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[14.037s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[14.037s]       |                [01;35m[K^[m[K
+[14.037s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[14.037s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[14.037s]       |                    [01;35m[K^[m[K
+[14.058s] [ 34%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/sl_lidar_driver.cpp.o[0m
+[14.476s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[14.476s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[14.476s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[14.476s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:33[m[K:
+[14.476s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[14.476s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[14.476s]       |                [01;35m[K^[m[K
+[14.476s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[14.476s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[14.477s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[14.477s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[14.477s]       |                    [01;35m[K^[m[K
+[14.581s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:50[m[K:
+[14.581s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[14.581s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.581s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[14.582s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[14.582s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.582s]    54 |    virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[14.582s]       |                                                        [01;35m[K~~~~~^~~~~~~~~~[m[K
+[14.582s] 
+[14.582s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.582s]    54 | SampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[14.582s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[14.582s] 
+[14.582s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.582s]    54 | Decoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[14.582s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[14.582s] 
+[14.582s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[14.582s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.582s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[14.582s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[14.583s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.583s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[14.583s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[14.583s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.583s]    56 | l void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[14.583s]       |                                                 [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[14.583s] 
+[14.583s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.583s]    56 | dingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[14.583s]       |                                                         [01;35m[K~~~~~~~^~~~[m[K
+[14.583s] 
+[14.590s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:51[m[K:
+[14.590s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::[01;32m[KonChannelError[m[K(u_result)[m[K’:
+[14.590s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.590s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[14.590s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[14.611s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[Kreset[m[K(sl_u32)[m[K’:
+[14.611s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:511:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.611s]   511 |         sl_result reset([01;35m[Ksl_u32 timeoutInMs = DEFAULT_TIMEOUT[m[K)
+[14.611s]       |                         [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[14.614s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[KstartScan[m[K(bool, bool, sl_u32, sl::LidarScanMode*)[m[K’:
+[14.614s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:586:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Koptions[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.615s]   586 | sl_result startScan(bool force, bool useTypicalScan, [01;35m[Ksl_u32 options = 0[m[K, LidarScanMode* outUsedScanMode = nullptr)
+[14.615s]       |                                                      [01;35m[K~~~~~~~^~~~~~~~~~~[m[K
+[14.615s] 
+[14.617s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[Kstop[m[K(sl_u32)[m[K’:
+[14.617s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:763:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.617s]   763 |         sl_result stop([01;35m[Ksl_u32 timeout = DEFAULT_TIMEOUT[m[K)
+[14.617s]       |                        [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[14.618s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[KgetFrequency[m[K(const sl::LidarScanMode&, const sl_lidar_response_measurement_node_hq_t*, size_t, float&)[m[K’:
+[14.618s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:880:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knodes[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.618s]   880 | e& scanMode, [01;35m[Kconst sl_lidar_response_measurement_node_hq_t* nodes[m[K, size_t count, float& frequency)
+[14.619s]       |              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[14.619s] 
+[14.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[KgetMotorInfo[m[K(sl::LidarMotorInfo&, sl_u32)[m[K’:
+[14.621s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:1023:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.621s]  1023 |    sl_result getMotorInfo(LidarMotorInfo &motorInfo, [01;35m[Ksl_u32 timeoutInMs[m[K)
+[14.621s]       |                                                      [01;35m[K~~~~~~~^~~~~~~~~~~[m[K
+[14.621s] 
+[14.622s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Ku_result sl::SlamtecLidarDriver::[01;32m[KgetScanModeCount[m[K(sl_u16&, sl_u32)[m[K’:
+[14.622s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:1199:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.622s]  1199 |         u_result getScanModeCount(sl_u16& modeCount, [01;35m[Ksl_u32 timeoutInMs = DEFAULT_TIMEOUT[m[K)
+[14.622s]       |                                                      [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[14.661s] /home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp: In instantiation of ‘[01m[Kvoid sl::RawSampleNodeHolder<T>::[01;32m[KpushNode[m[K(_u64, const T*) [35m[K[with T = sl_lidar_response_measurement_node_hq_t; _u64 = long unsigned int][m[K[m[K’:
+[14.661s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:1648:42:[m[K   required from here
+[14.661s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:202:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimestamp_uS[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[14.661s]   202 |         void pushNode([01;35m[K_u64 timestamp_uS[m[K, const T* node)
+[14.661s]       |                       [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[14.763s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K At global scope:
+[14.763s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:83:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::[01;32m[Kconvert[m[K(const sl_lidar_response_measurement_node_hq_t&, sl_lidar_response_measurement_node_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[14.763s]    83 |     static void [01;35m[Kconvert[m[K(const sl_lidar_response_measurement_node_hq_t& from, sl_lidar_response_measurement_node_t& to)
+[14.763s]       |                 [01;35m[K^~~~~~~[m[K
+[14.763s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:75:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::[01;32m[Kconvert[m[K(const sl_lidar_response_measurement_node_t&, sl_lidar_response_measurement_node_hq_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[14.763s]    75 |     static void [01;35m[Kconvert[m[K(const sl_lidar_response_measurement_node_t& from, sl_lidar_response_measurement_node_hq_t& to)
+[14.763s]       |                 [01;35m[K^~~~~~~[m[K
+[14.763s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:70:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::[01;32m[KprintDeprecationWarn[m[K(const char*, const char*)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[14.763s]    70 |     static void [01;35m[KprintDeprecationWarn[m[K(const char* fn, const char* replacement)
+[14.763s]       |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[15.125s] [ 36%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/sl_lidarprotocol_codec.cpp.o[0m
+[15.538s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[15.538s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[15.538s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[15.538s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidarprotocol_codec.cpp:35[m[K:
+[15.538s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.538s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[15.538s]       |                [01;35m[K^[m[K
+[15.538s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[15.538s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[15.538s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.538s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[15.538s]       |                    [01;35m[K^[m[K
+[15.626s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidarprotocol_codec.cpp:49[m[K:
+[15.626s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::[01;32m[KonChannelError[m[K(u_result)[m[K’:
+[15.626s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[15.626s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[15.626s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[15.733s] [ 39%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/sl_serial_channel.cpp.o[0m
+[15.969s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[15.969s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[15.969s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_serial_channel.cpp:33[m[K:
+[15.969s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.969s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[15.969s]       |                [01;35m[K^[m[K
+[15.969s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[15.969s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[15.969s]       |                    [01;35m[K^[m[K
+[16.030s] [ 42%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/sl_tcp_channel.cpp.o[0m
+[16.265s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[16.265s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[16.265s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp:33[m[K:
+[16.265s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[16.265s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[16.266s]       |                [01;35m[K^[m[K
+[16.266s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[16.266s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[16.266s]       |                    [01;35m[K^[m[K
+[16.269s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp:[m[K In member function ‘[01m[Kvoid sl::TcpChannel::[01;32m[KsetStatus[m[K(_u32)[m[K’:
+[16.269s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp:109:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[16.269s]   109 |         void setStatus([01;35m[K_u32 flag[m[K){}
+[16.269s]       |                        [01;35m[K~~~~~^~~~[m[K
+[16.324s] [ 44%] [32mBuilding CXX object CMakeFiles/rplidar_node.dir/sdk/src/sl_udp_channel.cpp.o[0m
+[16.557s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[16.558s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[16.558s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_udp_channel.cpp:33[m[K:
+[16.558s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[16.558s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[16.558s]       |                [01;35m[K^[m[K
+[16.558s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[16.558s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[16.558s]       |                    [01;35m[K^[m[K
+[16.562s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_udp_channel.cpp:[m[K In member function ‘[01m[Kvoid sl::UdpChannel::[01;32m[KsetStatus[m[K(_u32)[m[K’:
+[16.562s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_udp_channel.cpp:112:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[16.562s]   112 |         void setStatus([01;35m[K_u32 flag[m[K){}
+[16.562s]       |                        [01;35m[K~~~~~^~~~[m[K
+[16.617s] [ 47%] [32m[1mLinking CXX executable rplidar_node[0m
+[16.870s] [ 47%] Built target rplidar_node
+[16.891s] [ 50%] [32mBuilding CXX object CMakeFiles/rplidar_client.dir/src/rplidar_client.cpp.o[0m
+[24.476s] [ 52%] [32m[1mLinking CXX executable rplidar_client[0m
+[24.782s] [ 52%] Built target rplidar_client
+[24.806s] [ 55%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/src/rplidar_node.cpp.o[0m
+[26.819s] [ 57%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/arch/linux/timer.cpp.o[0m
+[27.061s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[27.061s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[27.061s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar.h:36[m[K,
+[27.061s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/src/rplidar_node.cpp:38[m[K:
+[27.062s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[27.062s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[27.062s]       |                [01;35m[K^[m[K
+[27.062s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[27.062s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[27.062s]       |                    [01;35m[K^[m[K
+[27.300s] [ 60%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/arch/linux/net_socket.cpp.o[0m
+[27.711s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[27.711s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[27.711s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[27.711s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp:10[m[K:
+[27.711s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[27.712s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[27.712s]       |                [01;35m[K^[m[K
+[27.712s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[27.712s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[27.712s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[27.712s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[27.712s]       |                    [01;35m[K^[m[K
+[27.748s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/arch_linux.h:42[m[K,
+[27.748s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:41[m[K:
+[27.749s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp:[m[K In member function ‘[01m[Kvirtual u_result rp::arch::net::DGramSocketImpl::[01;32m[KsendTo[m[K(const rp::net::SocketAddress*, const void*, size_t)[m[K’:
+[27.749s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp:733:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[27.749s]   733 |             assert([01;35m[Kans == len[m[K);
+[27.749s]       |                    [01;35m[K~~~~^~~~~~[m[K
+[27.915s] [ 63%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/dataunpacker/dataunpacker.cpp.o[0m
+[28.333s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[28.333s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[28.333s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[28.333s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunnpacker_commondef.h:41[m[K,
+[28.334s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.cpp:39[m[K:
+[28.334s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[28.334s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[28.334s]       |                [01;35m[K^[m[K
+[28.334s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[28.334s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[28.334s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[28.334s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[28.334s]       |                    [01;35m[K^[m[K
+[28.413s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.cpp:40[m[K:
+[28.413s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[28.413s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.413s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[28.414s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[28.414s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.414s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[28.414s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[28.414s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.414s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[28.414s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[28.414s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.414s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[28.414s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[28.414s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[28.414s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.414s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[28.414s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[28.415s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.415s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[28.415s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[28.415s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.415s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[28.415s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[28.415s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[28.415s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[28.415s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[28.625s] [ 65%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/dataunpacker/unpacker/handler_capsules.cpp.o[0m
+[29.047s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[29.047s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[29.047s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[29.047s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[29.047s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:39[m[K:
+[29.047s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[29.048s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[29.048s]       |                [01;35m[K^[m[K
+[29.048s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[29.048s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[29.048s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[29.048s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[29.048s]       |                    [01;35m[K^[m[K
+[29.132s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:40[m[K:
+[29.132s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[29.132s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.132s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[29.132s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[29.132s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.132s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[29.132s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[29.133s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.133s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[29.133s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[29.133s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.133s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[29.133s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[29.133s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[29.133s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.133s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[29.133s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[29.133s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.133s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[29.133s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[29.133s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.133s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[29.134s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[29.134s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.134s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[29.134s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[29.142s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:[m[K In member function ‘[01m[Kvoid sl::internal::unpacker::UnpackerHandler_DenseCapsuleNode::[01;32m[K_onScanNodeDenseCapsuleData[m[K(rplidar_response_dense_capsule_measurement_nodes_t&, sl::internal::LIDARSampleDataUnpackerInner*)[m[K’:
+[29.142s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_capsules.cpp:763:30:[m[K [01;35m[Kwarning: [m[Ktype qualifiers ignored on cast result type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-qualifiers-Wignored-qualifiers]8;;[m[K]
+[29.142s]   763 |             const int dist = [01;35m[Kstatic_cast<const int>(_cached_previous_dense_capsuledata.cabins[pos].distance)[m[K;
+[29.142s]       |                              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[29.302s] [ 68%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp.o[0m
+[29.725s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[29.725s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[29.726s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[29.726s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[29.726s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp:39[m[K:
+[29.726s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[29.726s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[29.726s]       |                [01;35m[K^[m[K
+[29.726s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[29.726s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[29.726s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[29.727s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[29.727s]       |                    [01;35m[K^[m[K
+[29.810s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_hqnode.cpp:40[m[K:
+[29.810s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[29.811s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.811s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[29.811s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[29.812s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.812s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[29.812s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[29.812s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.812s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[29.812s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[29.812s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.812s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[29.812s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[29.812s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[29.812s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.812s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[29.812s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[29.812s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.812s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[29.812s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[29.813s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.813s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[29.813s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[29.813s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[29.813s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[29.813s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[29.932s] [ 71%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp.o[0m
+[30.267s] [ 73%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/hal/thread.cpp.o[0m
+[30.349s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[30.349s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[30.349s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[30.349s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunnpacker_commondef.h:41[m[K,
+[30.349s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp:39[m[K:
+[30.349s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[30.349s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[30.349s]       |                [01;35m[K^[m[K
+[30.349s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[30.349s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[30.349s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[30.349s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[30.349s]       |                    [01;35m[K^[m[K
+[30.429s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/handler_normalnode.cpp:40[m[K:
+[30.429s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[30.429s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.429s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[30.429s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[30.429s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.429s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[30.429s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[30.430s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.430s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[30.430s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[30.430s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.430s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[30.430s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[30.430s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[30.430s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.430s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[30.430s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[30.430s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.431s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[30.431s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[30.431s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.431s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[30.431s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[30.431s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/unpacker/../dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.431s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[30.431s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[30.549s] [ 76%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/rplidar_driver.cpp.o[0m
+[30.671s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[30.672s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[30.672s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/sdkcommon.h:49[m[K,
+[30.672s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/hal/thread.cpp:35[m[K:
+[30.672s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[30.673s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[30.673s]       |                [01;35m[K^[m[K
+[30.673s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[30.673s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[30.674s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[30.674s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[30.674s]       |                    [01;35m[K^[m[K
+[30.697s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/hal/thread.cpp:43[m[K:
+[30.697s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:[m[K In static member function ‘[01m[Kstatic rp::hal::Thread rp::hal::Thread::[01;32m[Kcreate[m[K(thread_proc_t, void*)[m[K’:
+[30.697s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:52:57:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kthread_proc_t[m[K’ {aka ‘[01m[Klong unsigned int (*)(void*)[m[K’} to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[30.697s]    52 |     pthread_create((pthread_t *)&newborn._handle, NULL, [01;35m[K(void * (*)(void *))proc[m[K, data);
+[30.697s]       |                                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[30.697s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:[m[K In member function ‘[01m[Ku_result rp::hal::Thread::[01;32m[Kjoin[m[K(long unsigned int)[m[K’:
+[30.697s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/src/arch/linux/thread.hpp:176:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[30.698s]   176 | u_result Thread::join([01;35m[Kunsigned long timeout[m[K)
+[30.698s]       |                       [01;35m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[30.784s] [ 78%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/sl_async_transceiver.cpp.o[0m
+[30.954s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[30.954s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[30.954s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[30.954s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:33[m[K:
+[30.954s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[30.954s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[30.954s]       |                [01;35m[K^[m[K
+[30.954s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[30.954s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[30.954s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[30.954s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[30.954s]       |                    [01;35m[K^[m[K
+[30.998s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::[01;32m[Kconnect[m[K(const char*, _u32, _u32)[m[K’:
+[30.998s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:67:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.000s]    67 |     u_result RPlidarDriver::connect(const char *path, _u32 portOrBaud, [01;35m[K_u32 flag[m[K)
+[31.001s]       |                                                                        [01;35m[K~~~~~^~~~[m[K
+[31.001s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::[01;32m[Kreset[m[K(_u32)[m[K’:
+[31.001s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:101:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.001s]   101 |     u_result RPlidarDriver::reset([01;35m[K_u32 timeout[m[K)
+[31.001s]       |                                   [01;35m[K~~~~~^~~~~~~[m[K
+[31.001s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:[m[K In member function ‘[01m[Ku_result rp::standalone::rplidar::RPlidarDriver::[01;32m[KgetScanDataWithInterval[m[K(rplidar_response_measurement_node_t*, size_t&)[m[K’:
+[31.001s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:180:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knodebuffer[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.001s]   180 |     u_result RPlidarDriver::getScanDataWithInterval([01;35m[Krplidar_response_measurement_node_t * nodebuffer[m[K, size_t & count)
+[31.003s]       |                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[31.003s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/rplidar_driver.cpp:180:112:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcount[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.003s]   180 |     u_result RPlidarDriver::getScanDataWithInterval(rplidar_response_measurement_node_t * nodebuffer, [01;35m[Ksize_t & count[m[K)
+[31.003s]       |                                                                                                       [01;35m[K~~~~~~~~~^~~~~[m[K
+[31.100s] [ 81%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/sl_crc.cpp.o[0m
+[31.120s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[31.120s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_crc.h:36[m[K,
+[31.120s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_crc.cpp:33[m[K:
+[31.120s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.120s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[31.120s]       |                [01;35m[K^[m[K
+[31.120s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.120s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[31.120s]       |                    [01;35m[K^[m[K
+[31.140s] [ 84%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/sl_lidar_driver.cpp.o[0m
+[31.199s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[31.199s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[31.199s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[31.200s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.cpp:35[m[K:
+[31.200s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.201s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[31.201s]       |                [01;35m[K^[m[K
+[31.201s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[31.201s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[31.201s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.201s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[31.201s]       |                    [01;35m[K^[m[K
+[31.272s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.cpp:44[m[K:
+[31.272s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::[01;32m[KonChannelError[m[K(u_result)[m[K’:
+[31.272s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.272s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[31.273s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[31.418s] [ 86%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/sl_lidarprotocol_codec.cpp.o[0m
+[31.553s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[31.554s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[31.554s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[31.554s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:33[m[K:
+[31.554s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.554s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[31.554s]       |                [01;35m[K^[m[K
+[31.556s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[31.556s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[31.556s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.557s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[31.557s]       |                    [01;35m[K^[m[K
+[31.658s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:50[m[K:
+[31.658s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonCustomSampleDataDecoded[m[K(_u8, _u32, const void*, size_t)[m[K’:
+[31.658s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.658s]    54 |         virtual void onCustomSampleDataDecoded([01;35m[K_u8 ansType[m[K, _u32 customCode, const void* data, size_t size) {}
+[31.658s]       |                                                [01;35m[K~~~~^~~~~~~[m[K
+[31.658s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KcustomCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.658s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, [01;35m[K_u32 customCode[m[K, const void* data, size_t size) {}
+[31.658s]       |                                                             [01;35m[K~~~~~^~~~~~~~~~[m[K
+[31.658s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.658s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, [01;35m[Kconst void* data[m[K, size_t size) {}
+[31.658s]       |                                                                              [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[31.659s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:54:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.659s]    54 |         virtual void onCustomSampleDataDecoded(_u8 ansType, _u32 customCode, const void* data, [01;35m[Ksize_t size[m[K) {}
+[31.659s]       |                                                                                                [01;35m[K~~~~~~~^~~~[m[K
+[31.659s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::LIDARSampleDataListener::[01;32m[KonDecodingError[m[K(int, _u8, const void*, size_t)[m[K’:
+[31.659s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrMsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.659s]    56 |         virtual void onDecodingError([01;35m[Kint errMsg[m[K, _u8 ansType, const void* payload, size_t size) {}
+[31.659s]       |                                      [01;35m[K~~~~^~~~~~[m[K
+[31.659s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:54:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KansType[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.659s]    56 |         virtual void onDecodingError(int errMsg, [01;35m[K_u8 ansType[m[K, const void* payload, size_t size) {}
+[31.659s]       |                                                  [01;35m[K~~~~^~~~~~~[m[K
+[31.659s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.659s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, [01;35m[Kconst void* payload[m[K, size_t size) {}
+[31.659s]       |                                                               [01;35m[K~~~~~~~~~~~~^~~~~~~[m[K
+[31.659s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/dataunpacker/dataunpacker.h:56:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.659s]    56 |         virtual void onDecodingError(int errMsg, _u8 ansType, const void* payload, [01;35m[Ksize_t size[m[K) {}
+[31.659s]       |                                                                                    [01;35m[K~~~~~~~^~~~[m[K
+[31.666s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:51[m[K:
+[31.666s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::[01;32m[KonChannelError[m[K(u_result)[m[K’:
+[31.667s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.667s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[31.667s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[31.687s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[Kreset[m[K(sl_u32)[m[K’:
+[31.687s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:511:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.687s]   511 |         sl_result reset([01;35m[Ksl_u32 timeoutInMs = DEFAULT_TIMEOUT[m[K)
+[31.688s]       |                         [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[31.691s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[KstartScan[m[K(bool, bool, sl_u32, sl::LidarScanMode*)[m[K’:
+[31.691s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:586:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Koptions[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.692s]   586 |         sl_result startScan(bool force, bool useTypicalScan, [01;35m[Ksl_u32 options = 0[m[K, LidarScanMode* outUsedScanMode = nullptr)
+[31.692s]       |                                                              [01;35m[K~~~~~~~^~~~~~~~~~~[m[K
+[31.693s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[Kstop[m[K(sl_u32)[m[K’:
+[31.693s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:763:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.693s]   763 |         sl_result stop([01;35m[Ksl_u32 timeout = DEFAULT_TIMEOUT[m[K)
+[31.693s]       |                        [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[31.694s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[KgetFrequency[m[K(const sl::LidarScanMode&, const sl_lidar_response_measurement_node_hq_t*, size_t, float&)[m[K’:
+[31.695s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:880:110:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knodes[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.695s]   880 |         sl_result getFrequency(const LidarScanMode& scanMode, [01;35m[Kconst sl_lidar_response_measurement_node_hq_t* nodes[m[K, size_t count, float& frequency)
+[31.695s]       |                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[31.697s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Kvirtual sl_result sl::SlamtecLidarDriver::[01;32m[KgetMotorInfo[m[K(sl::LidarMotorInfo&, sl_u32)[m[K’:
+[31.697s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:1023:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.697s]  1023 |         sl_result getMotorInfo(LidarMotorInfo &motorInfo, [01;35m[Ksl_u32 timeoutInMs[m[K)
+[31.697s]       |                                                           [01;35m[K~~~~~~~^~~~~~~~~~~[m[K
+[31.698s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K In member function ‘[01m[Ku_result sl::SlamtecLidarDriver::[01;32m[KgetScanModeCount[m[K(sl_u16&, sl_u32)[m[K’:
+[31.698s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:1199:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KtimeoutInMs[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.698s]  1199 |         u_result getScanModeCount(sl_u16& modeCount, [01;35m[Ksl_u32 timeoutInMs = DEFAULT_TIMEOUT[m[K)
+[31.698s]       |                                                      [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[31.736s] /home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp: In instantiation of ‘[01m[Kvoid sl::RawSampleNodeHolder<T>::[01;32m[KpushNode[m[K(_u64, const T*) [35m[K[with T = sl_lidar_response_measurement_node_hq_t; _u64 = long unsigned int][m[K[m[K’:
+[31.737s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:1648:42:[m[K   required from here
+[31.737s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:202:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimestamp_uS[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.737s]   202 |         void pushNode([01;35m[K_u64 timestamp_uS[m[K, const T* node)
+[31.737s]       |                       [01;35m[K~~~~~^~~~~~~~~~~~[m[K
+[31.833s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_protocol.h:36[m[K,
+[31.834s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:39[m[K,
+[31.834s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sdkcommon.h:49[m[K,
+[31.834s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidarprotocol_codec.cpp:35[m[K:
+[31.834s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.834s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[31.834s]       |                [01;35m[K^[m[K
+[31.834s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar_cmd.h:36[m[K,
+[31.834s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/rplidar.h:40[m[K:
+[31.834s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[31.834s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[31.834s]       |                    [01;35m[K^[m[K
+[31.839s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:[m[K At global scope:
+[31.839s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:83:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::[01;32m[Kconvert[m[K(const sl_lidar_response_measurement_node_hq_t&, sl_lidar_response_measurement_node_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[31.840s]    83 |     static void [01;35m[Kconvert[m[K(const sl_lidar_response_measurement_node_hq_t& from, sl_lidar_response_measurement_node_t& to)
+[31.840s]       |                 [01;35m[K^~~~~~~[m[K
+[31.841s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:75:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::[01;32m[Kconvert[m[K(const sl_lidar_response_measurement_node_t&, sl_lidar_response_measurement_node_hq_t&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[31.841s]    75 |     static void [01;35m[Kconvert[m[K(const sl_lidar_response_measurement_node_t& from, sl_lidar_response_measurement_node_hq_t& to)
+[31.841s]       |                 [01;35m[K^~~~~~~[m[K
+[31.841s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp:70:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid sl::[01;32m[KprintDeprecationWarn[m[K(const char*, const char*)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[31.841s]    70 |     static void [01;35m[KprintDeprecationWarn[m[K(const char* fn, const char* replacement)
+[31.841s]       |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[31.925s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_lidarprotocol_codec.cpp:49[m[K:
+[31.925s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:[m[K In member function ‘[01m[Kvirtual void sl::internal::IAsyncProtocolCodec::[01;32m[KonChannelError[m[K(u_result)[m[K’:
+[31.925s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_async_transceiver.h:90:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KerrCode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[31.925s]    90 |         virtual void   onChannelError([01;35m[Ku_result errCode[m[K) {}
+[31.925s]       |                                       [01;35m[K~~~~~~~~~^~~~~~~[m[K
+[32.206s] [ 89%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/sl_tcp_channel.cpp.o[0m
+[32.443s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[32.443s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[32.443s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp:33[m[K:
+[32.443s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[32.443s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[32.443s]       |                [01;35m[K^[m[K
+[32.443s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[32.443s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[32.443s]       |                    [01;35m[K^[m[K
+[32.447s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp:[m[K In member function ‘[01m[Kvoid sl::TcpChannel::[01;32m[KsetStatus[m[K(_u32)[m[K’:
+[32.447s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp:109:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[32.447s]   109 |         void setStatus([01;35m[K_u32 flag[m[K){}
+[32.447s]       |                        [01;35m[K~~~~~^~~~[m[K
+[32.502s] [ 92%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/sl_udp_channel.cpp.o[0m
+[32.739s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[32.739s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[32.739s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_udp_channel.cpp:33[m[K:
+[32.739s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[32.739s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[32.739s]       |                [01;35m[K^[m[K
+[32.740s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[32.740s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[32.740s]       |                    [01;35m[K^[m[K
+[32.743s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_udp_channel.cpp:[m[K In member function ‘[01m[Kvoid sl::UdpChannel::[01;32m[KsetStatus[m[K(_u32)[m[K’:
+[32.743s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_udp_channel.cpp:112:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[32.743s]   112 |         void setStatus([01;35m[K_u32 flag[m[K){}
+[32.743s]       |                        [01;35m[K~~~~~^~~~[m[K
+[32.800s] [ 94%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/sl_serial_channel.cpp.o[0m
+[33.032s] In file included from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:41[m[K,
+[33.032s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_driver.h:54[m[K,
+[33.032s]                  from [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/sl_serial_channel.cpp:33[m[K:
+[33.032s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_protocol.h:66:16:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kdata[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[33.033s]    66 |     sl_u8 data[[01;35m[K0[m[K];
+[33.033s]       |                [01;35m[K^[m[K
+[33.033s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/./sdk/include/sl_lidar_cmd.h:324:20:[m[K [01;35m[Kwarning: [m[KISO C++ forbids zero-size array ‘[01m[Kpayload[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+[33.033s]   324 |     sl_u8  payload[[01;35m[K0[m[K];
+[33.033s]       |                    [01;35m[K^[m[K
+[33.094s] [ 97%] [32mBuilding CXX object CMakeFiles/rplidar_composition.dir/sdk/src/arch/linux/net_serial.cpp.o[0m
+[33.486s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kbool rp::arch::net::raw_serial::[01;32m[Kopen[m[K(const char*, uint32_t, uint32_t)[m[K’:
+[33.486s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:97:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[33.486s]    97 | _serial::open(const char * portname, uint32_t baudrate, [01;35m[Kuint32_t flags[m[K)
+[33.486s]       |                                                         [01;35m[K~~~~~~~~~^~~~~[m[K
+[33.486s] 
+[33.487s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual void rp::arch::net::raw_serial::[01;32m[Kflush[m[K(_u32)[m[K’:
+[33.487s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:281:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflags[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[33.487s]   281 | void raw_serial::flush( [01;35m[K_u32 flags[m[K)
+[33.487s]       |                         [01;35m[K~~~~~^~~~~[m[K
+[33.487s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::[01;32m[Kwaitforsent[m[K(_u32, size_t*)[m[K’:
+[33.487s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:286:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[33.487s]   286 | int raw_serial::waitforsent([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[33.487s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[33.487s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual int rp::arch::net::raw_serial::[01;32m[Kwaitforrecv[m[K(_u32, size_t*)[m[K’:
+[33.487s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:292:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktimeout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[33.487s]   292 | int raw_serial::waitforrecv([01;35m[K_u32 timeout[m[K, size_t * returned_size)
+[33.487s]       |                             [01;35m[K~~~~~^~~~~~~[m[K
+[33.488s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:[m[K In member function ‘[01m[Kvirtual void rp::arch::net::raw_serial::[01;32m[KcancelOperation[m[K()[m[K’:
+[33.488s] [01m[K/home/argo/Downloads/robot_wss/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp:427:5:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[33.488s]   427 |     [01;35m[K(int)::write(_selfpipe[1], "x", 1)[m[K;
+[33.488s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[33.587s] [100%] [32m[1mLinking CXX executable rplidar_composition[0m
+[33.836s] [100%] Built target rplidar_composition
+[33.848s] Invoked command in '/home/argo/Downloads/robot_wss/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/argo/Downloads/robot_wss/build/rplidar_ros -- -j4 -l4
+[33.849s] Invoking command in '/home/argo/Downloads/robot_wss/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/argo/Downloads/robot_wss/build/rplidar_ros
+[33.858s] -- Install configuration: ""
+[33.858s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch
+[33.858s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py
+[33.859s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py
+[33.859s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py
+[33.859s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py
+[33.859s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py
+[33.859s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py
+[33.860s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py
+[33.860s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py
+[33.860s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py
+[33.860s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py
+[33.861s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py
+[33.861s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py
+[33.861s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py
+[33.861s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py
+[33.861s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py
+[33.862s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py
+[33.862s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py
+[33.862s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py
+[33.862s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py
+[33.863s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py
+[33.863s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py
+[33.863s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py
+[33.863s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py
+[33.864s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py
+[33.864s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/rviz
+[33.864s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz
+[33.864s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/lib/rplidar_ros/rplidar_node
+[33.866s] -- Set non-toolchain portion of runtime path of "/home/argo/Downloads/robot_wss/install/rplidar_ros/lib/rplidar_ros/rplidar_node" to ""
+[33.866s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[33.868s] -- Set non-toolchain portion of runtime path of "/home/argo/Downloads/robot_wss/install/rplidar_ros/lib/rplidar_ros/rplidar_composition" to ""
+[33.868s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/lib/rplidar_ros/rplidar_client
+[33.871s] -- Set non-toolchain portion of runtime path of "/home/argo/Downloads/robot_wss/install/rplidar_ros/lib/rplidar_ros/rplidar_client" to ""
+[33.871s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[33.871s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[33.871s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[33.872s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/package.dsv
+[33.873s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[33.873s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[33.873s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[33.873s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[33.873s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[33.873s] -- Installing: /home/argo/Downloads/robot_wss/install/rplidar_ros/share/rplidar_ros/package.xml
+[33.875s] Invoked command in '/home/argo/Downloads/robot_wss/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/argo/Downloads/robot_wss/build/rplidar_ros

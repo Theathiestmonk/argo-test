@@ -1,0 +1,111 @@
+[0.251s] Invoking command in '/home/argo/Downloads/robot_wss/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/argo/Downloads/robot_wss/src/robot_control_pkg -DCMAKE_INSTALL_PREFIX=/home/argo/Downloads/robot_wss/install/robot_control_pkg
+[0.326s] -- The CXX compiler identification is GNU 13.3.0
+[0.345s] -- Detecting CXX compiler ABI info
+[0.468s] -- Detecting CXX compiler ABI info - done
+[0.481s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.482s] -- Detecting CXX compile features
+[0.482s] -- Detecting CXX compile features - done
+[0.487s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.802s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.001s] -- Found hardware_interface: 4.42.2 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[1.071s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.094s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.117s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.143s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.613s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.724s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.731s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.777s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.860s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.863s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.883s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.887s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.897s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.910s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.363s] -- Found ament_cmake_gtest: 2.5.5 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[2.472s] -- Configuring done (2.2s)
+[2.509s] -- Generating done (0.0s)
+[2.516s] -- Build files have been written to: /home/argo/Downloads/robot_wss/build/robot_control_pkg
+[2.531s] Invoked command in '/home/argo/Downloads/robot_wss/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/argo/Downloads/robot_wss/src/robot_control_pkg -DCMAKE_INSTALL_PREFIX=/home/argo/Downloads/robot_wss/install/robot_control_pkg
+[2.531s] Invoking command in '/home/argo/Downloads/robot_wss/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/argo/Downloads/robot_wss/build/robot_control_pkg -- -j4 -l4
+[2.593s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_control_pkg.dir/hardware/diffbot_system.cpp.o[0m
+[5.607s] [01m[K/home/argo/Downloads/robot_wss/src/robot_control_pkg/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn robot_control_pkg::RobotControlHardware::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[5.607s] [01m[K/home/argo/Downloads/robot_wss/src/robot_control_pkg/hardware/diffbot_system.cpp:33:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[5.607s]    33 |     [01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+[5.607s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.607s] In file included from [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+[5.607s]                  from [01m[K/home/argo/Downloads/robot_wss/src/robot_control_pkg/hardware/include/robot_control_pkg/diffbot_system.hpp:24[m[K,
+[5.607s]                  from [01m[K/home/argo/Downloads/robot_wss/src/robot_control_pkg/hardware/diffbot_system.cpp:15[m[K:
+[5.607s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:140:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.607s]   140 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info);
+[5.607s]       |                          [01;36m[K^~~~~~~[m[K
+[7.657s] [100%] [32m[1mLinking CXX shared library librobot_control_pkg.so[0m
+[7.886s] [100%] Built target robot_control_pkg
+[7.899s] Invoked command in '/home/argo/Downloads/robot_wss/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/argo/Downloads/robot_wss/build/robot_control_pkg -- -j4 -l4
+[7.910s] Invoking command in '/home/argo/Downloads/robot_wss/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/argo/Downloads/robot_wss/build/robot_control_pkg
+[7.919s] -- Install configuration: ""
+[7.920s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/robot_control_pkg.xml
+[7.920s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/include/robot_control_pkg
+[7.920s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg
+[7.920s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/wheel.hpp
+[7.920s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/diffbot_system.hpp
+[7.920s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/arduino_comms.hpp
+[7.921s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/visibility_control.h
+[7.921s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/urdf
+[7.921s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/urdf/diffbot_description.urdf.xacro
+[7.921s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/urdf/diffbot.urdf.xacro
+[7.921s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/models
+[7.921s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/models/rear_caster_link.STL
+[7.921s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/models/lidar_link.STL
+[7.922s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/models/right_wheel_link.STL
+[7.923s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/models/base_link.STL
+[7.937s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/models/front_caster_link.STL
+[7.937s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/models/left_wheel_link.STL
+[7.938s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/ros2_control
+[7.939s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/ros2_control/diffbot.ros2_control.xacro
+[7.939s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/launch
+[7.939s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/launch/real_robot_launch.py
+[7.940s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/launch/diffbot.launch.py
+[7.940s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/launch/joystick.launch.py
+[7.940s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/config
+[7.941s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/config/joystick.yaml
+[7.941s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/config/diffbot_controllers.yaml
+[7.941s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/config/twist_mux.yaml
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/urdf
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/urdf/diffbot_description.urdf.xacro
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/urdf/diffbot.urdf.xacro
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/ros2_control
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/ros2_control/diffbot.ros2_control.xacro
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/models
+[7.942s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/models/rear_caster_link.STL
+[7.943s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/models/lidar_link.STL
+[7.943s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/models/right_wheel_link.STL
+[7.943s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/models/base_link.STL
+[7.946s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/models/front_caster_link.STL
+[7.946s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/description/models/left_wheel_link.STL
+[7.946s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/lib/librobot_control_pkg.so
+[7.947s] -- Set non-toolchain portion of runtime path of "/home/argo/Downloads/robot_wss/install/robot_control_pkg/lib/librobot_control_pkg.so" to ""
+[7.947s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/environment/library_path.sh
+[7.947s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/environment/library_path.dsv
+[7.947s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/ament_index/resource_index/package_run_dependencies/robot_control_pkg
+[7.948s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/ament_index/resource_index/parent_prefix_path/robot_control_pkg
+[7.948s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/environment/ament_prefix_path.sh
+[7.948s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/environment/ament_prefix_path.dsv
+[7.948s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/environment/path.sh
+[7.948s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/environment/path.dsv
+[7.948s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/local_setup.bash
+[7.948s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/local_setup.sh
+[7.949s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/local_setup.zsh
+[7.949s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/local_setup.dsv
+[7.949s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/package.dsv
+[7.949s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/ament_index/resource_index/packages/robot_control_pkg
+[7.949s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_control_pkg
+[7.949s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/cmake/export_robot_control_pkgExport.cmake
+[7.949s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/cmake/export_robot_control_pkgExport-noconfig.cmake
+[7.950s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[7.950s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.950s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/cmake/robot_control_pkgConfig.cmake
+[7.950s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/cmake/robot_control_pkgConfig-version.cmake
+[7.951s] -- Installing: /home/argo/Downloads/robot_wss/install/robot_control_pkg/share/robot_control_pkg/package.xml
+[7.952s] Invoked command in '/home/argo/Downloads/robot_wss/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/argo/Downloads/robot_wss/build/robot_control_pkg
