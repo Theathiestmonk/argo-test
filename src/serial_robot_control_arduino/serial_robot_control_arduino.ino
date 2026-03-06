@@ -100,6 +100,10 @@ void setup() {
     Serial.println("OLED init failed");
     while (true) {}
   }
+  
+  // Fast I2C (400kHz) to reduce blocking time during display.display()
+  Wire.setClock(400000);
+
   display.clearDisplay();
   display.setTextSize(1);
   display.setTextColor(WHITE);
@@ -142,13 +146,16 @@ void loop() {
     stopMotors();
   }
 
-  // Every second update OLED (don't print stats to Serial as it slows down ROS)
+  // Every 2 seconds update OLED (reduced frequency to minimize jitter)
+  // ONLY update if there is NO serial data waiting, to prioritize control commands
   unsigned long now = millis();
-  if (now - lastStatTime >= 1000) {
-    updateDisplay();
+  if (now - lastStatTime >= 2000) {
+    if (Serial.available() == 0) {
+       updateDisplay();
+       lastStatTime = now;
+    }
     ticksPerSecR = 0;
     ticksPerSecL = 0;
-    lastStatTime = now;
   }
 }
 
@@ -222,44 +229,44 @@ void updateDisplay() {
 
 // ---------------- SERIAL COMMAND PARSER ----------------
 void parseSerial() {
-  String line = Serial.readStringUntil('\n');
-  line.trim();
-  if (line.length() == 0) return;
+  // Use a static buffer for faster, non-blocking reading
+  static char buffer[32];
+  static int pos = 0;
 
-  if (line.charAt(0) == 'm') {
-    int firstSpace = line.indexOf(' ');
-    if (firstSpace == -1) return;
-    int secondSpace = line.indexOf(' ', firstSpace + 1);
-    if (secondSpace == -1) return;
-    
-    // As per robot_control_pkg/arduino_comms.hpp, it sends "m <left> <right>\n"
-    String sL = line.substring(firstSpace + 1, secondSpace);
-    String sR = line.substring(secondSpace + 1);
-    
-    // ROS 2 sends float values in rad/s
-    float target_rad_s_L = sL.toFloat();
-    float target_rad_s_R = sR.toFloat();
-    
-    // Map rad/s to PWM (-255 to 255)
-    pwmL = (target_rad_s_L / MAX_RAD_S) * 255;
-    pwmR = (target_rad_s_R / MAX_RAD_S) * 255;
-    
-    // Update last command time for safety watchdog
-    lastCommandTime = millis();
-    
-    setMotors(pwmR, pwmL);
-    
-    // ROS 2 Hardware Interface expects a response line, send 'm' to acknowledge
-    Serial.println("m"); 
-  } else if (line.charAt(0) == 'e') {
-    // Print encoder counts for ROS 2 Control: "<left> <right>"
+  while (Serial.available()) {
+    char c = Serial.read();
+    if (c == '\n' || c == '\r') {
+      buffer[pos] = '\0';
+      if (pos > 0) {
+        processCommand(buffer);
+      }
+      pos = 0;
+    } else if (pos < 31) {
+      buffer[pos++] = c;
+    }
+  }
+}
+
+void processCommand(char* cmd) {
+  if (cmd[0] == 'm') {
+    // Expected: "m <left> <right>"
+    double valL, valR;
+    if (sscanf(cmd, "m %lf %lf", &valL, &valR) == 2) {
+      pwmL = (valL / MAX_RAD_S) * 255;
+      pwmR = (valR / MAX_RAD_S) * 255;
+      lastCommandTime = millis();
+      setMotors(pwmR, pwmL);
+      Serial.println("m"); // Ack
+    }
+  } else if (cmd[0] == 'e') {
+    // Encoder request
     Serial.print(totalTicksL);
     Serial.print(" ");
     Serial.println(totalTicksR);
-  } else if (line == "stop") {
+  } else if (strcmp(cmd, "stop") == 0) {
     stopMotors();
     Serial.println("s");
-  } else if (line == "reset") {
+  } else if (strcmp(cmd, "reset") == 0) {
     noInterrupts();
     totalTicksR = totalTicksL = 0;
     interrupts();
