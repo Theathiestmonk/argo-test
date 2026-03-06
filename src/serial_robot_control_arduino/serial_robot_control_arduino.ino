@@ -7,119 +7,89 @@
 #define SCREEN_HEIGHT 64
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
-// -------- Motor Driver Pins (Two Sabertooth drivers) --------
-// Right motor driver (driver 1)
-#define RPWM1 5   // PWM for right wheel forward
-#define LPWM1 6   // PWM for right wheel reverse
-#define R_EN1 7   // Enable right driver
-#define L_EN1 8   // Enable left driver (same driver, other channel)
+// -------- Motor Driver Pins --------
+#define RPWM1 5
+#define LPWM1 6
+#define R_EN1 7
+#define L_EN1 8
 
-// Left motor driver (driver 2)
-#define RPWM2 9   // PWM for left wheel forward
-#define LPWM2 10  // PWM for left wheel reverse
-#define R_EN2 11  // Enable right driver (second board)
-#define L_EN2 12  // Enable left driver (second board)
+#define RPWM2 9
+#define LPWM2 10
+#define R_EN2 11
+#define L_EN2 12
 
-// -------- IR Encoder Pins (one per wheel) --------
-const uint8_t irPinR = 2; // Right wheel encoder
-const uint8_t irPinL = 3; // Left wheel encoder
+// -------- IR Encoder Pins --------
+const uint8_t irPinR = 2;
+const uint8_t irPinL = 3;
 
 // -------- Encoder Variables --------
-volatile long totalTicksR = 0; // total edge counts for right wheel
-volatile long totalTicksL = 0; // total edge counts for left wheel
-
-volatile uint16_t ticksPerSecR = 0; // ticks counted in the last second
-volatile uint16_t ticksPerSecL = 0;
+volatile long totalTicksR = 0;
+volatile long totalTicksL = 0;
 
 unsigned long lastTickTimeR = 0;
 unsigned long lastTickTimeL = 0;
+const unsigned long debounceDelay = 5;
 
-const unsigned long debounceDelay = 5; // ms, shorter debounce for clean IR sensors
-
-// Distance per **full wheel rotation** (meters). Adjust to match your wheel circumference.
-const float wheelCircumference = 0.3833; // e.g., 0.3833 m per rotation
-
-// Maximum expected speed in rad/s from ROS 2 (used to scale to 255 PWM).
-// You may need to tune this so teleop speeds feel right.
-const float MAX_RAD_S = 12.5; 
-
-// Motor speed control (-255 to 255). Negative means reverse.
+// -------- Motor Control --------
+const float MAX_RAD_S = 12.5;
 int pwmR = 0;
 int pwmL = 0;
 
-// Safety Watchdog (Heartbeat)
+// -------- Safety Watchdog --------
 unsigned long lastCommandTime = 0;
-const unsigned long commandTimeout = 500; // Stop motors if no command for 500ms
+const unsigned long commandTimeout = 500;
 
-// -------- Serial Command Handling --------
-// Expected command format: "m <right_speed> <left_speed>" where speeds are 0‑255.
-// Example: "m 200 180" sets right motor to 200, left motor to 180.
-
-void parseSerial();
+// -------- Serial Buffer --------
+static char buffer[32];
+static int bufPos = 0;
 
 // -------- Function Prototypes --------
 void setMotors(int speedRight, int speedLeft);
 void stopMotors();
-void updateDisplay();
-void computeAndPrintStats();
+void processCommand(char* cmd);
 
 // ---------------- SETUP ----------------
 void setup() {
   Serial.begin(115200);
 
-  // Motor pins as outputs
-  pinMode(RPWM1, OUTPUT);
-  pinMode(LPWM1, OUTPUT);
-  pinMode(R_EN1, OUTPUT);
-  pinMode(L_EN1, OUTPUT);
+  // Motor pins
+  pinMode(RPWM1, OUTPUT); pinMode(LPWM1, OUTPUT);
+  pinMode(R_EN1, OUTPUT); pinMode(L_EN1, OUTPUT);
+  pinMode(RPWM2, OUTPUT); pinMode(LPWM2, OUTPUT);
+  pinMode(R_EN2, OUTPUT); pinMode(L_EN2, OUTPUT);
 
-  pinMode(RPWM2, OUTPUT);
-  pinMode(LPWM2, OUTPUT);
-  pinMode(R_EN2, OUTPUT);
-  pinMode(L_EN2, OUTPUT);
+  // Enable drivers
+  digitalWrite(R_EN1, HIGH); digitalWrite(L_EN1, HIGH);
+  digitalWrite(R_EN2, HIGH); digitalWrite(L_EN2, HIGH);
 
-  // Enable drivers (active‑high)
-  digitalWrite(R_EN1, HIGH);
-  digitalWrite(L_EN1, HIGH);
-  digitalWrite(R_EN2, HIGH);
-  digitalWrite(L_EN2, HIGH);
-
-  // Ensure motors are stopped on startup
+  // Motors OFF on startup
   stopMotors();
 
-  // Encoder pins as inputs (use internal pull‑up if needed)
+  // Encoder pins
   pinMode(irPinR, INPUT);
   pinMode(irPinL, INPUT);
-
-  // Attach interrupts for rising edges
   attachInterrupt(digitalPinToInterrupt(irPinR), countRight, RISING);
   attachInterrupt(digitalPinToInterrupt(irPinL), countLeft, RISING);
 
-  // OLED init
-  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
-    Serial.println("OLED init failed");
-    while (true) {}
+  // OLED: show startup screen ONCE, then never touch it again
+  if (display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setTextColor(WHITE);
+    display.setCursor(0, 0);
+    display.println("Robot Ready");
+    display.println("Waiting for");
+    display.println("ROS 2 commands...");
+    display.display();
   }
-  
-  // Fast I2C (400kHz) to reduce blocking time during display.display()
-  Wire.setClock(400000);
-
-  display.clearDisplay();
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0, 0);
-  display.println("Robot System");
-  display.println("Starting...");
-  display.display();
-  delay(1000);
+  delay(500);
 }
 
-// ---------------- INTERRUPT HANDLERS ----------------
+// ---------------- INTERRUPTS ----------------
 void countRight() {
   unsigned long now = millis();
   if (now - lastTickTimeR > debounceDelay) {
     totalTicksR++;
-    ticksPerSecR++;
     lastTickTimeR = now;
   }
 }
@@ -128,42 +98,36 @@ void countLeft() {
   unsigned long now = millis();
   if (now - lastTickTimeL > debounceDelay) {
     totalTicksL++;
-    ticksPerSecL++;
     lastTickTimeL = now;
   }
 }
 
 // ---------------- MAIN LOOP ----------------
-unsigned long lastStatTime = 0;
+// This loop MUST be as fast as possible. No OLED, no Serial.print debug output.
+// The Pi sends commands at 50Hz. We must respond within a few ms.
 void loop() {
-  // Handle incoming serial commands (speed changes, stop, reset)
-  if (Serial.available()) {
-    parseSerial();
+  // 1. Read and process ALL available serial bytes immediately
+  while (Serial.available()) {
+    char c = Serial.read();
+    if (c == '\n' || c == '\r') {
+      buffer[bufPos] = '\0';
+      processCommand(buffer);
+      bufPos = 0;
+    } else if (bufPos < 31) {
+      buffer[bufPos++] = c;
+    }
   }
 
-  // Safety Watchdog: Stop motors if no command received within timeout
+  // 2. Safety: stop motors if no command received recently
   if (millis() - lastCommandTime > commandTimeout) {
     stopMotors();
-  }
-
-  // Every 2 seconds update OLED (reduced frequency to minimize jitter)
-  // ONLY update if there is NO serial data waiting, to prioritize control commands
-  unsigned long now = millis();
-  if (now - lastStatTime >= 2000) {
-    if (Serial.available() == 0) {
-       updateDisplay();
-       lastStatTime = now;
-    }
-    ticksPerSecR = 0;
-    ticksPerSecL = 0;
   }
 }
 
 // ---------------- MOTOR CONTROL ----------------
 void setMotors(int speedRight, int speedLeft) {
-  // Constrain speeds to safe PWM range
   speedRight = constrain(speedRight, -255, 255);
-  speedLeft = constrain(speedLeft, -255, 255);
+  speedLeft  = constrain(speedLeft, -255, 255);
 
   // Right Motor
   if (speedRight >= 0) {
@@ -174,7 +138,7 @@ void setMotors(int speedRight, int speedLeft) {
     analogWrite(LPWM1, -speedRight);
   }
 
-  // Left Motor (Notice LPWM2 is forward based on your original moveForward)
+  // Left Motor
   if (speedLeft >= 0) {
     analogWrite(RPWM2, 0);
     analogWrite(LPWM2, speedLeft);
@@ -191,82 +155,23 @@ void stopMotors() {
   analogWrite(LPWM2, 0);
 }
 
-// ---------------- DISPLAY & STATS ----------------
-void computeAndPrintStats() {
-  // RPM calculation (ticks per second -> revolutions per minute)
-  float revR = ticksPerSecR / 2.0; // assuming one tick per half‑rotation
-  float revL = ticksPerSecL / 2.0;
-  float rpmR = revR * 60.0;
-  float rpmL = revL * 60.0;
-
-  // Distance travelled (total ticks -> rotations -> meters)
-  float distR = (totalTicksR / 2.0) * wheelCircumference;
-  float distL = (totalTicksL / 2.0) * wheelCircumference;
-
-  // Heading estimate (difference in distance / wheel base)
-  const float wheelBase = 0.45; // meters between wheels
-  float thetaDeg = ((distR - distL) / wheelBase) * 57.2958;
-
-  Serial.println("--- Stats ---");
-  Serial.print("Right ticks: "); Serial.println(totalTicksR);
-  Serial.print("Left  ticks: "); Serial.println(totalTicksL);
-  Serial.print("RPM Right: "); Serial.println(rpmR);
-  Serial.print("RPM Left : "); Serial.println(rpmL);
-  Serial.print("Dist Right (m): "); Serial.println(distR);
-  Serial.print("Dist Left  (m): "); Serial.println(distL);
-  Serial.print("Heading (deg): "); Serial.println(thetaDeg);
-}
-
-void updateDisplay() {
-  display.clearDisplay();
-  display.setCursor(0, 0);
-  display.print("R ticks:"); display.println(totalTicksR);
-  display.print("L ticks:"); display.println(totalTicksL);
-  display.print("R rpm:"); display.println(ticksPerSecR * 30); // (ticks/2)*60 per sec
-  display.print("L rpm:"); display.println(ticksPerSecL * 30);
-  display.display();
-}
-
-// ---------------- SERIAL COMMAND PARSER ----------------
-void parseSerial() {
-  // Use a static buffer for faster, non-blocking reading
-  static char buffer[32];
-  static int pos = 0;
-
-  while (Serial.available()) {
-    char c = Serial.read();
-    if (c == '\n' || c == '\r') {
-      buffer[pos] = '\0';
-      // Process even if pos is 0 (empty line) to respond with an empty line
-      processCommand(buffer);
-      pos = 0;
-    } else if (pos < 31) {
-      buffer[pos++] = c;
-    }
-  }
-}
-
+// ---------------- COMMAND PROCESSOR ----------------
 void processCommand(char* cmd) {
   if (cmd[0] == 'm') {
-    // Expected: "m <left> <right>"
     double valL, valR;
     if (sscanf(cmd, "m %lf %lf", &valL, &valR) == 2) {
       pwmL = (valL / MAX_RAD_S) * 255;
       pwmR = (valR / MAX_RAD_S) * 255;
       lastCommandTime = millis();
       setMotors(pwmR, pwmL);
-      Serial.println("m"); // Ack
-    } else {
-      Serial.println("m"); // Ack anyway
     }
+    Serial.println("m");
   } else if (cmd[0] == 'e') {
-    // Encoder request
     Serial.print(totalTicksL);
     Serial.print(" ");
     Serial.println(totalTicksR);
   } else if (cmd[0] == 'p') {
-    // PID values (e.g., "p 2.5 0.5 0.1") - Just ack for now
-    Serial.println("p"); 
+    Serial.println("p");
   } else if (strcmp(cmd, "stop") == 0) {
     stopMotors();
     Serial.println("s");
@@ -276,7 +181,6 @@ void processCommand(char* cmd) {
     interrupts();
     Serial.println("r");
   } else {
-    // For empty or unknown commands, always send a newline to satisfy ReadLine on the Pi
     Serial.println("ok");
   }
 }
