@@ -2,13 +2,18 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-// IMPORTANT: Install "NewPing" library in Arduino IDE (Sketch -> Include Library -> Manage Libraries -> "NewPing")
+// IMPORTANT: Install "NewPing" and "Adafruit MPU6050" libraries in Arduino IDE
 #include <NewPing.h>
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_Sensor.h>
 
 // ---------------- OLED ----------------
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+// ---------------- IMU ----------------
+Adafruit_MPU6050 mpu;
 
 // -------- Motor Driver Pins --------
 #define RPWM1 5
@@ -20,19 +25,6 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 #define LPWM2 10
 #define R_EN2 11
 #define L_EN2 12
-
-// -------- IR Encoder Pins --------
-const uint8_t irPinR = 2;
-const uint8_t irPinL = 3;
-
-// -------- Encoder Variables --------
-volatile long totalTicksR = 0;
-volatile long totalTicksL = 0;
-volatile uint16_t ticksPerSecR = 0;
-volatile uint16_t ticksPerSecL = 0;
-unsigned long lastTickTimeR = 0;
-unsigned long lastTickTimeL = 0;
-const unsigned long debounceDelay = 5;
 
 // -------- Wheel / Robot Physical Parameters --------
 const float WHEEL_RADIUS       = 0.055;   // meters
@@ -85,7 +77,8 @@ const int threshold = 50;
 // Timer for non-blocking ping
 unsigned long pingTimer[3]; 
 uint8_t currentSensor = 0;
-String currentAction = "FORWARD";
+String currentAction = "STANDBY";
+char lastCommand = 'X';
 
 // -------- Function Prototypes --------
 void setMotors(int speedRight, int speedLeft);
@@ -109,12 +102,6 @@ void setup() {
   digitalWrite(R_EN2, HIGH); digitalWrite(L_EN2, HIGH);
   stopMotors();
 
-  // Encoders
-  pinMode(irPinR, INPUT);
-  pinMode(irPinL, INPUT);
-  attachInterrupt(digitalPinToInterrupt(irPinR), countRight, RISING);
-  attachInterrupt(digitalPinToInterrupt(irPinL), countLeft,  RISING);
-
   // Buzzers
   pinMode(BUZZER_C, OUTPUT);
   pinMode(BUZZER_L, OUTPUT);
@@ -132,6 +119,15 @@ void setup() {
     display.display();
   }
 
+  // IMU Init
+  if (!mpu.begin()) {
+    Serial.println("MPU6050 init failed");
+  } else {
+    mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
+    mpu.setGyroRange(MPU6050_RANGE_500_DEG);
+    mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
+  }
+
   // Ping timers (every 33ms per sensor, approx 100ms cycle)
   pingTimer[0] = millis() + 33;
   pingTimer[1] = pingTimer[0] + 33;
@@ -139,21 +135,6 @@ void setup() {
 
   lastOdomTime        = millis();
   lastOdomPublishTime = millis();
-}
-
-// ---------------- INTERRUPT HANDLERS ----------------
-void countRight() {
-  unsigned long now = millis();
-  if (now - lastTickTimeR > debounceDelay) {
-    totalTicksR++; ticksPerSecR++; lastTickTimeR = now;
-  }
-}
-
-void countLeft() {
-  unsigned long now = millis();
-  if (now - lastTickTimeL > debounceDelay) {
-    totalTicksL++; ticksPerSecL++; lastTickTimeL = now;
-  }
 }
 
 // ---------- NON-BLOCKING PING ----------
@@ -209,42 +190,29 @@ void loop() {
   bool blockedR = distR < threshold;
 
   // PWM Mapping (0 - 255)
-  // I scaled this to match the approximate speeds from your snippet
-  int forwardSpeed = 100; 
-  int turnSpeed = 80;
+  int forwardSpeed = 90; 
+  int turnSpeed = 70;
 
-  if (blockedC && blockedL && blockedR) {
-    currentAction = "STOP";
-    pwmR = 0; pwmL = 0;
-  } 
-  else if (!blockedC && blockedL && !blockedR) {
-    currentAction = "STEER R";
-    pwmL = turnSpeed; pwmR = -turnSpeed; // Steer right
-  } 
-  else if (!blockedC && !blockedL && blockedR) {
-    currentAction = "STEER L";
-    pwmL = -turnSpeed; pwmR = turnSpeed; // Steer left
-  } 
-  else if (blockedC && !blockedL && !blockedR) {
-    if (distL >= distR) {
-      currentAction = "TURN L";
-      pwmL = -turnSpeed; pwmR = turnSpeed;
-    } else {
-      currentAction = "TURN R";
-      pwmL = turnSpeed; pwmR = -turnSpeed;
-    }
-  } 
-  else if (blockedC && blockedL && !blockedR) {
-    currentAction = "TURN R";
-    pwmL = turnSpeed; pwmR = -turnSpeed;
-  } 
-  else if (blockedC && !blockedL && blockedR) {
-    currentAction = "TURN L";
-    pwmL = -turnSpeed; pwmR = turnSpeed;
-  } 
-  else {
+  // KEYBOARD CONTROL LOGIC
+  if (lastCommand == 'W') {
     currentAction = "FORWARD";
     pwmL = forwardSpeed; pwmR = forwardSpeed;
+  } 
+  else if (lastCommand == 'S') {
+    currentAction = "REVERSE";
+    pwmL = -forwardSpeed; pwmR = -forwardSpeed;
+  } 
+  else if (lastCommand == 'A') {
+    currentAction = "LEFT";
+    pwmL = -turnSpeed; pwmR = turnSpeed;
+  } 
+  else if (lastCommand == 'D') {
+    currentAction = "RIGHT";
+    pwmL = turnSpeed; pwmR = -turnSpeed;
+  } 
+  else {
+    currentAction = "STOP";
+    pwmL = 0; pwmR = 0;
   }
 
   setMotors(pwmR, pwmL);
@@ -261,7 +229,6 @@ void loop() {
   // Update OLED Display (1Hz)
   if (now - lastStatTime >= 1000) {
     updateDisplay();
-    ticksPerSecR = 0; ticksPerSecL = 0;
     lastStatTime = now;
   }
 }
@@ -300,7 +267,14 @@ void publishOdom() {
   Serial.print(posY, 4);       Serial.print(" ");
   Serial.print(theta, 4);      Serial.print(" ");
   Serial.print(linearVel, 4);  Serial.print(" ");
-  Serial.println(angularVel, 4);
+  Serial.print(angularVel, 4); Serial.print(" ");
+  
+  // Add IMU data for mapping: gyro_z, accel_x, accel_y
+  sensors_event_t a, g, temp;
+  mpu.getEvent(&a, &g, &temp);
+  Serial.print(g.gyro.z, 4);   Serial.print(" ");
+  Serial.print(a.acceleration.x, 4); Serial.print(" ");
+  Serial.println(a.acceleration.y, 4);
 }
 
 // ---------------- MOTOR CONTROL ----------------
@@ -346,17 +320,17 @@ void updateDisplay() {
 
 // ---------------- SERIAL COMMAND PARSER ----------------
 void parseSerial() {
-  String line = Serial.readStringUntil('\n');
-  line.trim();
-  if (line.length() == 0) return;
-
-  if (line == "reset") {
-    noInterrupts();
-    totalTicksR = totalTicksL = 0;
-    interrupts();
-    posX = 0; posY = 0; theta = 0;
-    Serial.println("r");
-  } else if (line.charAt(0) == 'e') {
-    Serial.print(totalTicksL); Serial.print(" "); Serial.println(totalTicksR);
+  if (Serial.available() > 0) {
+    char cmd = Serial.read();
+    
+    // Check if it's one of our control keys
+    if (cmd == 'W' || cmd == 'A' || cmd == 'S' || cmd == 'D' || cmd == 'X') {
+      lastCommand = cmd;
+    }
+    
+    // Still support reset if needed
+    if (cmd == 'r') {
+       posX = 0; posY = 0; theta = 0;
+    }
   }
 }

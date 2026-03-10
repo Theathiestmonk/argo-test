@@ -35,14 +35,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    # IMU node
-    imu_node = Node(
-        package='robot_control_pkg',
-        executable='imu_publisher.py',
-        name='imu_publisher',
-        output='screen'
-    )
-
     # EKF fusion node
     ekf_node = Node(
         package='robot_localization',
@@ -56,6 +48,5 @@ def generate_launch_description():
         diffbot,
         lidar,
         odom_node,
-        imu_node,
         ekf_node,
     ])
