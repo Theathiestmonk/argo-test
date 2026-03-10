@@ -27,7 +27,7 @@ def generate_launch_description():
                 os.path.join(
                     get_package_share_directory("rplidar_ros"),
                     "launch",
-                    "rplidar_a2m8_launch.py",
+                    "rplidar_a1_launch.py",
                 )
             ]
         )

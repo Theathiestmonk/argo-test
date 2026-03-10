@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define paths
-WORKSPACE="$HOME/Downloads/robot_ws"
+WORKSPACE="$HOME/Downloads/robot_ws1"
 
 # Setup ROS and workspace
 source /opt/ros/jazzy/setup.bash
@@ -22,12 +22,7 @@ gnome-terminal -- bash -c "cd $WORKSPACE && source /opt/ros/jazzy/setup.bash && 
 
 sleep 3
 
-echo "Starting RViz2 Visualization..."
-gnome-terminal -- bash -c "cd $WORKSPACE && source /opt/ros/jazzy/setup.bash && source install/setup.bash && rviz2 -d src/simulation_pkg/config/sim_view.rviz; exec bash"
-
-sleep 2
-
 echo "Starting Teleop Keyboard Control..."
 gnome-terminal -- bash -c "cd $WORKSPACE && source /opt/ros/jazzy/setup.bash && source install/setup.bash && ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/cmd_vel_nav; exec bash"
 
-echo "All services have been launched in separate terminals."
+echo "Gazebo, SLAM, Nav2, and Teleop have been launched (RViz is included in simulation_pkg)."
