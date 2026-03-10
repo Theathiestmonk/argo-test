@@ -3,6 +3,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
+from std_msgs.msg import String
 import tf2_ros
 import serial
 import math
@@ -14,10 +15,18 @@ class OdomPublisher(Node):
         self.imu_pub  = self.create_publisher(Imu, '/imu/data', 10)
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
         
+        # Subscribe to teleop commands
+        self.subscription = self.create_subscription(String, '/arduino_command', self.cmd_callback, 10)
+        
         # Open serial port to Arduino
         self.ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
         
         self.timer = self.create_timer(0.05, self.read_serial)  # 20Hz
+
+    def cmd_callback(self, msg):
+        # Relay the key press to Arduino over the shared serial port
+        self.ser.write(msg.data.encode())
+        self.get_logger().info(f"Relaying command: {msg.data}")
 
     def read_serial(self):
         if self.ser.in_waiting:
