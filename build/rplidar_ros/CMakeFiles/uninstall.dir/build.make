@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/argo/Downloads/robot_wss/src/rplidar_ros
+CMAKE_SOURCE_DIR = /home/argo/argo-test/src/rplidar_ros
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/argo/Downloads/robot_wss/build/rplidar_ros
+CMAKE_BINARY_DIR = /home/argo/argo-test/build/rplidar_ros
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/argo/Downloads/robot_wss/build/rplidar_ros && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/argo/Downloads/robot_wss/src/rplidar_ros /home/argo/Downloads/robot_wss/src/rplidar_ros /home/argo/Downloads/robot_wss/build/rplidar_ros /home/argo/Downloads/robot_wss/build/rplidar_ros /home/argo/Downloads/robot_wss/build/rplidar_ros/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/argo/argo-test/build/rplidar_ros && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/argo/argo-test/src/rplidar_ros /home/argo/argo-test/src/rplidar_ros /home/argo/argo-test/build/rplidar_ros /home/argo/argo-test/build/rplidar_ros /home/argo/argo-test/build/rplidar_ros/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/argo/Downloads/robot_wss/src/robot_control_pkg
+# Install script for directory: /home/argo/argo-test/src/robot_control_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/argo/Downloads/robot_wss/install/robot_control_pkg")
+  set(CMAKE_INSTALL_PREFIX "/home/argo/argo-test/install/robot_control_pkg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,26 +43,33 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/Downloads/robot_wss/src/robot_control_pkg/robot_control_pkg.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/argo-test/src/robot_control_pkg/robot_control_pkg.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/robot_control_pkg" TYPE DIRECTORY FILES "/home/argo/Downloads/robot_wss/src/robot_control_pkg/hardware/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/robot_control_pkg" TYPE DIRECTORY FILES "/home/argo/argo-test/src/robot_control_pkg/hardware/include/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE DIRECTORY FILES
-    "/home/argo/Downloads/robot_wss/src/robot_control_pkg/description/urdf"
-    "/home/argo/Downloads/robot_wss/src/robot_control_pkg/description/models"
-    "/home/argo/Downloads/robot_wss/src/robot_control_pkg/description/ros2_control"
+    "/home/argo/argo-test/src/robot_control_pkg/description/urdf"
+    "/home/argo/argo-test/src/robot_control_pkg/description/models"
+    "/home/argo/argo-test/src/robot_control_pkg/description/ros2_control"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE DIRECTORY FILES
-    "/home/argo/Downloads/robot_wss/src/robot_control_pkg/bringup/launch"
-    "/home/argo/Downloads/robot_wss/src/robot_control_pkg/bringup/config"
-    "/home/argo/Downloads/robot_wss/src/robot_control_pkg/description"
+    "/home/argo/argo-test/src/robot_control_pkg/bringup/launch"
+    "/home/argo/argo-test/src/robot_control_pkg/bringup/config"
+    "/home/argo/argo-test/src/robot_control_pkg/description"
+    )
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_control_pkg" TYPE PROGRAM FILES
+    "/home/argo/argo-test/src/robot_control_pkg/robot_control_pkg/odom_publisher.py"
+    "/home/argo/argo-test/src/robot_control_pkg/robot_control_pkg/imu_publisher.py"
     )
 endif()
 
@@ -73,7 +80,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librobot_control_pkg.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/librobot_control_pkg.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/argo/argo-test/build/robot_control_pkg/librobot_control_pkg.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librobot_control_pkg.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librobot_control_pkg.so")
     file(RPATH_CHANGE
@@ -90,19 +97,27 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_control_pkg" TYPE PROGRAM RENAME "odom_publisher" FILES "/home/argo/argo-test/src/robot_control_pkg/robot_control_pkg/odom_publisher.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_control_pkg" TYPE PROGRAM RENAME "teleop_keyboard" FILES "/home/argo/argo-test/src/robot_control_pkg/scripts/teleop_keyboard.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/environment" TYPE FILE FILES "/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/environment_hook/library_path.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/environment" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/library_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/environment" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/library_path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_control_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_control_pkg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_control_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/robot_control_pkg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -110,7 +125,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/environment" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/environment" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -118,42 +133,42 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/environment" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/environment" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/packages/robot_control_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/packages/robot_control_pkg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/hardware_interface__pluginlib__plugin" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_control_pkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/hardware_interface__pluginlib__plugin" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_index/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_control_pkg")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake/export_robot_control_pkgExport.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake/export_robot_control_pkgExport.cmake"
-         "/home/argo/Downloads/robot_wss/build/robot_control_pkg/CMakeFiles/Export/09f0b27898cdf568e8283bf030fabd20/export_robot_control_pkgExport.cmake")
+         "/home/argo/argo-test/build/robot_control_pkg/CMakeFiles/Export/09f0b27898cdf568e8283bf030fabd20/export_robot_control_pkgExport.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake/export_robot_control_pkgExport-*.cmake")
       if(_cmake_old_config_files)
@@ -166,29 +181,29 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/CMakeFiles/Export/09f0b27898cdf568e8283bf030fabd20/export_robot_control_pkgExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/CMakeFiles/Export/09f0b27898cdf568e8283bf030fabd20/export_robot_control_pkgExport.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/CMakeFiles/Export/09f0b27898cdf568e8283bf030fabd20/export_robot_control_pkgExport-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/CMakeFiles/Export/09f0b27898cdf568e8283bf030fabd20/export_robot_control_pkgExport-noconfig.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg/cmake" TYPE FILE FILES
-    "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_core/robot_control_pkgConfig.cmake"
-    "/home/argo/Downloads/robot_wss/build/robot_control_pkg/ament_cmake_core/robot_control_pkgConfig-version.cmake"
+    "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_core/robot_control_pkgConfig.cmake"
+    "/home/argo/argo-test/build/robot_control_pkg/ament_cmake_core/robot_control_pkgConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/Downloads/robot_wss/src/robot_control_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control_pkg" TYPE FILE FILES "/home/argo/argo-test/src/robot_control_pkg/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -199,5 +214,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/argo/Downloads/robot_wss/build/robot_control_pkg/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/argo/argo-test/build/robot_control_pkg/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

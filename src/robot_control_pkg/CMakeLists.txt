@@ -79,7 +79,7 @@ install(PROGRAMS
 )
 
 install(PROGRAMS
-  robot_control_pkg/teleop_keyboard.py
+  scripts/teleop_keyboard.py
   RENAME teleop_keyboard
   DESTINATION lib/robot_control_pkg
 )
