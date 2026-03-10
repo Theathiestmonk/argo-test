@@ -72,6 +72,17 @@ install(TARGETS robot_control_pkg
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
 )
+install(PROGRAMS
+  robot_control_pkg/odom_publisher.py
+  RENAME odom_publisher
+  DESTINATION lib/robot_control_pkg
+)
+
+install(PROGRAMS
+  robot_control_pkg/teleop_keyboard.py
+  RENAME teleop_keyboard
+  DESTINATION lib/robot_control_pkg
+)
 
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
