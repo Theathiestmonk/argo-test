@@ -58,6 +58,14 @@ install(
   DIRECTORY bringup/launch bringup/config description
   DESTINATION share/robot_control_pkg
 )
+
+# Install Python nodes
+install(PROGRAMS
+  robot_control_pkg/odom_publisher.py
+  robot_control_pkg/imu_publisher.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 install(TARGETS robot_control_pkg
   EXPORT export_robot_control_pkg
   ARCHIVE DESTINATION lib
