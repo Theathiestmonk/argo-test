@@ -11,12 +11,21 @@ import math
 class OdomPublisher(Node):
     def __init__(self):
         super().__init__('odom_publisher')
+        self.declare_parameter('serial_port', '/dev/ttyUSB0')
+        self.declare_parameter('baud_rate', 115200)
+        self.declare_parameter('command_topic', '/arduino_command')
+
+        serial_port = self.get_parameter('serial_port').get_parameter_value().string_value
+        baud_rate = self.get_parameter('baud_rate').get_parameter_value().integer_value
+        command_topic = self.get_parameter('command_topic').get_parameter_value().string_value
+
         self.odom_pub = self.create_publisher(Odometry, '/odom', 10)
         self.imu_pub  = self.create_publisher(Imu, '/imu/data', 10)
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
         self.subscription = self.create_subscription(
-            String, '/arduino_command', self.cmd_callback, 10)
-        self.ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+            String, command_topic, self.cmd_callback, 10)
+        self.ser = serial.Serial(serial_port, int(baud_rate), timeout=1)
+        self.get_logger().info(f"Arduino serial: port={serial_port} baud={baud_rate} topic={command_topic}")
         self.timer = self.create_timer(0.05, self.read_serial)
 
     def cmd_callback(self, msg):

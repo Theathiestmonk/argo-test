@@ -1,0 +1,29 @@
+[3.458s] Invoking command in '/home/dhruvil/argo-test/build/slam_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruvil/argo-test/build/slam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruvil/argo-test/install/slam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dhruvil/argo-test/build/slam_pkg/build --no-deps symlink_data
+[4.322s] running develop
+[6.296s] running egg_info
+[6.298s] creating slam_pkg.egg-info
+[6.555s] writing slam_pkg.egg-info/PKG-INFO
+[6.560s] writing dependency_links to slam_pkg.egg-info/dependency_links.txt
+[6.561s] writing requirements to slam_pkg.egg-info/requires.txt
+[6.566s] writing top-level names to slam_pkg.egg-info/top_level.txt
+[6.569s] writing manifest file 'slam_pkg.egg-info/SOURCES.txt'
+[6.831s] reading manifest file 'slam_pkg.egg-info/SOURCES.txt'
+[6.833s] writing manifest file 'slam_pkg.egg-info/SOURCES.txt'
+[6.901s] running build_ext
+[6.901s] Creating /home/dhruvil/argo-test/install/slam_pkg/lib/python3.12/site-packages/slam-pkg.egg-link (link to .)
+[6.902s] 
+[6.902s] Installed /home/dhruvil/argo-test/build/slam_pkg
+[6.906s] running symlink_data
+[6.907s] creating /home/dhruvil/argo-test/install/slam_pkg/share/ament_index
+[6.907s] creating /home/dhruvil/argo-test/install/slam_pkg/share/ament_index/resource_index
+[6.907s] creating /home/dhruvil/argo-test/install/slam_pkg/share/ament_index/resource_index/packages
+[6.907s] symbolically linking /home/dhruvil/argo-test/build/slam_pkg/resource/slam_pkg -> /home/dhruvil/argo-test/install/slam_pkg/share/ament_index/resource_index/packages
+[6.907s] symbolically linking /home/dhruvil/argo-test/build/slam_pkg/package.xml -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg
+[6.907s] creating /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+[6.908s] symbolically linking /home/dhruvil/argo-test/build/slam_pkg/launch/slam_sim.launch.py -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+[6.909s] symbolically linking /home/dhruvil/argo-test/build/slam_pkg/launch/slam_real.launch.py -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+[6.909s] symbolically linking /home/dhruvil/argo-test/build/slam_pkg/launch/localization_launch.py -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+[6.909s] creating /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/config
+[6.915s] symbolically linking /home/dhruvil/argo-test/build/slam_pkg/config/mapper_params_localization.yaml -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/config
+[6.916s] symbolically linking /home/dhruvil/argo-test/build/slam_pkg/config/mapper_params_online_async.yaml -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/config
+[7.054s] Invoked command in '/home/dhruvil/argo-test/build/slam_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruvil/argo-test/build/slam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruvil/argo-test/install/slam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dhruvil/argo-test/build/slam_pkg/build --no-deps symlink_data

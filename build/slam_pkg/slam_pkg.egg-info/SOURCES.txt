@@ -1,13 +1,6 @@
-README.md
 package.xml
 setup.cfg
 setup.py
-../../build/slam_pkg/slam_pkg.egg-info/PKG-INFO
-../../build/slam_pkg/slam_pkg.egg-info/SOURCES.txt
-../../build/slam_pkg/slam_pkg.egg-info/dependency_links.txt
-../../build/slam_pkg/slam_pkg.egg-info/requires.txt
-../../build/slam_pkg/slam_pkg.egg-info/top_level.txt
-../../build/slam_pkg/slam_pkg.egg-info/zip-safe
 config/mapper_params_localization.yaml
 config/mapper_params_online_async.yaml
 launch/localization_launch.py
@@ -15,6 +8,9 @@ launch/slam_real.launch.py
 launch/slam_sim.launch.py
 resource/slam_pkg
 slam_pkg/__init__.py
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
+slam_pkg.egg-info/PKG-INFO
+slam_pkg.egg-info/SOURCES.txt
+slam_pkg.egg-info/dependency_links.txt
+slam_pkg.egg-info/requires.txt
+slam_pkg.egg-info/top_level.txt
+slam_pkg.egg-info/zip-safe

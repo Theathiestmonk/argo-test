@@ -1,0 +1,61 @@
+[100%] Built target robot_control_pkg
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg//robot_control_pkg.xml
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/arduino_comms.hpp
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/diffbot_system.hpp
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/visibility_control.h
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/wheel.hpp
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/urdf/diffbot.urdf.xacro
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/urdf/diffbot_description.urdf.xacro
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/base_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/front_caster_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/left_wheel_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/lidar_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/rear_caster_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/right_wheel_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/ros2_control/diffbot.ros2_control.xacro
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/diffbot.launch.py
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/joystick.launch.py
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/mapping_keyboard.launch.py
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/real_robot_launch.py
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/diffbot_controllers.yaml
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/ekf.yaml
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/joystick.yaml
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/twist_mux.yaml
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/base_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/front_caster_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/left_wheel_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/lidar_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/rear_caster_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/right_wheel_link.STL
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/ros2_control/diffbot.ros2_control.xacro
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/urdf/diffbot.urdf.xacro
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/urdf/diffbot_description.urdf.xacro
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/lib/robot_control_pkg/odom_publisher.py
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/lib/robot_control_pkg/imu_publisher.py
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/library_path.sh
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/library_path.dsv
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/ament_index/resource_index/package_run_dependencies/robot_control_pkg
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/ament_index/resource_index/parent_prefix_path/robot_control_pkg
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/path.sh
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/path.dsv
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.bash
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.sh
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.zsh
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.dsv
+-- Symlinking: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.dsv
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/ament_index/resource_index/packages/robot_control_pkg
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_control_pkg
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/robot_control_pkgConfig.cmake
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/robot_control_pkgConfig-version.cmake
+-- Up-to-date symlink: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.xml
+-- Up-to-date: /home/dhruvil/argo-test/install/robot_control_pkg/lib/librobot_control_pkg.so
+-- Installing: /home/dhruvil/argo-test/install/robot_control_pkg/lib/robot_control_pkg/odom_publisher
+-- Up-to-date: /home/dhruvil/argo-test/install/robot_control_pkg/lib/robot_control_pkg/teleop_keyboard
+-- Up-to-date: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/export_robot_control_pkgExport.cmake
+-- Up-to-date: /home/dhruvil/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/export_robot_control_pkgExport-noconfig.cmake

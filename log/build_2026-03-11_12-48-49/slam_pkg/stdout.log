@@ -1,0 +1,27 @@
+running develop
+running egg_info
+creating slam_pkg.egg-info
+writing slam_pkg.egg-info/PKG-INFO
+writing dependency_links to slam_pkg.egg-info/dependency_links.txt
+writing requirements to slam_pkg.egg-info/requires.txt
+writing top-level names to slam_pkg.egg-info/top_level.txt
+writing manifest file 'slam_pkg.egg-info/SOURCES.txt'
+reading manifest file 'slam_pkg.egg-info/SOURCES.txt'
+writing manifest file 'slam_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/dhruvil/argo-test/install/slam_pkg/lib/python3.12/site-packages/slam-pkg.egg-link (link to .)
+
+Installed /home/dhruvil/argo-test/build/slam_pkg
+running symlink_data
+creating /home/dhruvil/argo-test/install/slam_pkg/share/ament_index
+creating /home/dhruvil/argo-test/install/slam_pkg/share/ament_index/resource_index
+creating /home/dhruvil/argo-test/install/slam_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/dhruvil/argo-test/build/slam_pkg/resource/slam_pkg -> /home/dhruvil/argo-test/install/slam_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/dhruvil/argo-test/build/slam_pkg/package.xml -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg
+creating /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+symbolically linking /home/dhruvil/argo-test/build/slam_pkg/launch/slam_sim.launch.py -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+symbolically linking /home/dhruvil/argo-test/build/slam_pkg/launch/slam_real.launch.py -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+symbolically linking /home/dhruvil/argo-test/build/slam_pkg/launch/localization_launch.py -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/launch
+creating /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/config
+symbolically linking /home/dhruvil/argo-test/build/slam_pkg/config/mapper_params_localization.yaml -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/config
+symbolically linking /home/dhruvil/argo-test/build/slam_pkg/config/mapper_params_online_async.yaml -> /home/dhruvil/argo-test/install/slam_pkg/share/slam_pkg/config
