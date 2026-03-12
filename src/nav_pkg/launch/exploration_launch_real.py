@@ -9,6 +9,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     nav_pkg_share = get_package_share_directory('nav_pkg')
+    slam_pkg_share = get_package_share_directory('slam_pkg')
 
     # LiDAR driver (assumes rplidar_ros package and A1 launch)
     lidar = IncludeLaunchDescription(
@@ -24,7 +25,7 @@ def generate_launch_description():
     # SLAM Toolbox for real robot
     slam = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(nav_pkg_share, 'launch', 'slam_real.launch.py')
+            os.path.join(slam_pkg_share, 'launch', 'slam_real.launch.py')
         )
     )
 

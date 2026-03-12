@@ -136,8 +136,8 @@ void loop() {
   }
 
   // PWM Mapping (0 - 255)
-  int forwardSpeed = 90; 
-  int turnSpeed = 70;
+  int forwardSpeed = 50; 
+  int turnSpeed = 40;
 
   // If we have received numeric cmd_vel from ROS, use that.
   // Otherwise fall back to keyboard W/A/S/D logic.
