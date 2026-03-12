@@ -38,11 +38,17 @@ def generate_launch_description():
 
     # Dead-reckoning / IMU-based odometry (from robot_control_pkg)
     odom_node = Node(
-        package='robot_control_pkg',
-        executable='odom_publisher',
-        name='odom_publisher',
-        output='screen',
-    )
+    package='robot_control_pkg',
+    executable='odom_publisher',
+    name='odom_publisher',
+    output='screen',
+    parameters=[
+        {
+            'serial_port': '/dev/ttyACM0',
+            'baud_rate': 115200,
+        }
+    ],
+)
 
     # Ultrasonic safety layer: /cmd_vel_nav -> /cmd_vel
     ultrasonic_safety = Node(
