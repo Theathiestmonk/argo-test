@@ -18,6 +18,24 @@ Adafruit_MPU6050 mpu;
 #define R_EN2 11
 #define L_EN2 12
 
+// -------- Ultrasonic Sensor Pins (3 sensors) --------
+// HC-SR04 style sensors: TRIG = output, ECHO = input
+// Center sensor
+#define TRIG_C 22
+#define ECHO_C 23
+// Left sensor
+#define TRIG_L 27
+#define ECHO_L 25
+// Right sensor
+#define TRIG_R 26
+#define ECHO_R 24
+
+// -------- Buzzer Pins (3 buzzers) --------
+// Each buzzer goes HIGH when its corresponding sensor is below threshold
+#define BUZZER_C 30
+#define BUZZER_L 32
+#define BUZZER_R 31
+
 // -------- Wheel / Robot Physical Parameters --------
 const float WHEEL_RADIUS       = 0.055;   // meters
 const float WHEEL_BASE         = 0.5;     // meters
@@ -29,6 +47,12 @@ const float MAX_RAD_S          = 12.5;
 int pwmR = 0;
 int pwmL = 0;
 
+// -------- Ultrasonic + Buzzer State --------
+float distC = 0.0f;
+float distL = 0.0f;
+float distR = 0.0f;
+const float ULTRA_THRESHOLD = 0.30f;  // meters
+
 // -------- Dead Reckoning State --------
 float posX  = 0.0;
 float posY  = 0.0;
@@ -38,17 +62,25 @@ unsigned long lastOdomTime = 0;
 // -------- Timing --------
 unsigned long lastStatTime  = 0;
 unsigned long lastOdomPublishTime = 0;
+unsigned long lastUltraTime = 0;
 
 // ---------- CONTROL STATE ----------
 String currentAction = "STANDBY";
 char lastCommand = 'X';
+
+// Commanded velocities from ROS (Twist-style)
+float cmd_vx = 0.0;   // linear velocity (m/s)
+float cmd_wz = 0.0;   // angular velocity (rad/s)
+bool use_cmd_vel = false;
 
 // -------- Function Prototypes --------
 void setMotors(int speedRight, int speedLeft);
 void stopMotors();
 void updateDeadReckoning();
 void publishOdom();
-void parseSerial(); 
+void parseSerial();
+float getDistance(int trigPin, int echoPin);
+void updateUltrasonicAndBuzzers();
 
 // ---------------- SETUP ----------------
 void setup() {
@@ -59,6 +91,22 @@ void setup() {
   pinMode(R_EN1, OUTPUT); pinMode(L_EN1, OUTPUT);
   pinMode(RPWM2, OUTPUT); pinMode(LPWM2, OUTPUT);
   pinMode(R_EN2, OUTPUT); pinMode(L_EN2, OUTPUT);
+
+  // Ultrasonic sensors
+  pinMode(TRIG_C, OUTPUT);
+  pinMode(ECHO_C, INPUT);
+  pinMode(TRIG_L, OUTPUT);
+  pinMode(ECHO_L, INPUT);
+  pinMode(TRIG_R, OUTPUT);
+  pinMode(ECHO_R, INPUT);
+
+  // Buzzers
+  pinMode(BUZZER_C, OUTPUT);
+  pinMode(BUZZER_L, OUTPUT);
+  pinMode(BUZZER_R, OUTPUT);
+  digitalWrite(BUZZER_C, LOW);
+  digitalWrite(BUZZER_L, LOW);
+  digitalWrite(BUZZER_R, LOW);
 
   digitalWrite(R_EN1, HIGH); digitalWrite(L_EN1, HIGH);
   digitalWrite(R_EN2, HIGH); digitalWrite(L_EN2, HIGH);
@@ -75,6 +123,7 @@ void setup() {
 
   lastOdomTime        = millis();
   lastOdomPublishTime = millis();
+  lastUltraTime       = millis();
 }
 
 // ---------------- MAIN LOOP ----------------
@@ -90,26 +139,48 @@ void loop() {
   int forwardSpeed = 90; 
   int turnSpeed = 70;
 
-  // KEYBOARD CONTROL LOGIC
-  if (lastCommand == 'W') {
-    currentAction = "FORWARD";
-    pwmL = forwardSpeed; pwmR = forwardSpeed;
-  } 
-  else if (lastCommand == 'S') {
-    currentAction = "REVERSE";
-    pwmL = -forwardSpeed; pwmR = -forwardSpeed;
-  } 
-  else if (lastCommand == 'A') {
-    currentAction = "LEFT";
-    pwmL = -turnSpeed; pwmR = turnSpeed;
-  } 
-  else if (lastCommand == 'D') {
-    currentAction = "RIGHT";
-    pwmL = turnSpeed; pwmR = -turnSpeed;
-  } 
-  else {
-    currentAction = "STOP";
-    pwmL = 0; pwmR = 0;
+  // If we have received numeric cmd_vel from ROS, use that.
+  // Otherwise fall back to keyboard W/A/S/D logic.
+  if (use_cmd_vel) {
+    // Differential drive kinematics:
+    // v_r = v + w * (WHEEL_BASE / 2)
+    // v_l = v - w * (WHEEL_BASE / 2)
+    float v_r = cmd_vx + cmd_wz * (WHEEL_BASE / 2.0f);
+    float v_l = cmd_vx - cmd_wz * (WHEEL_BASE / 2.0f);
+
+    // Convert wheel linear velocity (m/s) back to PWM using the same model
+    // used in updateDeadReckoning/publishOdom.
+    float max_lin = (MAX_RPM / 60.0f) * WHEEL_CIRCUMFERENCE; // m/s at full PWM
+    if (max_lin < 1e-4) {
+      pwmR = 0;
+      pwmL = 0;
+    } else {
+      pwmR = (int)constrain((v_r / max_lin) * 255.0f, -255.0f, 255.0f);
+      pwmL = (int)constrain((v_l / max_lin) * 255.0f, -255.0f, 255.0f);
+    }
+    currentAction = "CMD_VEL";
+  } else {
+    // KEYBOARD CONTROL LOGIC (W/A/S/D/X)
+    if (lastCommand == 'W') {
+      currentAction = "FORWARD";
+      pwmL = forwardSpeed; pwmR = forwardSpeed;
+    } 
+    else if (lastCommand == 'S') {
+      currentAction = "REVERSE";
+      pwmL = -forwardSpeed; pwmR = -forwardSpeed;
+    } 
+    else if (lastCommand == 'A') {
+      currentAction = "LEFT";
+      pwmL = -turnSpeed; pwmR = turnSpeed;
+    } 
+    else if (lastCommand == 'D') {
+      currentAction = "RIGHT";
+      pwmL = turnSpeed; pwmR = -turnSpeed;
+    } 
+    else {
+      currentAction = "STOP";
+      pwmL = 0; pwmR = 0;
+    }
   }
 
   setMotors(pwmR, pwmL);
@@ -121,6 +192,12 @@ void loop() {
   if (now - lastOdomPublishTime >= 50) {
     publishOdom();
     lastOdomPublishTime = now;
+  }
+
+  // Ultrasonic sensing and buzzer control (10 Hz)
+  if (now - lastUltraTime >= 100) {
+    updateUltrasonicAndBuzzers();
+    lastUltraTime = now;
   }
 }
 
@@ -168,6 +245,42 @@ void publishOdom() {
   Serial.println(a.acceleration.y, 4);
 }
 
+// ---------------- ULTRASONIC + BUZZERS ----------------
+float getDistance(int trigPin, int echoPin) {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duration = pulseIn(echoPin, HIGH, 30000UL); // timeout 30 ms
+  if (duration <= 0) {
+    return 9.99f;  // treat as "far away" (meters)
+  }
+
+  float distance_cm = duration * 0.0343f / 2.0f;
+  return distance_cm / 100.0f;  // convert to meters
+}
+
+void updateUltrasonicAndBuzzers() {
+  // Measure distances in meters
+  distC = getDistance(TRIG_C, ECHO_C);
+  delay(20);
+  distL = getDistance(TRIG_L, ECHO_L);
+  delay(20);
+  distR = getDistance(TRIG_R, ECHO_R);
+  delay(20);
+
+  // Buzzers: HIGH when closer than threshold
+  digitalWrite(BUZZER_C, distC < ULTRA_THRESHOLD);
+  digitalWrite(BUZZER_L, distL < ULTRA_THRESHOLD);
+  digitalWrite(BUZZER_R, distR < ULTRA_THRESHOLD);
+
+  // Send center distance to ROS over serial for ultrasonic_safety node
+  Serial.print("u ");
+  Serial.println(distC, 3);  // meters
+}
+
 // ---------------- MOTOR CONTROL ----------------
 void setMotors(int speedRight, int speedLeft) {
   speedRight = constrain(speedRight, -255, 255);
@@ -194,18 +307,44 @@ void stopMotors() {
 }
 
 // ---------------- SERIAL COMMAND PARSER ----------------
+// Supports:
+//  - Single-char keyboard commands: W/A/S/D/X/r  (for teleop)
+//  - Numeric velocity commands from ROS: "C vx wz\n"
+//      where vx is linear x [m/s], wz is angular z [rad/s]
 void parseSerial() {
-  if (Serial.available() > 0) {
+  if (Serial.available() <= 0) {
+    return;
+  }
+
+  // Peek the first non-whitespace character to decide the mode
+  char first = Serial.peek();
+
+  if (first == 'C') {
+    // Read the whole line "C vx wz"
+    String line = Serial.readStringUntil('\n');
+
+    // Parse with sscanf-style logic
+    char cmdChar;
+    float vx, wz;
+    int parsed = sscanf(line.c_str(), "%c %f %f", &cmdChar, &vx, &wz);
+    if (parsed == 3 && cmdChar == 'C') {
+      cmd_vx = vx;
+      cmd_wz = wz;
+      use_cmd_vel = true;
+    }
+  } else {
+    // Fallback: single-character teleop commands
     char cmd = Serial.read();
-    
-    // Check if it's one of our control keys
+
+    // Teleop keys override cmd_vel mode
     if (cmd == 'W' || cmd == 'A' || cmd == 'S' || cmd == 'D' || cmd == 'X') {
       lastCommand = cmd;
+      use_cmd_vel = false;
     }
-    
-    // Still support reset if needed
+
+    // Reset pose if needed
     if (cmd == 'r') {
-       posX = 0; posY = 0; theta = 0;
+      posX = 0; posY = 0; theta = 0;
     }
   }
 }

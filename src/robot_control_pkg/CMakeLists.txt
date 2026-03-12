@@ -59,13 +59,6 @@ install(
   DESTINATION share/robot_control_pkg
 )
 
-# Install Python nodes
-install(PROGRAMS
-  robot_control_pkg/odom_publisher.py
-  robot_control_pkg/imu_publisher.py
-  DESTINATION lib/${PROJECT_NAME}
-)
-
 install(TARGETS robot_control_pkg
   EXPORT export_robot_control_pkg
   ARCHIVE DESTINATION lib
@@ -81,6 +74,12 @@ install(PROGRAMS
 install(PROGRAMS
   scripts/teleop_keyboard.py
   RENAME teleop_keyboard
+  DESTINATION lib/robot_control_pkg
+)
+
+install(PROGRAMS
+  robot_control_pkg/cmd_vel_to_serial.py
+  RENAME cmd_vel_to_serial
   DESTINATION lib/robot_control_pkg
 )
 
