@@ -44,7 +44,7 @@ def generate_launch_description():
     output='screen',
     parameters=[
         {
-            'serial_port': '/dev/ttyACM0',
+            'serial_port': '/dev/ttyUSB0',
             'baud_rate': 115200,
         }
     ],
