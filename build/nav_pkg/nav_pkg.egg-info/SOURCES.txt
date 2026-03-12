@@ -5,14 +5,17 @@ config/nav2_params_real.yaml
 config/nav2_params_sim.yaml
 config/output.json
 config/params that work on real robot.yaml
+launch/exploration_launch_real.py
 launch/localization_launch_real.py
 launch/localization_launch_sim.py
 launch/navigation_launch_real.py
 launch/navigation_launch_sim.py
 nav_pkg/__init__.py
+nav_pkg/ultrasonic_safety.py
 nav_pkg.egg-info/PKG-INFO
 nav_pkg.egg-info/SOURCES.txt
 nav_pkg.egg-info/dependency_links.txt
+nav_pkg.egg-info/entry_points.txt
 nav_pkg.egg-info/requires.txt
 nav_pkg.egg-info/top_level.txt
 nav_pkg.egg-info/zip-safe

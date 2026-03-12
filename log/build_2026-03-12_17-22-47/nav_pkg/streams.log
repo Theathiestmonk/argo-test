@@ -1,0 +1,19 @@
+[0.735s] Invoking command in '/home/dhruv/argo-test/build/nav_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/nav_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dhruv/argo-test/build/nav_pkg/build --no-deps symlink_data
+[0.981s] running develop
+[1.127s] running egg_info
+[1.148s] writing nav_pkg.egg-info/PKG-INFO
+[1.148s] writing dependency_links to nav_pkg.egg-info/dependency_links.txt
+[1.148s] writing entry points to nav_pkg.egg-info/entry_points.txt
+[1.148s] writing requirements to nav_pkg.egg-info/requires.txt
+[1.150s] writing top-level names to nav_pkg.egg-info/top_level.txt
+[1.176s] reading manifest file 'nav_pkg.egg-info/SOURCES.txt'
+[1.177s] writing manifest file 'nav_pkg.egg-info/SOURCES.txt'
+[1.191s] running build_ext
+[1.191s] Creating /home/dhruv/argo-test/install/nav_pkg/lib/python3.12/site-packages/nav-pkg.egg-link (link to .)
+[1.192s] Installing ultrasonic_safety script to /home/dhruv/argo-test/install/nav_pkg/lib/nav_pkg
+[1.192s] 
+[1.192s] Installed /home/dhruv/argo-test/build/nav_pkg
+[1.193s] running symlink_data
+[1.193s] symbolically linking /home/dhruv/argo-test/build/nav_pkg/resource/nav_pkg -> /home/dhruv/argo-test/install/nav_pkg/share/ament_index/resource_index/packages
+[1.194s] error: [Errno 17] File exists: '/home/dhruv/argo-test/build/nav_pkg/resource/nav_pkg' -> '/home/dhruv/argo-test/install/nav_pkg/share/ament_index/resource_index/packages/nav_pkg'
+[1.228s] Invoked command in '/home/dhruv/argo-test/build/nav_pkg' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/nav_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/dhruv/argo-test/build/nav_pkg/build --no-deps symlink_data
