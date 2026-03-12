@@ -46,7 +46,7 @@ amcl:
 bt_navigator:
   ros__parameters:
     global_frame: map
-    robot_base_frame: base_link
+    robot_base_frame: base_footprint_link
     odom_topic: /odom
     bt_loop_duration: 10 #mod from 20
     default_server_timeout: 80 
@@ -180,7 +180,7 @@ local_costmap:
       update_frequency: 5.0
       publish_frequency: 2.0
       global_frame: odom
-      robot_base_frame: base_link
+      robot_base_frame: base_footprint_link
       rolling_window: true
       width: 5 #mod from 4
       height: 5
@@ -216,7 +216,7 @@ global_costmap:
       update_frequency: 1.0 
       publish_frequency: 1.0
       global_frame: map
-      robot_base_frame: base_link
+      robot_base_frame: base_footprint_link
       # Use same circular footprint as local costmap
       robot_radius: 0.389
       resolution: 0.05
@@ -296,7 +296,7 @@ behavior_server:
       plugin: "nav2_behaviors::AssistedTeleop"
     local_frame: odom
     global_frame: map
-    robot_base_frame: base_link
+    robot_base_frame: base_footprint_link
     transform_tolerance: 0.2
     simulate_ahead_time: 2.0
     max_rotational_vel: 0.5
