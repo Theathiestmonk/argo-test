@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-62c52e1c97958a708f3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "explore_lite_msgs__py",
+					"jsonFile" : "directory-explore_lite_msgs__py-ed674de3962a86ba2b42.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/dhruv/argo-test/build/explore_lite_msgs/explore_lite_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "explore_lite_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_explore_lite_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_explore_lite_msgs_egg-b0f116af6ad4ad6d0258.json",
+					"name" : "ament_cmake_python_build_explore_lite_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_explore_lite_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_explore_lite_msgs-292a31ed8c6b9b508210.json",
+					"name" : "ament_cmake_python_copy_explore_lite_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs-c012cc4025d87593f944.json",
+					"name" : "explore_lite_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__cpp-78ecda3406cdacfcdaa7.json",
+					"name" : "explore_lite_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "explore_lite_msgs__py::@7319cfe889aae899943c",
+					"jsonFile" : "target-explore_lite_msgs__py-99a25bfb70621216d465.json",
+					"name" : "explore_lite_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_generator_c-cfe0d77e9423ca69cd75.json",
+					"name" : "explore_lite_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_generator_py-45f30f71fe0f9b0aaceb.json",
+					"name" : "explore_lite_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_generator_type_description-f91ccc991e06981a282e.json",
+					"name" : "explore_lite_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_typesupport_c-fff61d351d7cd1cece8d.json",
+					"name" : "explore_lite_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_typesupport_cpp-9d52cf50c35cb41964e2.json",
+					"name" : "explore_lite_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_typesupport_fastrtps_c-36dc0c8cf3dc684158ae.json",
+					"name" : "explore_lite_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_typesupport_fastrtps_cpp-9f7666a7889eb2acb2f0.json",
+					"name" : "explore_lite_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_typesupport_introspection_c-b38bdfdf74b96c126260.json",
+					"name" : "explore_lite_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs__rosidl_typesupport_introspection_cpp-8ff3500a9da37dfd5bca.json",
+					"name" : "explore_lite_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs_s__rosidl_typesupport_c-ed4d7526bedb95101784.json",
+					"name" : "explore_lite_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs_s__rosidl_typesupport_fastrtps_c-2a2a6d466d9a41a198de.json",
+					"name" : "explore_lite_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs_s__rosidl_typesupport_introspection_c-042a92f7041cb52db750.json",
+					"name" : "explore_lite_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "explore_lite_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-explore_lite_msgs_uninstall-d56e12561cfb4f71dc87.json",
+					"name" : "explore_lite_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ce500343773d70164295.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dhruv/argo-test/build/explore_lite_msgs",
+		"source" : "/home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

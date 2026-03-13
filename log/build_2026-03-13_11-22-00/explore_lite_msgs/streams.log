@@ -1,0 +1,226 @@
+[0.024s] Invoking command in '/home/dhruv/argo-test/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/explore_lite_msgs
+[0.285s] -- The C compiler identification is GNU 13.3.0
+[0.286s] -- The CXX compiler identification is GNU 13.3.0
+[0.286s] -- Detecting C compiler ABI info
+[0.286s] -- Detecting C compiler ABI info - done
+[0.286s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.286s] -- Detecting C compile features
+[0.286s] -- Detecting C compile features - done
+[0.286s] -- Detecting CXX compiler ABI info
+[0.432s] -- Detecting CXX compiler ABI info - done
+[0.444s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.445s] -- Detecting CXX compile features
+[0.445s] -- Detecting CXX compile features - done
+[0.453s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.675s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.816s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.825s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.899s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.959s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.852s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.678s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.330s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.342s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[3.531s] -- Found PythonExtra: /usr/bin/python3  
+[4.407s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[4.509s] -- Configuring done (4.5s)
+[4.651s] -- Generating done (0.1s)
+[4.713s] -- Build files have been written to: /home/dhruv/argo-test/build/explore_lite_msgs
+[4.751s] Invoked command in '/home/dhruv/argo-test/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/explore_lite_msgs
+[4.752s] Invoking command in '/home/dhruv/argo-test/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/explore_lite_msgs -- -j4 -l4
+[4.954s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[4.977s] [  2%] Built target ament_cmake_python_copy_explore_lite_msgs
+[5.673s] running egg_info
+[5.673s] creating explore_lite_msgs.egg-info
+[5.704s] writing explore_lite_msgs.egg-info/PKG-INFO
+[5.704s] writing dependency_links to explore_lite_msgs.egg-info/dependency_links.txt
+[5.704s] writing top-level names to explore_lite_msgs.egg-info/top_level.txt
+[5.705s] writing manifest file 'explore_lite_msgs.egg-info/SOURCES.txt'
+[5.798s] reading manifest file 'explore_lite_msgs.egg-info/SOURCES.txt'
+[5.799s] writing manifest file 'explore_lite_msgs.egg-info/SOURCES.txt'
+[5.901s] [  2%] Built target ament_cmake_python_build_explore_lite_msgs_egg
+[6.140s] [  2%] Built target explore_lite_msgs__rosidl_generator_type_description
+[6.164s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[6.230s] [  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[7.692s] [ 11%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_generator_c.dir/rosidl_generator_c/explore_lite_msgs/msg/detail/explore_status__type_support.c.o[0m
+[7.700s] [ 14%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_generator_c.dir/rosidl_generator_c/explore_lite_msgs/msg/detail/explore_status__functions.c.o[0m
+[7.702s] [ 17%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_generator_c.dir/rosidl_generator_c/explore_lite_msgs/msg/detail/explore_status__description.c.o[0m
+[7.890s] [ 20%] [32m[1mLinking C shared library libexplore_lite_msgs__rosidl_generator_c.so[0m
+[7.900s] [ 20%] Built target explore_lite_msgs__cpp
+[7.962s] [ 20%] Built target explore_lite_msgs__rosidl_generator_c
+[7.989s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[7.999s] [ 26%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[8.007s] [ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[8.015s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[9.370s] [ 35%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/explore_lite_msgs/msg/detail/explore_status__type_support_c.cpp.o[0m
+[9.515s] [ 38%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/explore_lite_msgs/msg/detail/explore_status__type_support.c.o[0m
+[9.639s] [ 41%] [32m[1mLinking C shared library libexplore_lite_msgs__rosidl_typesupport_introspection_c.so[0m
+[9.682s] [ 44%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/explore_lite_msgs/msg/explore_status__type_support.cpp.o[0m
+[9.796s] [ 44%] Built target explore_lite_msgs__rosidl_typesupport_introspection_c
+[9.802s] [ 47%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/explore_lite_msgs/msg/detail/explore_status__type_support.cpp.o[0m
+[9.827s] [ 50%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[9.845s] [ 52%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_c.so[0m
+[10.123s] [ 52%] Built target explore_lite_msgs__rosidl_typesupport_c
+[10.153s] [ 55%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[10.984s] [ 58%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[11.209s] [ 58%] Built target explore_lite_msgs__rosidl_typesupport_introspection_cpp
+[11.262s] [ 61%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/explore_lite_msgs/msg/explore_status__type_support.cpp.o[0m
+[11.491s] [ 64%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/explore_lite_msgs/msg/detail/dds_fastrtps/explore_status__type_support.cpp.o[0m
+[12.846s] [ 67%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[12.993s] [ 70%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[13.159s] [ 70%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_c
+[13.186s] [ 73%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_cpp.so[0m
+[13.256s] [ 73%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_cpp
+[13.400s] [ 73%] Built target explore_lite_msgs__rosidl_typesupport_cpp
+[13.505s] [ 73%] Built target explore_lite_msgs
+[13.588s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[14.805s] [ 76%] Built target explore_lite_msgs__py
+[14.859s] [ 79%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_generator_py.dir/rosidl_generator_py/explore_lite_msgs/msg/_explore_status_s.c.o[0m
+[15.276s] [ 82%] [32m[1mLinking C shared library libexplore_lite_msgs__rosidl_generator_py.so[0m
+[15.480s] [ 82%] Built target explore_lite_msgs__rosidl_generator_py
+[15.564s] [ 85%] [32mBuilding C object CMakeFiles/explore_lite_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[15.570s] [ 88%] [32mBuilding C object CMakeFiles/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[16.015s] [ 91%] [32m[1mLinking C shared module rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[16.022s] [ 94%] [32m[1mLinking C shared module rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[16.106s] [ 94%] Built target explore_lite_msgs_s__rosidl_typesupport_introspection_c
+[16.115s] [ 94%] Built target explore_lite_msgs_s__rosidl_typesupport_fastrtps_c
+[16.141s] [ 97%] [32mBuilding C object CMakeFiles/explore_lite_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[16.536s] [100%] [32m[1mLinking C shared module rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.so[0m
+[16.672s] [100%] Built target explore_lite_msgs_s__rosidl_typesupport_c
+[16.737s] Invoked command in '/home/dhruv/argo-test/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/explore_lite_msgs -- -j4 -l4
+[16.765s] Invoking command in '/home/dhruv/argo-test/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/explore_lite_msgs
+[16.820s] -- Install configuration: ""
+[16.820s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/ament_index/resource_index/rosidl_interfaces/explore_lite_msgs
+[16.820s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/msg/ExploreStatus.json
+[16.821s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs
+[16.821s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg
+[16.821s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/rosidl_generator_c__visibility_control.h
+[16.821s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/explore_status.h
+[16.824s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail
+[16.824s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__type_support.h
+[16.826s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__description.c
+[16.828s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__functions.h
+[16.828s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__type_support.c
+[16.828s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__struct.h
+[16.828s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__functions.c
+[16.831s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/library_path.sh
+[16.831s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/library_path.dsv
+[16.835s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_c.so
+[16.835s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_c.so" to ""
+[16.838s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs
+[16.838s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg
+[16.838s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail
+[16.838s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_fastrtps_c.h
+[16.841s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[16.849s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_c.so
+[16.849s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[16.849s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs
+[16.849s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg
+[16.849s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[16.850s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail
+[16.850s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__type_support.c
+[16.853s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_introspection_c.h
+[16.856s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_c.so
+[16.856s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_c.so" to ""
+[16.856s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_c.so
+[16.856s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_c.so" to ""
+[16.857s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs
+[16.857s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg
+[16.857s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/explore_status.hpp
+[16.862s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[16.864s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail
+[16.864s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__builder.hpp
+[16.865s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__type_support.hpp
+[16.867s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__traits.hpp
+[16.878s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__struct.hpp
+[16.878s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs
+[16.878s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg
+[16.878s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail
+[16.878s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/dds_fastrtps
+[16.878s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_fastrtps_cpp.hpp
+[16.878s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[16.879s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_cpp.so
+[16.879s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[16.879s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs
+[16.879s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg
+[16.879s] -- Up-to-date: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail
+[16.879s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__type_support.cpp
+[16.884s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/include/explore_lite_msgs/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_introspection_cpp.hpp
+[16.884s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so
+[16.886s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[16.893s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_cpp.so
+[16.893s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_cpp.so" to ""
+[16.893s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/pythonpath.sh
+[16.898s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/pythonpath.dsv
+[16.914s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs-1.0.0-py3.12.egg-info
+[16.914s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs-1.0.0-py3.12.egg-info/top_level.txt
+[16.914s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs-1.0.0-py3.12.egg-info/SOURCES.txt
+[16.917s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs-1.0.0-py3.12.egg-info/PKG-INFO
+[16.917s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs-1.0.0-py3.12.egg-info/dependency_links.txt
+[16.917s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs
+[16.917s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[16.917s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[16.917s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.so
+[16.918s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/msg
+[16.918s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/msg/_explore_status.py
+[16.918s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/msg/_explore_status_s.c
+[16.923s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/msg/__init__.py
+[16.923s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.so
+[16.923s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.so
+[16.924s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/__init__.py
+[16.924s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_c.c
+[17.158s] Listing '/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs'...
+[17.158s] Compiling '/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/__init__.py'...
+[17.159s] Listing '/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/msg'...
+[17.159s] Compiling '/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/msg/__init__.py'...
+[17.159s] Compiling '/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/msg/_explore_status.py'...
+[17.167s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.so
+[17.167s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[17.167s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.so
+[17.167s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[17.167s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.so
+[17.169s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.so" to ""
+[17.170s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_py.so
+[17.170s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_py.so" to ""
+[17.171s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/msg/ExploreStatus.idl
+[17.173s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/msg/ExploreStatus.msg
+[17.173s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/ament_index/resource_index/package_run_dependencies/explore_lite_msgs
+[17.174s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/ament_index/resource_index/parent_prefix_path/explore_lite_msgs
+[17.174s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/ament_prefix_path.sh
+[17.174s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/ament_prefix_path.dsv
+[17.174s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/path.sh
+[17.174s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/environment/path.dsv
+[17.174s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.bash
+[17.174s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.sh
+[17.180s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.zsh
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.dsv
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.dsv
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/ament_index/resource_index/packages/explore_lite_msgs
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_generator_cExport.cmake
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_generator_cExport-noconfig.cmake
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cExport.cmake
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[17.181s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cExport.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_generator_cppExport.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cppExport.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_generator_pyExport.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/export_explore_lite_msgs__rosidl_generator_pyExport-noconfig.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake-extras.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[17.182s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[17.183s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[17.183s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[17.183s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[17.183s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[17.183s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgsConfig.cmake
+[17.183s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgsConfig-version.cmake
+[17.183s] -- Installing: /home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.xml
+[17.197s] Invoked command in '/home/dhruv/argo-test/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/explore_lite_msgs

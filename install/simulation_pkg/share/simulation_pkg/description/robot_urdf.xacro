@@ -1,1 +1,13 @@
-/home/dhruvil/argo-test/build/simulation_pkg/description/robot_urdf.xacro
+<?xml version="1.0"?>
+<robot name="sim_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:include filename="robot_core.xacro" />
+
+    <!-- <xacro:include filename="gazebo_control.xacro" /> -->
+
+    <xacro:include filename="ros2_control.xacro" />
+
+    <xacro:include filename="gazebo_references.xacro" />
+
+    <xacro:include filename="lidar.xacro" />
+</robot>

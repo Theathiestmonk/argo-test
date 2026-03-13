@@ -1,0 +1,42 @@
+[4.236s] Invoking command in '/home/dhruv/argo-test/src/twist_stamper-main': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/twist_stamper/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/twist_stamper build --build-base /home/dhruv/argo-test/build/twist_stamper/build install --record /home/dhruv/argo-test/build/twist_stamper/install.log --single-version-externally-managed install_data
+[5.227s] running egg_info
+[5.228s] creating ../../build/twist_stamper/twist_stamper.egg-info
+[5.287s] writing ../../build/twist_stamper/twist_stamper.egg-info/PKG-INFO
+[5.287s] writing dependency_links to ../../build/twist_stamper/twist_stamper.egg-info/dependency_links.txt
+[5.291s] writing entry points to ../../build/twist_stamper/twist_stamper.egg-info/entry_points.txt
+[5.291s] writing requirements to ../../build/twist_stamper/twist_stamper.egg-info/requires.txt
+[5.291s] writing top-level names to ../../build/twist_stamper/twist_stamper.egg-info/top_level.txt
+[5.292s] writing manifest file '../../build/twist_stamper/twist_stamper.egg-info/SOURCES.txt'
+[5.427s] reading manifest file '../../build/twist_stamper/twist_stamper.egg-info/SOURCES.txt'
+[5.431s] adding license file 'LICENSE'
+[5.431s] writing manifest file '../../build/twist_stamper/twist_stamper.egg-info/SOURCES.txt'
+[5.431s] running build
+[5.431s] running build_py
+[5.431s] creating /home/dhruv/argo-test/build/twist_stamper/build
+[5.431s] creating /home/dhruv/argo-test/build/twist_stamper/build/lib
+[5.431s] creating /home/dhruv/argo-test/build/twist_stamper/build/lib/twist_stamper
+[5.432s] copying twist_stamper/twist_stamper.py -> /home/dhruv/argo-test/build/twist_stamper/build/lib/twist_stamper
+[5.433s] copying twist_stamper/twist_unstamper.py -> /home/dhruv/argo-test/build/twist_stamper/build/lib/twist_stamper
+[5.433s] copying twist_stamper/__init__.py -> /home/dhruv/argo-test/build/twist_stamper/build/lib/twist_stamper
+[5.434s] running install
+[5.447s] running install_lib
+[5.502s] creating /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper
+[5.502s] copying /home/dhruv/argo-test/build/twist_stamper/build/lib/twist_stamper/twist_stamper.py -> /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper
+[5.502s] copying /home/dhruv/argo-test/build/twist_stamper/build/lib/twist_stamper/twist_unstamper.py -> /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper
+[5.503s] copying /home/dhruv/argo-test/build/twist_stamper/build/lib/twist_stamper/__init__.py -> /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper
+[5.503s] byte-compiling /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper/twist_stamper.py to twist_stamper.cpython-312.pyc
+[5.505s] byte-compiling /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper/twist_unstamper.py to twist_unstamper.cpython-312.pyc
+[5.505s] byte-compiling /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper/__init__.py to __init__.cpython-312.pyc
+[5.505s] running install_data
+[5.505s] creating /home/dhruv/argo-test/install/twist_stamper/share/ament_index
+[5.506s] creating /home/dhruv/argo-test/install/twist_stamper/share/ament_index/resource_index
+[5.506s] creating /home/dhruv/argo-test/install/twist_stamper/share/ament_index/resource_index/packages
+[5.506s] copying resource/twist_stamper -> /home/dhruv/argo-test/install/twist_stamper/share/ament_index/resource_index/packages
+[5.509s] copying package.xml -> /home/dhruv/argo-test/install/twist_stamper/share/twist_stamper
+[5.509s] running install_egg_info
+[5.546s] Copying ../../build/twist_stamper/twist_stamper.egg-info to /home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages/twist_stamper-0.0.5-py3.12.egg-info
+[5.547s] running install_scripts
+[5.820s] Installing twist_stamper script to /home/dhruv/argo-test/install/twist_stamper/lib/twist_stamper
+[5.821s] Installing twist_unstamper script to /home/dhruv/argo-test/install/twist_stamper/lib/twist_stamper
+[5.821s] writing list of installed files to '/home/dhruv/argo-test/build/twist_stamper/install.log'
+[5.879s] Invoked command in '/home/dhruv/argo-test/src/twist_stamper-main' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/twist_stamper/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/twist_stamper build --build-base /home/dhruv/argo-test/build/twist_stamper/build install --record /home/dhruv/argo-test/build/twist_stamper/install.log --single-version-externally-managed install_data

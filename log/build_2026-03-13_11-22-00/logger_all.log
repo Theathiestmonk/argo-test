@@ -1,0 +1,658 @@
+[0.100s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.100s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7a7525a0fd10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a7525b5bcb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a7525b5bcb0>>)
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.130s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.130s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dhruv/argo-test'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'ros'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['cmake', 'python']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2) by extension 'python_setup_py'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/m-explore-ros2/explore' with type 'ros.ament_cmake' and name 'explore_lite'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/explore_lite_msgs) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/m-explore-ros2/explore_lite_msgs' with type 'ros.ament_cmake' and name 'explore_lite_msgs'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/m-explore-ros2/map_merge) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/m-explore-ros2/map_merge' with type 'ros.ament_cmake' and name 'multirobot_map_merge'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/nav_pkg) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/nav_pkg' with type 'ros.ament_python' and name 'nav_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_control_pkg) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_control_pkg' with type 'ros.ament_cmake' and name 'robot_control_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'ros'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extensions ['cmake', 'python']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'cmake'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'python'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extensions ['python_setup_py']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/serial_robot_control_arduino) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/simulation_pkg) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/simulation_pkg' with type 'ros.ament_python' and name 'simulation_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/slam_pkg' with type 'ros.ament_python' and name 'slam_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(src/twist_stamper-main) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'src/twist_stamper-main' with type 'ros.ament_python' and name 'twist_stamper'
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.181s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 414 installed packages in /opt/ros/jazzy
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_target' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'explore_lite_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'explore_lite_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/explore_lite_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/explore_lite_msgs', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_target' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'multirobot_map_merge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'multirobot_map_merge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/multirobot_map_merge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/multirobot_map_merge', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/m-explore-ros2/map_merge', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'nav_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'nav_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/nav_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/nav_pkg', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/nav_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'robot_control_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'robot_control_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/robot_control_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/robot_control_pkg', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/robot_control_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/rplidar_ros', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/rplidar_ros', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'simulation_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'simulation_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/simulation_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/simulation_pkg', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/simulation_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'slam_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/slam_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/slam_pkg', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/slam_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'twist_stamper' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'twist_stamper' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/twist_stamper', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/twist_stamper', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/twist_stamper-main', 'symlink_install': False, 'test_result_base': None}
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_target' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'explore_lite' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'explore_lite' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dhruv/argo-test/build/explore_lite', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dhruv/argo-test/install/explore_lite', 'merge_install': False, 'path': '/home/dhruv/argo-test/src/m-explore-ros2/explore', 'symlink_install': False, 'test_result_base': None}
+[0.254s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.255s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.256s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs' with build type 'ament_cmake'
+[0.256s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs'
+[0.258s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.258s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.258s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.260s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dhruv/argo-test/src/m-explore-ros2/map_merge' with build type 'ament_cmake'
+[0.260s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dhruv/argo-test/src/m-explore-ros2/map_merge'
+[0.261s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.261s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.264s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/dhruv/argo-test/src/nav_pkg' with build type 'ament_python'
+[0.264s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_pkg', 'ament_prefix_path')
+[0.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/hook/ament_prefix_path.ps1'
+[0.265s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/hook/ament_prefix_path.dsv'
+[0.265s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/hook/ament_prefix_path.sh'
+[0.266s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.266s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.270s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dhruv/argo-test/src/robot_control_pkg' with build type 'ament_cmake'
+[0.271s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dhruv/argo-test/src/robot_control_pkg'
+[0.271s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.271s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.281s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/explore_lite_msgs
+[0.282s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/map_merge -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/multirobot_map_merge
+[0.535s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/dhruv/argo-test/src/nav_pkg'
+[0.535s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.535s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.545s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/robot_control_pkg -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/robot_control_pkg
+[1.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/src/nav_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/nav_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nav_pkg build --build-base /home/dhruv/argo-test/build/nav_pkg/build install --record /home/dhruv/argo-test/build/nav_pkg/install.log --single-version-externally-managed install_data
+[2.505s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/src/nav_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/nav_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/nav_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nav_pkg build --build-base /home/dhruv/argo-test/build/nav_pkg/build install --record /home/dhruv/argo-test/build/nav_pkg/install.log --single-version-externally-managed install_data
+[2.508s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/nav_pkg' for CMake module files
+[2.509s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/nav_pkg' for CMake config files
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/nav_pkg/lib'
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/nav_pkg/bin'
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/nav_pkg/lib/pkgconfig/nav_pkg.pc'
+[2.510s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/nav_pkg/lib/python3.12/site-packages'
+[2.510s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav_pkg', 'pythonpath')
+[2.510s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/hook/pythonpath.ps1'
+[2.514s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/hook/pythonpath.dsv'
+[2.514s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/hook/pythonpath.sh'
+[2.515s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/nav_pkg/bin'
+[2.515s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(nav_pkg)
+[2.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/package.ps1'
+[2.516s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/package.dsv'
+[2.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/package.sh'
+[2.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/package.bash'
+[2.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/nav_pkg/share/nav_pkg/package.zsh'
+[2.525s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/nav_pkg/share/colcon-core/packages/nav_pkg)
+[2.526s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dhruv/argo-test/src/rplidar_ros' with build type 'ament_cmake'
+[2.526s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dhruv/argo-test/src/rplidar_ros'
+[2.526s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.526s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/rplidar_ros
+[3.030s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/robot_control_pkg -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/robot_control_pkg
+[3.030s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/robot_control_pkg -- -j4 -l4
+[4.054s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/rplidar_ros -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/rplidar_ros
+[4.055s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/rplidar_ros -- -j4 -l4
+[5.007s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/explore_lite_msgs -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/explore_lite_msgs
+[5.007s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/explore_lite_msgs -- -j4 -l4
+[9.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/map_merge -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/multirobot_map_merge
+[9.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/multirobot_map_merge -- -j4 -l4
+[16.993s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/explore_lite_msgs -- -j4 -l4
+[17.021s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/explore_lite_msgs
+[17.449s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite_msgs)
+[17.449s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs' for CMake module files
+[17.450s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs' for CMake config files
+[17.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'cmake_prefix_path')
+[17.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.ps1'
+[17.458s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.dsv'
+[17.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.sh'
+[17.459s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/lib'
+[17.459s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'ld_library_path_lib')
+[17.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.ps1'
+[17.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/explore_lite_msgs
+[17.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.dsv'
+[17.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.sh'
+[17.470s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/bin'
+[17.470s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/lib/pkgconfig/explore_lite_msgs.pc'
+[17.471s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages'
+[17.471s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'pythonpath')
+[17.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.ps1'
+[17.481s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.dsv'
+[17.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.sh'
+[17.482s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/bin'
+[17.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.ps1'
+[17.504s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.dsv'
+[17.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.sh'
+[17.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.bash'
+[17.506s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.zsh'
+[17.527s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/explore_lite_msgs/share/colcon-core/packages/explore_lite_msgs)
+[17.528s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite_msgs)
+[17.528s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs' for CMake module files
+[17.529s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs' for CMake config files
+[17.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'cmake_prefix_path')
+[17.529s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.ps1'
+[17.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.dsv'
+[17.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/cmake_prefix_path.sh'
+[17.555s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/lib'
+[17.555s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'ld_library_path_lib')
+[17.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.ps1'
+[17.565s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.dsv'
+[17.568s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/ld_library_path_lib.sh'
+[17.571s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/bin'
+[17.580s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/lib/pkgconfig/explore_lite_msgs.pc'
+[17.581s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages'
+[17.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite_msgs', 'pythonpath')
+[17.581s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.ps1'
+[17.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.dsv'
+[17.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/hook/pythonpath.sh'
+[17.597s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite_msgs/bin'
+[17.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.ps1'
+[17.610s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.dsv'
+[17.612s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.sh'
+[17.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.bash'
+[17.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite_msgs/share/explore_lite_msgs/package.zsh'
+[17.630s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/explore_lite_msgs/share/colcon-core/packages/explore_lite_msgs)
+[17.630s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/dhruv/argo-test/src/simulation_pkg' with build type 'ament_python'
+[17.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation_pkg', 'ament_prefix_path')
+[17.630s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/hook/ament_prefix_path.ps1'
+[17.631s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/hook/ament_prefix_path.dsv'
+[17.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/hook/ament_prefix_path.sh'
+[17.644s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[17.644s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[19.073s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/dhruv/argo-test/src/simulation_pkg'
+[19.074s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[19.074s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[19.511s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/robot_control_pkg -- -j4 -l4
+[19.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/robot_control_pkg
+[19.640s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_control_pkg)
+[19.640s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg' for CMake module files
+[19.641s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg' for CMake config files
+[19.641s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control_pkg', 'cmake_prefix_path')
+[19.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/cmake_prefix_path.ps1'
+[19.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/cmake_prefix_path.dsv'
+[19.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/robot_control_pkg
+[19.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/cmake_prefix_path.sh'
+[19.648s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/lib'
+[19.649s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control_pkg', 'ld_library_path_lib')
+[19.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/ld_library_path_lib.ps1'
+[19.651s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/ld_library_path_lib.dsv'
+[19.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/ld_library_path_lib.sh'
+[19.656s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/bin'
+[19.656s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/lib/pkgconfig/robot_control_pkg.pc'
+[19.656s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/lib/python3.12/site-packages'
+[19.660s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/bin'
+[19.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.ps1'
+[19.661s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.dsv'
+[19.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.sh'
+[19.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.bash'
+[19.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.zsh'
+[19.668s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/robot_control_pkg/share/colcon-core/packages/robot_control_pkg)
+[19.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_control_pkg)
+[19.672s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg' for CMake module files
+[19.673s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg' for CMake config files
+[19.674s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control_pkg', 'cmake_prefix_path')
+[19.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/cmake_prefix_path.ps1'
+[19.685s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/cmake_prefix_path.dsv'
+[19.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/cmake_prefix_path.sh'
+[19.693s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/lib'
+[19.693s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_control_pkg', 'ld_library_path_lib')
+[19.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/ld_library_path_lib.ps1'
+[19.695s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/ld_library_path_lib.dsv'
+[19.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/hook/ld_library_path_lib.sh'
+[19.699s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/bin'
+[19.699s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/lib/pkgconfig/robot_control_pkg.pc'
+[19.699s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/lib/python3.12/site-packages'
+[19.700s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/robot_control_pkg/bin'
+[19.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.ps1'
+[19.706s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.dsv'
+[19.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.sh'
+[19.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.bash'
+[19.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.zsh'
+[19.717s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/robot_control_pkg/share/colcon-core/packages/robot_control_pkg)
+[19.720s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/dhruv/argo-test/src/slam_pkg' with build type 'ament_python'
+[19.720s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_pkg', 'ament_prefix_path')
+[19.720s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/hook/ament_prefix_path.ps1'
+[19.721s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/hook/ament_prefix_path.dsv'
+[19.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/hook/ament_prefix_path.sh'
+[19.727s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[19.728s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.273s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/dhruv/argo-test/src/slam_pkg'
+[21.274s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.274s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.685s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/src/simulation_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/simulation_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/simulation_pkg build --build-base /home/dhruv/argo-test/build/simulation_pkg/build install --record /home/dhruv/argo-test/build/simulation_pkg/install.log --single-version-externally-managed install_data
+[23.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/src/slam_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/slam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/slam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/slam_pkg build --build-base /home/dhruv/argo-test/build/slam_pkg/build install --record /home/dhruv/argo-test/build/slam_pkg/install.log --single-version-externally-managed install_data
+[24.346s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/simulation_pkg' for CMake module files
+[24.347s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/simulation_pkg' for CMake config files
+[24.348s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/simulation_pkg/lib'
+[24.348s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/simulation_pkg/bin'
+[24.348s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/simulation_pkg/lib/pkgconfig/simulation_pkg.pc'
+[24.349s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages'
+[24.352s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation_pkg', 'pythonpath')
+[24.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/hook/pythonpath.ps1'
+[24.353s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/hook/pythonpath.dsv'
+[24.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/src/simulation_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/simulation_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/simulation_pkg build --build-base /home/dhruv/argo-test/build/simulation_pkg/build install --record /home/dhruv/argo-test/build/simulation_pkg/install.log --single-version-externally-managed install_data
+[24.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/hook/pythonpath.sh'
+[24.357s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/simulation_pkg/bin'
+[24.357s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation_pkg)
+[24.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/package.ps1'
+[24.359s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/package.dsv'
+[24.359s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/package.sh'
+[24.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/package.bash'
+[24.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/package.zsh'
+[24.361s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/simulation_pkg/share/colcon-core/packages/simulation_pkg)
+[24.362s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/dhruv/argo-test/src/twist_stamper-main' with build type 'ament_python'
+[24.363s] Level 1:colcon.colcon_core.shell:create_environment_hook('twist_stamper', 'ament_prefix_path')
+[24.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/hook/ament_prefix_path.ps1'
+[24.364s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/hook/ament_prefix_path.dsv'
+[24.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/hook/ament_prefix_path.sh'
+[24.365s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[24.365s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[25.568s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/dhruv/argo-test/src/twist_stamper-main'
+[25.569s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[25.569s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[26.552s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/slam_pkg' for CMake module files
+[26.552s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/slam_pkg' for CMake config files
+[26.556s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/slam_pkg/lib'
+[26.556s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/slam_pkg/bin'
+[26.556s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/slam_pkg/lib/pkgconfig/slam_pkg.pc'
+[26.557s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/slam_pkg/lib/python3.12/site-packages'
+[26.560s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_pkg', 'pythonpath')
+[26.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/hook/pythonpath.ps1'
+[26.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/src/slam_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/slam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/slam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/slam_pkg build --build-base /home/dhruv/argo-test/build/slam_pkg/build install --record /home/dhruv/argo-test/build/slam_pkg/install.log --single-version-externally-managed install_data
+[26.564s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/hook/pythonpath.dsv'
+[26.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/hook/pythonpath.sh'
+[26.566s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/slam_pkg/bin'
+[26.578s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam_pkg)
+[26.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/package.ps1'
+[26.579s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/package.dsv'
+[26.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/package.sh'
+[26.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/package.bash'
+[26.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/slam_pkg/share/slam_pkg/package.zsh'
+[26.591s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/slam_pkg/share/colcon-core/packages/slam_pkg)
+[26.592s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dhruv/argo-test/src/m-explore-ros2/explore' with build type 'ament_cmake'
+[26.592s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dhruv/argo-test/src/m-explore-ros2/explore'
+[26.592s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[26.592s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[26.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/explore_lite': AMENT_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/explore_lite
+[28.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/src/twist_stamper-main': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/twist_stamper/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/twist_stamper build --build-base /home/dhruv/argo-test/build/twist_stamper/build install --record /home/dhruv/argo-test/build/twist_stamper/install.log --single-version-externally-managed install_data
+[30.241s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/twist_stamper' for CMake module files
+[30.242s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/twist_stamper' for CMake config files
+[30.243s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/twist_stamper/lib'
+[30.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/src/twist_stamper-main' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/twist_stamper/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/twist_stamper build --build-base /home/dhruv/argo-test/build/twist_stamper/build install --record /home/dhruv/argo-test/build/twist_stamper/install.log --single-version-externally-managed install_data
+[30.243s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/twist_stamper/bin'
+[30.243s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/twist_stamper/lib/pkgconfig/twist_stamper.pc'
+[30.243s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/twist_stamper/lib/python3.12/site-packages'
+[30.243s] Level 1:colcon.colcon_core.shell:create_environment_hook('twist_stamper', 'pythonpath')
+[30.244s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/hook/pythonpath.ps1'
+[30.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/hook/pythonpath.dsv'
+[30.245s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/hook/pythonpath.sh'
+[30.246s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/twist_stamper/bin'
+[30.246s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(twist_stamper)
+[30.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/package.ps1'
+[30.247s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/package.dsv'
+[30.247s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/package.sh'
+[30.248s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/package.bash'
+[30.248s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/twist_stamper/share/twist_stamper/package.zsh'
+[30.249s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/twist_stamper/share/colcon-core/packages/twist_stamper)
+[33.102s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/dhruv/argo-test/src/m-explore-ros2/explore -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/explore_lite
+[33.102s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/explore_lite': AMENT_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dhruv/argo-test/build/explore_lite -- -j4 -l4
+[44.232s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/rplidar_ros -- -j4 -l4
+[44.235s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/rplidar_ros
+[44.269s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[44.270s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros' for CMake module files
+[44.271s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros' for CMake config files
+[44.271s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[44.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[44.272s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[44.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[44.270s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/rplidar_ros
+[44.274s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/lib'
+[44.274s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/bin'
+[44.274s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[44.274s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/lib/python3.12/site-packages'
+[44.275s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/bin'
+[44.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[44.276s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[44.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.sh'
+[44.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.bash'
+[44.277s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[44.278s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[44.279s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[44.279s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros' for CMake module files
+[44.280s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros' for CMake config files
+[44.280s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[44.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[44.281s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[44.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[44.282s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/lib'
+[44.282s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/bin'
+[44.282s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[44.283s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/lib/python3.12/site-packages'
+[44.283s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/rplidar_ros/bin'
+[44.284s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[44.284s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[44.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.sh'
+[44.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.bash'
+[44.306s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[44.307s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[57.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/multirobot_map_merge -- -j4 -l4
+[57.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/multirobot_map_merge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/multirobot_map_merge
+[57.260s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multirobot_map_merge)
+[57.260s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/multirobot_map_merge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/multirobot_map_merge
+[57.260s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge' for CMake module files
+[57.261s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge' for CMake config files
+[57.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('multirobot_map_merge', 'cmake_prefix_path')
+[57.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.ps1'
+[57.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.dsv'
+[57.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.sh'
+[57.264s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/lib'
+[57.264s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/bin'
+[57.264s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/lib/pkgconfig/multirobot_map_merge.pc'
+[57.264s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/lib/python3.12/site-packages'
+[57.265s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/bin'
+[57.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.ps1'
+[57.266s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.dsv'
+[57.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.sh'
+[57.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.bash'
+[57.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.zsh'
+[57.268s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/multirobot_map_merge/share/colcon-core/packages/multirobot_map_merge)
+[57.268s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multirobot_map_merge)
+[57.269s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge' for CMake module files
+[57.269s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge' for CMake config files
+[57.270s] Level 1:colcon.colcon_core.shell:create_environment_hook('multirobot_map_merge', 'cmake_prefix_path')
+[57.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.ps1'
+[57.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.dsv'
+[57.271s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/hook/cmake_prefix_path.sh'
+[57.272s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/lib'
+[57.272s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/bin'
+[57.272s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/lib/pkgconfig/multirobot_map_merge.pc'
+[57.272s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/lib/python3.12/site-packages'
+[57.273s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/multirobot_map_merge/bin'
+[57.273s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.ps1'
+[57.273s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.dsv'
+[57.274s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.sh'
+[57.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.bash'
+[57.275s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/multirobot_map_merge/share/multirobot_map_merge/package.zsh'
+[57.276s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/multirobot_map_merge/share/colcon-core/packages/multirobot_map_merge)
+[75.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dhruv/argo-test/build/explore_lite -- -j4 -l4
+[75.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dhruv/argo-test/build/explore_lite': AMENT_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dhruv/argo-test/build/explore_lite
+[75.360s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite)
+[75.360s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite' for CMake module files
+[75.360s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dhruv/argo-test/build/explore_lite' returned '0': AMENT_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dhruv/argo-test/install/explore_lite_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dhruv/argo-test/install/explore_lite_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dhruv/argo-test/build/explore_lite
+[75.361s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite' for CMake config files
+[75.361s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite', 'cmake_prefix_path')
+[75.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.ps1'
+[75.361s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.dsv'
+[75.361s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.sh'
+[75.362s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/lib'
+[75.362s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/bin'
+[75.362s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/lib/pkgconfig/explore_lite.pc'
+[75.362s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/lib/python3.12/site-packages'
+[75.362s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/bin'
+[75.362s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.ps1'
+[75.363s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.dsv'
+[75.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.sh'
+[75.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.bash'
+[75.363s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.zsh'
+[75.364s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/explore_lite/share/colcon-core/packages/explore_lite)
+[75.364s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(explore_lite)
+[75.364s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite' for CMake module files
+[75.364s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite' for CMake config files
+[75.365s] Level 1:colcon.colcon_core.shell:create_environment_hook('explore_lite', 'cmake_prefix_path')
+[75.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.ps1'
+[75.365s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.dsv'
+[75.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/hook/cmake_prefix_path.sh'
+[75.366s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/lib'
+[75.366s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/bin'
+[75.366s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/lib/pkgconfig/explore_lite.pc'
+[75.366s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/lib/python3.12/site-packages'
+[75.366s] Level 1:colcon.colcon_core.environment:checking '/home/dhruv/argo-test/install/explore_lite/bin'
+[75.366s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.ps1'
+[75.367s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.dsv'
+[75.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.sh'
+[75.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.bash'
+[75.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/dhruv/argo-test/install/explore_lite/share/explore_lite/package.zsh'
+[75.368s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dhruv/argo-test/install/explore_lite/share/colcon-core/packages/explore_lite)
+[75.368s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[75.369s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[75.369s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[75.369s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[75.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[75.377s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[75.377s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[75.388s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[75.388s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/argo-test/install/local_setup.ps1'
+[75.389s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dhruv/argo-test/install/_local_setup_util_ps1.py'
+[75.391s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/argo-test/install/setup.ps1'
+[75.392s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/argo-test/install/local_setup.sh'
+[75.393s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dhruv/argo-test/install/_local_setup_util_sh.py'
+[75.393s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/argo-test/install/setup.sh'
+[75.394s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/argo-test/install/local_setup.bash'
+[75.395s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/argo-test/install/setup.bash'
+[75.396s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dhruv/argo-test/install/local_setup.zsh'
+[75.396s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dhruv/argo-test/install/setup.zsh'

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: simulation-pkg
+Version: 1.0.0
+Summary: Package to simulate my final year thesis robot using Gazebo and ROS2 Control
+Maintainer: Apostolos Apostolou
+Maintainer-email: aapost04@ucy.ac.cy
+License: Apache-2.0

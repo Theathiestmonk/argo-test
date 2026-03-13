@@ -1,0 +1,116 @@
+[0.274s] Invoking command in '/home/dhruv/argo-test/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/robot_control_pkg -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/robot_control_pkg
+[0.378s] -- The CXX compiler identification is GNU 13.3.0
+[0.402s] -- Detecting CXX compiler ABI info
+[0.530s] -- Detecting CXX compiler ABI info - done
+[0.543s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.543s] -- Detecting CXX compile features
+[0.544s] -- Detecting CXX compile features - done
+[0.547s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.763s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.913s] -- Found hardware_interface: 4.42.2 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.988s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.029s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.048s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.088s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.613s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.734s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.739s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.783s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.882s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.887s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.914s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.918s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.933s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.950s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.552s] -- Found ament_cmake_gtest: 2.5.5 (/opt/ros/jazzy/share/ament_cmake_gtest/cmake)
+[2.688s] -- Configuring done (2.4s)
+[2.729s] -- Generating done (0.0s)
+[2.740s] -- Build files have been written to: /home/dhruv/argo-test/build/robot_control_pkg
+[2.758s] Invoked command in '/home/dhruv/argo-test/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dhruv/argo-test/src/robot_control_pkg -DCMAKE_INSTALL_PREFIX=/home/dhruv/argo-test/install/robot_control_pkg
+[2.759s] Invoking command in '/home/dhruv/argo-test/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/robot_control_pkg -- -j4 -l4
+[2.811s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_control_pkg.dir/hardware/diffbot_system.cpp.o[0m
+[10.699s] [01m[K/home/dhruv/argo-test/src/robot_control_pkg/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn robot_control_pkg::RobotControlHardware::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[10.700s] [01m[K/home/dhruv/argo-test/src/robot_control_pkg/hardware/diffbot_system.cpp:33:49:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::HardwareComponentInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[10.700s]    33 |     [01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K !=
+[10.700s]       |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[10.700s] In file included from [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:18[m[K,
+[10.700s]                  from [01m[K/home/dhruv/argo-test/src/robot_control_pkg/hardware/include/robot_control_pkg/diffbot_system.hpp:24[m[K,
+[10.700s]                  from [01m[K/home/dhruv/argo-test/src/robot_control_pkg/hardware/diffbot_system.cpp:15[m[K:
+[10.700s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp:140:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[10.704s]   140 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info);
+[10.704s]       |                          [01;36m[K^~~~~~~[m[K
+[18.363s] [100%] [32m[1mLinking CXX shared library librobot_control_pkg.so[0m
+[19.191s] [100%] Built target robot_control_pkg
+[19.240s] Invoked command in '/home/dhruv/argo-test/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dhruv/argo-test/build/robot_control_pkg -- -j4 -l4
+[19.243s] Invoking command in '/home/dhruv/argo-test/build/robot_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/robot_control_pkg
+[19.270s] -- Install configuration: ""
+[19.271s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/robot_control_pkg.xml
+[19.271s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/include/robot_control_pkg
+[19.272s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg
+[19.272s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/arduino_comms.hpp
+[19.272s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/diffbot_system.hpp
+[19.273s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/wheel.hpp
+[19.273s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/include/robot_control_pkg/robot_control_pkg/visibility_control.h
+[19.274s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/urdf
+[19.275s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/urdf/diffbot_description.urdf.xacro
+[19.276s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/urdf/diffbot.urdf.xacro
+[19.277s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/models
+[19.277s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/front_caster_link.STL
+[19.278s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/base_link.STL
+[19.294s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/right_wheel_link.STL
+[19.295s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/left_wheel_link.STL
+[19.296s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/rear_caster_link.STL
+[19.297s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/models/lidar_link.STL
+[19.300s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/ros2_control
+[19.300s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/ros2_control/diffbot.ros2_control.xacro
+[19.300s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch
+[19.300s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/diffbot.launch.py
+[19.303s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/joystick.launch.py
+[19.305s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/real_robot_launch.py
+[19.305s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/launch/mapping_keyboard.launch.py
+[19.305s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/config
+[19.305s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/ekf.yaml
+[19.306s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/diffbot_controllers.yaml
+[19.307s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/twist_mux.yaml
+[19.307s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/config/joystick.yaml
+[19.310s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description
+[19.313s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/urdf
+[19.313s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/urdf/diffbot_description.urdf.xacro
+[19.313s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/urdf/diffbot.urdf.xacro
+[19.313s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models
+[19.313s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/front_caster_link.STL
+[19.313s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/base_link.STL
+[19.328s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/right_wheel_link.STL
+[19.331s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/left_wheel_link.STL
+[19.336s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/rear_caster_link.STL
+[19.336s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/models/lidar_link.STL
+[19.336s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/ros2_control
+[19.337s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/description/ros2_control/diffbot.ros2_control.xacro
+[19.337s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/lib/librobot_control_pkg.so
+[19.338s] -- Set non-toolchain portion of runtime path of "/home/dhruv/argo-test/install/robot_control_pkg/lib/librobot_control_pkg.so" to ""
+[19.339s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/lib/robot_control_pkg/odom_publisher
+[19.340s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/lib/robot_control_pkg/teleop_keyboard
+[19.341s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/lib/robot_control_pkg/cmd_vel_to_serial
+[19.348s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/library_path.sh
+[19.348s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/library_path.dsv
+[19.349s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/ament_index/resource_index/package_run_dependencies/robot_control_pkg
+[19.349s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/ament_index/resource_index/parent_prefix_path/robot_control_pkg
+[19.349s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/ament_prefix_path.sh
+[19.349s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/ament_prefix_path.dsv
+[19.349s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/path.sh
+[19.350s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/environment/path.dsv
+[19.350s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.bash
+[19.351s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.sh
+[19.352s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.zsh
+[19.353s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/local_setup.dsv
+[19.354s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.dsv
+[19.355s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/ament_index/resource_index/packages/robot_control_pkg
+[19.355s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/robot_control_pkg
+[19.361s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/export_robot_control_pkgExport.cmake
+[19.361s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/export_robot_control_pkgExport-noconfig.cmake
+[19.362s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[19.362s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[19.362s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/robot_control_pkgConfig.cmake
+[19.362s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/cmake/robot_control_pkgConfig-version.cmake
+[19.367s] -- Installing: /home/dhruv/argo-test/install/robot_control_pkg/share/robot_control_pkg/package.xml
+[19.376s] Invoked command in '/home/dhruv/argo-test/build/robot_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dhruv/argo-test/build/robot_control_pkg

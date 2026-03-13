@@ -1,0 +1,60 @@
+[4.043s] Invoking command in '/home/dhruv/argo-test/src/simulation_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/simulation_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/simulation_pkg build --build-base /home/dhruv/argo-test/build/simulation_pkg/build install --record /home/dhruv/argo-test/build/simulation_pkg/install.log --single-version-externally-managed install_data
+[5.934s] running egg_info
+[5.934s] creating ../../build/simulation_pkg/simulation_pkg.egg-info
+[5.973s] writing ../../build/simulation_pkg/simulation_pkg.egg-info/PKG-INFO
+[5.973s] writing dependency_links to ../../build/simulation_pkg/simulation_pkg.egg-info/dependency_links.txt
+[5.974s] writing requirements to ../../build/simulation_pkg/simulation_pkg.egg-info/requires.txt
+[5.974s] writing top-level names to ../../build/simulation_pkg/simulation_pkg.egg-info/top_level.txt
+[5.974s] writing manifest file '../../build/simulation_pkg/simulation_pkg.egg-info/SOURCES.txt'
+[6.052s] reading manifest file '../../build/simulation_pkg/simulation_pkg.egg-info/SOURCES.txt'
+[6.052s] writing manifest file '../../build/simulation_pkg/simulation_pkg.egg-info/SOURCES.txt'
+[6.052s] running build
+[6.053s] running build_py
+[6.053s] creating /home/dhruv/argo-test/build/simulation_pkg/build
+[6.053s] creating /home/dhruv/argo-test/build/simulation_pkg/build/lib
+[6.054s] creating /home/dhruv/argo-test/build/simulation_pkg/build/lib/simulation_pkg
+[6.054s] copying simulation_pkg/__init__.py -> /home/dhruv/argo-test/build/simulation_pkg/build/lib/simulation_pkg
+[6.054s] running install
+[6.068s] running install_lib
+[6.114s] creating /home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages/simulation_pkg
+[6.114s] copying /home/dhruv/argo-test/build/simulation_pkg/build/lib/simulation_pkg/__init__.py -> /home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages/simulation_pkg
+[6.118s] byte-compiling /home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages/simulation_pkg/__init__.py to __init__.cpython-312.pyc
+[6.118s] running install_data
+[6.119s] creating /home/dhruv/argo-test/install/simulation_pkg/share/ament_index
+[6.119s] creating /home/dhruv/argo-test/install/simulation_pkg/share/ament_index/resource_index
+[6.119s] creating /home/dhruv/argo-test/install/simulation_pkg/share/ament_index/resource_index/packages
+[6.120s] copying resource/simulation_pkg -> /home/dhruv/argo-test/install/simulation_pkg/share/ament_index/resource_index/packages
+[6.126s] copying package.xml -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg
+[6.127s] creating /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/launch
+[6.127s] copying launch/gaz_sim_launch.py -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/launch
+[6.127s] copying launch/rsp_launch.py -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/launch
+[6.127s] creating /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/models
+[6.134s] copying models/front_caster_link.STL -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/models
+[6.134s] copying models/base_link.STL -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/models
+[6.139s] copying models/right_wheel_link.STL -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/models
+[6.139s] copying models/left_wheel_link.STL -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/models
+[6.147s] copying models/rear_caster_link.STL -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/models
+[6.148s] copying models/lidar_link.STL -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/models
+[6.148s] creating /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/description
+[6.148s] copying description/gazebo_references.xacro -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/description
+[6.148s] copying description/lidar.xacro -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/description
+[6.149s] copying description/ros2_control.xacro -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/description
+[6.149s] copying description/robot_urdf.xacro -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/description
+[6.150s] copying description/robot_core.xacro -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/description
+[6.150s] copying description/gazebo_control.xacro -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/description
+[6.152s] creating /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/worlds
+[6.153s] copying worlds/sim_world.sdf -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/worlds
+[6.153s] copying worlds/industrial-warehouse.sdf -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/worlds
+[6.153s] copying worlds/simple_sim_world.sdf -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/worlds
+[6.153s] creating /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/params
+[6.153s] copying params/ros_gz_bridge.yaml -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/params
+[6.153s] creating /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/config
+[6.153s] copying config/sim_view.rviz -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/config
+[6.153s] copying config/view_bot.rviz -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/config
+[6.161s] copying config/twist_mux.yaml -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/config
+[6.161s] copying config/robot_controllers.yaml -> /home/dhruv/argo-test/install/simulation_pkg/share/simulation_pkg/config
+[6.161s] running install_egg_info
+[6.269s] Copying ../../build/simulation_pkg/simulation_pkg.egg-info to /home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages/simulation_pkg-1.0.0-py3.12.egg-info
+[6.269s] running install_scripts
+[6.631s] writing list of installed files to '/home/dhruv/argo-test/build/simulation_pkg/install.log'
+[6.710s] Invoked command in '/home/dhruv/argo-test/src/simulation_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/dhruv/argo-test/build/simulation_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/dhruv/argo-test/install/simulation_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/simulation_pkg build --build-base /home/dhruv/argo-test/build/simulation_pkg/build install --record /home/dhruv/argo-test/build/simulation_pkg/install.log --single-version-externally-managed install_data
