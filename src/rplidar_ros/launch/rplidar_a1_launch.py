@@ -13,7 +13,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     channel_type =  LaunchConfiguration('channel_type', default='serial')
     # Default to /dev/ttyUSB1 where your RPLidar is connected on the Pi
-    serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB1')
+    serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB0')
     serial_baudrate = LaunchConfiguration('serial_baudrate', default='115200')
     frame_id = LaunchConfiguration('frame_id', default='laser')
     inverted = LaunchConfiguration('inverted', default='false')
