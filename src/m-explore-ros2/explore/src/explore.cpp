@@ -257,11 +257,9 @@ void Explore::makePlan()
   }
 
   if (frontiers.empty()) {
-    RCLCPP_WARN(logger_, "No frontiers found, stopping.");
-    auto status_msg = explore_lite_msgs::msg::ExploreStatus();
-    status_msg.status = explore_lite_msgs::msg::ExploreStatus::EXPLORATION_COMPLETE;
-    status_pub_->publish(status_msg);
-    stop(true);
+    RCLCPP_WARN(logger_, "No frontiers found, will retry on next cycle (map may not be ready yet).");
+    // Do NOT stop the timer — the map may still be initializing.
+    // The timer will call makePlan() again after planner_frequency interval.
     return;
   }
 
