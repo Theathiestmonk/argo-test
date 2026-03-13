@@ -32,7 +32,7 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'serial_port': '/dev/ttyUSB1',
+            'serial_port': '/dev/ttyUSB0',
             'serial_baudrate': '115200',
         }.items(),
     )
