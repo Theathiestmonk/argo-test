@@ -11,7 +11,7 @@ def generate_launch_description():
     nav_pkg_share = get_package_share_directory('nav_pkg')
     slam_pkg_share = get_package_share_directory('slam_pkg')
 
-    # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB0
+    # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB1 on the Pi
     lidar = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
@@ -21,7 +21,7 @@ def generate_launch_description():
             )
         ),
         launch_arguments={
-            'serial_port': '/dev/ttyUSB0',
+            'serial_port': '/dev/ttyUSB1',
             'serial_baudrate': '115200',
         }.items(),
     )
