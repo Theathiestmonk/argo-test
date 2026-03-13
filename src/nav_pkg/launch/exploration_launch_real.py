@@ -65,6 +65,21 @@ def generate_launch_description():
         ],
     )
 
+    # cmd_vel -> Arduino serial bridge
+    cmd_vel_to_serial = Node(
+        package='robot_control_pkg',
+        executable='cmd_vel_to_serial',
+        name='cmd_vel_to_serial',
+        output='screen',
+        parameters=[
+            {
+                'serial_port': '/dev/ttyACM0',
+                'baud_rate': 115200,
+                'cmd_vel_topic': '/cmd_vel',
+            }
+        ],
+    )
+
     # Ultrasonic safety layer: /cmd_vel_nav -> /cmd_vel
     ultrasonic_safety = Node(
         package='nav_pkg',
@@ -117,6 +132,7 @@ def generate_launch_description():
             slam,
             nav2,
             odom_node,
+            cmd_vel_to_serial,
             ultrasonic_safety,
             explore_node,
         ]
