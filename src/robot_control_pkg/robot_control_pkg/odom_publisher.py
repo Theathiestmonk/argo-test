@@ -6,6 +6,7 @@ from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
 from std_msgs.msg import String, Float32
+import re
 import tf2_ros
 import serial
 import math
@@ -45,19 +46,25 @@ class OdomPublisher(Node):
     def read_serial(self):
         if self.ser.in_waiting:
             try:
-                line = self.ser.readline().decode().strip()
+                line = self.ser.readline().decode(errors='ignore').strip()
+                # Odometry line from Arduino starts with 'o ' followed by 9 floats,
+                # but the Arduino may also print extra debug text on the same line.
                 if line.startswith('o '):
-                    parts = line.split()
-                    if len(parts) >= 9:
-                        x, y, theta = float(parts[1]), float(parts[2]), float(parts[3])
-                        vx, wz = float(parts[4]), float(parts[5])
-                        gz, ax, ay = float(parts[6]), float(parts[7]), float(parts[8])
+                    # Extract numeric fields robustly: first 9 float-like tokens
+                    nums = re.findall(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", line)
+                    if len(nums) >= 9:
+                        x, y, theta = map(float, nums[0:3])
+                        vx, wz = map(float, nums[3:5])
+                        gz, ax, ay = map(float, nums[5:8+1])
                         self.publish_data(x, y, theta, vx, wz, gz, ax, ay)
+                    else:
+                        self.get_logger().warn(f"Bad odom line: {line}")
                 elif line.startswith('u '):
-                    parts = line.split()
-                    if len(parts) >= 2:
+                    # Ultrasonic line: 'u <distance>'
+                    nums = re.findall(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", line)
+                    if nums:
                         try:
-                            dist = float(parts[1])
+                            dist = float(nums[0])
                             msg = Float32()
                             msg.data = dist
                             self.ultra_pub.publish(msg)
