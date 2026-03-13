@@ -229,9 +229,10 @@ global_costmap:
       inflation_layer:
         enabled: True
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.5
-        # Must be larger than circumscribed radius (~0.403)
-        inflation_radius: 0.6
+        cost_scaling_factor: 3.5
+        # Keep inflation small so frontier search BFS can find FREE_SPACE (cost=0) cells.
+        # frontier_search only traverses cost==0 cells; large inflation blocks frontier detection.
+        inflation_radius: 0.22
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: False ## I need to find a way to update this layer and remove obstacles that no longer exists
