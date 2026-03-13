@@ -11,7 +11,18 @@ def generate_launch_description():
     nav_pkg_share = get_package_share_directory('nav_pkg')
     slam_pkg_share = get_package_share_directory('slam_pkg')
 
-    # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB1 on the Pi
+    # Static TF: base_footprint_link -> laser (lidar mounted at center, 0.1m above base)
+    # Adjust x/y/z if your LiDAR is not centered on the robot
+    laser_tf = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='base_to_laser_tf',
+        arguments=['0.0', '0.0', '0.1', '0', '0', '0',
+                   'base_footprint_link', 'laser'],
+        output='screen',
+    )
+
+    # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB0 on the Pi
     lidar = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
@@ -93,6 +104,7 @@ def generate_launch_description():
 
     return LaunchDescription(
         [
+            laser_tf,
             lidar,
             slam,
             nav2,

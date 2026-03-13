@@ -50,12 +50,13 @@ class OdomPublisher(Node):
                 # Odometry line from Arduino starts with 'o ' followed by 9 floats,
                 # but the Arduino may also print extra debug text on the same line.
                 if line.startswith('o '):
-                    # Extract numeric fields robustly: first 9 float-like tokens
+                    # Extract numeric fields robustly: first 8 float-like tokens
                     nums = re.findall(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", line)
-                    if len(nums) >= 9:
+                    # Arduino prints: x, y, theta, linearVel, angularVel, gyro_z, accel_x, accel_y
+                    if len(nums) >= 8:
                         x, y, theta = map(float, nums[0:3])
                         vx, wz = map(float, nums[3:5])
-                        gz, ax, ay = map(float, nums[5:8+1])
+                        gz, ax, ay = map(float, nums[5:8])
                         self.publish_data(x, y, theta, vx, wz, gz, ax, ay)
                     else:
                         self.get_logger().warn(f"Bad odom line: {line}")
