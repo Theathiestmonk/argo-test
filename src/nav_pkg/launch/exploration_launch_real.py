@@ -91,8 +91,8 @@ def generate_launch_description():
         parameters=[
             {
                 'robot_base_frame': 'base_footprint_link',
-                'costmap_topic': 'costmap',
-                'costmap_updates_topic': 'costmap_updates',
+                'costmap_topic': '/global_costmap/costmap',
+                'costmap_updates_topic': '/global_costmap/costmap_updates',
                 'visualize': True,
                 'planner_frequency': 0.5,
                 'progress_timeout': 30.0,
@@ -107,8 +107,6 @@ def generate_launch_description():
             ('/map', '/map'),
             ('/tf', '/tf'),
             ('/tf_static', '/tf_static'),
-            ('costmap', '/global_costmap/costmap'),
-            ('costmap_updates', '/global_costmap/costmap_updates'),
         ],
     )
 
