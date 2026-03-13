@@ -50,16 +50,20 @@ class OdomPublisher(Node):
                 # Odometry line from Arduino starts with 'o ' followed by 9 floats,
                 # but the Arduino may also print extra debug text on the same line.
                 if line.startswith('o '):
-                    # Extract numeric fields robustly: first 8 float-like tokens
+                    # Extract all numeric tokens from the line robustly.
+                    # Old firmware may mix "C: L: R:" debug text on the same line,
+                    # truncating IMU fields. Accept 5+ numbers (x,y,theta,vx,wz)
+                    # and zero-fill missing IMU values (gz, ax, ay).
                     nums = re.findall(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", line)
-                    # Arduino prints: x, y, theta, linearVel, angularVel, gyro_z, accel_x, accel_y
-                    if len(nums) >= 8:
+                    if len(nums) >= 5:
                         x, y, theta = map(float, nums[0:3])
                         vx, wz = map(float, nums[3:5])
-                        gz, ax, ay = map(float, nums[5:8])
+                        gz = float(nums[5]) if len(nums) > 5 else 0.0
+                        ax = float(nums[6]) if len(nums) > 6 else 0.0
+                        ay = float(nums[7]) if len(nums) > 7 else 0.0
                         self.publish_data(x, y, theta, vx, wz, gz, ax, ay)
                     else:
-                        self.get_logger().warn(f"Bad odom line: {line}")
+                        self.get_logger().warn(f"Bad odom line (< 5 nums): {line}")
                 elif line.startswith('u '):
                     # Ultrasonic line: 'u <distance>'
                     nums = re.findall(r"[-+]?\d*\.?\d+(?:[eE][-+]?\d+)?", line)
