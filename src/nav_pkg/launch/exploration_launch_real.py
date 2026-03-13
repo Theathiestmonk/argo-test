@@ -107,7 +107,6 @@ def generate_launch_description():
             ('/map', '/map'),
             ('/tf', '/tf'),
             ('/tf_static', '/tf_static'),
-            ('move_base', 'navigate_to_pose'),
         ],
     )
 
