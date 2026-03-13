@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
@@ -11,30 +11,39 @@ def generate_launch_description():
     nav_pkg_share = get_package_share_directory('nav_pkg')
     slam_pkg_share = get_package_share_directory('slam_pkg')
 
-    # Static TF: base_footprint_link -> laser (lidar mounted at center, 0.1m above base)
-    # Adjust x/y/z if your LiDAR is not centered on the robot
+    # Static TF: base_footprint_link -> laser (LiDAR at center, 0.1m above base)
     laser_tf = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='base_to_laser_tf',
-        arguments=['0.0', '0.0', '0.1', '0', '0', '0',
-                   'base_footprint_link', 'laser'],
+        arguments=[
+            '--x', '0.0', '--y', '0.0', '--z', '0.1',
+            '--roll', '0', '--pitch', '0', '--yaw', '0',
+            '--frame-id', 'base_footprint_link',
+            '--child-frame-id', 'laser',
+        ],
         output='screen',
     )
 
     # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB0 on the Pi
-    lidar = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(
-                get_package_share_directory('rplidar_ros'),
-                'launch',
-                'rplidar_a1_launch.py',
+    # Delayed 3s to allow USB to fully enumerate before the driver opens the port
+    lidar = TimerAction(
+        period=3.0,
+        actions=[
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    os.path.join(
+                        get_package_share_directory('rplidar_ros'),
+                        'launch',
+                        'rplidar_a1_launch.py',
+                    )
+                ),
+                launch_arguments={
+                    'serial_port': '/dev/ttyUSB0',
+                    'serial_baudrate': '115200',
+                }.items(),
             )
-        ),
-        launch_arguments={
-            'serial_port': '/dev/ttyUSB0',
-            'serial_baudrate': '115200',
-        }.items(),
+        ],
     )
 
     # SLAM Toolbox for real robot
