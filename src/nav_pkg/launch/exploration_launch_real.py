@@ -11,7 +11,7 @@ def generate_launch_description():
     nav_pkg_share = get_package_share_directory('nav_pkg')
     slam_pkg_share = get_package_share_directory('slam_pkg')
 
-    # LiDAR driver (assumes rplidar_ros package and A1 launch)
+    # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB0
     lidar = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
@@ -19,7 +19,11 @@ def generate_launch_description():
                 'launch',
                 'rplidar_a1_launch.py',
             )
-        )
+        ),
+        launch_arguments={
+            'serial_port': '/dev/ttyUSB0',
+            'serial_baudrate': '115200',
+        }.items(),
     )
 
     # SLAM Toolbox for real robot
@@ -36,19 +40,19 @@ def generate_launch_description():
         )
     )
 
-    # Dead-reckoning / IMU-based odometry (from robot_control_pkg)
+    # Arduino Mega 2560 (CDC ACM) -> /dev/ttyACM0
     odom_node = Node(
-    package='robot_control_pkg',
-    executable='odom_publisher',
-    name='odom_publisher',
-    output='screen',
-    parameters=[
-        {
-            'serial_port': '/dev/ttyUSB0',
-            'baud_rate': 115200,
-        }
-    ],
-)
+        package='robot_control_pkg',
+        executable='odom_publisher',
+        name='odom_publisher',
+        output='screen',
+        parameters=[
+            {
+                'serial_port': '/dev/ttyACM0',
+                'baud_rate': 115200,
+            }
+        ],
+    )
 
     # Ultrasonic safety layer: /cmd_vel_nav -> /cmd_vel
     ultrasonic_safety = Node(

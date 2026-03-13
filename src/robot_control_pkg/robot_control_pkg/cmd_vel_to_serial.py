@@ -10,7 +10,7 @@ class CmdVelToSerial(Node):
     def __init__(self) -> None:
         super().__init__('cmd_vel_to_serial')
 
-        self.declare_parameter('serial_port', '/dev/ttyUSB0')
+        self.declare_parameter('serial_port', '/dev/ttyACM0')
         self.declare_parameter('baud_rate', 115200)
         self.declare_parameter('cmd_vel_topic', '/cmd_vel')
 

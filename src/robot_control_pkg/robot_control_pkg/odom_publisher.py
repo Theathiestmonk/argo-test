@@ -14,7 +14,7 @@ import math
 class OdomPublisher(Node):
     def __init__(self):
         super().__init__('odom_publisher')
-        self.declare_parameter('serial_port', '/dev/ttyUSB0')
+        self.declare_parameter('serial_port', '/dev/ttyACM0')
         self.declare_parameter('baud_rate', 115200)
         self.declare_parameter('command_topic', '/arduino_command')
 
