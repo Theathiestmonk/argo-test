@@ -98,14 +98,16 @@ def generate_launch_description():
                 'progress_timeout': 30.0,
                 'potential_scale': 3.0,
                 'gain_scale': 1.0,
-                'transform_tolerance': 0.3,
-                'min_frontier_size': 0.75,
+                'transform_tolerance': 0.5,
+                'min_frontier_size': 0.5,
+                'use_sim_time': False,
             }
         ],
         remappings=[
             ('/map', '/map'),
             ('/tf', '/tf'),
             ('/tf_static', '/tf_static'),
+            ('move_base', 'navigate_to_pose'),
         ],
     )
 
