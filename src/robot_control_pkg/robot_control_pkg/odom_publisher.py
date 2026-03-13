@@ -29,7 +29,8 @@ class OdomPublisher(Node):
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
         self.subscription = self.create_subscription(
             String, command_topic, self.cmd_callback, 10)
-        self.ser = serial.Serial(serial_port, int(baud_rate), timeout=1)
+        self.ser = serial.Serial(serial_port, int(baud_rate), timeout=1,
+                                 dsrdtr=False, rtscts=False)
         self.get_logger().info(
             f"Arduino serial: port={serial_port} baud={baud_rate} topic={command_topic}"
         )
@@ -44,7 +45,8 @@ class OdomPublisher(Node):
         self.get_logger().info(f"Sent to Arduino: {msg.data}")
 
     def read_serial(self):
-        if self.ser.in_waiting:
+        # Drain all available lines so odom TF is never delayed by a timer tick
+        while self.ser.in_waiting:
             try:
                 line = self.ser.readline().decode(errors='ignore').strip()
                 # Odometry line from Arduino starts with 'o ' followed by 9 floats,
