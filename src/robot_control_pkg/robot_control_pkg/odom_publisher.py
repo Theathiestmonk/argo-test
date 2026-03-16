@@ -5,6 +5,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import TransformStamped
+from geometry_msgs.msg import Twist
 from std_msgs.msg import String, Float32
 import re
 import tf2_ros
@@ -18,10 +19,12 @@ class OdomPublisher(Node):
         self.declare_parameter('serial_port', '/dev/ttyACM0')
         self.declare_parameter('baud_rate', 115200)
         self.declare_parameter('command_topic', '/arduino_command')
+        self.declare_parameter('cmd_vel_topic', '/cmd_vel')
 
         serial_port = self.get_parameter('serial_port').get_parameter_value().string_value
         baud_rate = self.get_parameter('baud_rate').get_parameter_value().integer_value
         command_topic = self.get_parameter('command_topic').get_parameter_value().string_value
+        cmd_vel_topic = self.get_parameter('cmd_vel_topic').get_parameter_value().string_value
 
         self.odom_pub = self.create_publisher(Odometry, '/odom', 10)
         self.imu_pub = self.create_publisher(Imu, '/imu/data', 10)
@@ -29,9 +32,12 @@ class OdomPublisher(Node):
         self.tf_broadcaster = tf2_ros.TransformBroadcaster(self)
         self.subscription = self.create_subscription(
             String, command_topic, self.cmd_callback, 10)
+        self.cmd_vel_subscription = self.create_subscription(
+            Twist, cmd_vel_topic, self.cmd_vel_callback, 10)
         self.ser = serial.Serial(serial_port, int(baud_rate), timeout=1)
         self.get_logger().info(
-            f"Arduino serial: port={serial_port} baud={baud_rate} topic={command_topic}"
+            f"Arduino serial: port={serial_port} baud={baud_rate} "
+            f"topics=[{command_topic}, {cmd_vel_topic}]"
         )
         self.timer = self.create_timer(0.05, self.read_serial)
 
@@ -40,8 +46,19 @@ class OdomPublisher(Node):
         self.vx_imu = 0.0
 
     def cmd_callback(self, msg):
-        self.ser.write(msg.data.encode())
-        self.get_logger().info(f"Sent to Arduino: {msg.data}")
+        try:
+            self.ser.write(msg.data.encode())
+            self.get_logger().debug(f"Sent raw command: {msg.data}")
+        except Exception as exc:
+            self.get_logger().error(f"Error writing String command: {exc}")
+
+    def cmd_vel_callback(self, msg: Twist) -> None:
+        # Send the same protocol expected by the Arduino sketch: "C vx wz\n"
+        line = f'C {msg.linear.x:.3f} {msg.angular.z:.3f}\n'
+        try:
+            self.ser.write(line.encode('ascii'))
+        except Exception as exc:
+            self.get_logger().error(f"Error writing cmd_vel command: {exc}")
 
     def read_serial(self):
         if self.ser.in_waiting:

@@ -6,6 +6,7 @@
 
 // ---------------- IMU ----------------
 Adafruit_MPU6050 mpu;
+bool imu_ok = false;
 
 // -------- Motor Driver Pins --------
 #define RPWM1 5
@@ -72,6 +73,8 @@ char lastCommand = 'X';
 float cmd_vx = 0.0;   // linear velocity (m/s)
 float cmd_wz = 0.0;   // angular velocity (rad/s)
 bool use_cmd_vel = false;
+unsigned long lastCmdVelTime = 0;
+const unsigned long CMD_VEL_TIMEOUT_MS = 350;
 
 // -------- Function Prototypes --------
 void setMotors(int speedRight, int speedLeft);
@@ -85,6 +88,7 @@ void updateUltrasonicAndBuzzers();
 // ---------------- SETUP ----------------
 void setup() {
   Serial.begin(115200);
+  Serial.setTimeout(5);  // Keep parseSerial() non-blocking on partial lines.
 
   // Motors
   pinMode(RPWM1, OUTPUT); pinMode(LPWM1, OUTPUT);
@@ -115,15 +119,18 @@ void setup() {
   // IMU Init
   if (!mpu.begin()) {
     Serial.println("MPU6050 init failed");
+    imu_ok = false;
   } else {
     mpu.setAccelerometerRange(MPU6050_RANGE_8_G);
     mpu.setGyroRange(MPU6050_RANGE_500_DEG);
     mpu.setFilterBandwidth(MPU6050_BAND_21_HZ);
+    imu_ok = true;
   }
 
   lastOdomTime        = millis();
   lastOdomPublishTime = millis();
   lastUltraTime       = millis();
+  lastCmdVelTime      = millis();
 }
 
 // ---------------- MAIN LOOP ----------------
@@ -141,6 +148,14 @@ void loop() {
 
   // If we have received numeric cmd_vel from ROS, use that.
   // Otherwise fall back to keyboard W/A/S/D logic.
+  if (use_cmd_vel && (now - lastCmdVelTime > CMD_VEL_TIMEOUT_MS)) {
+    // Safety watchdog: stop robot if cmd stream drops.
+    cmd_vx = 0.0f;
+    cmd_wz = 0.0f;
+    lastCommand = 'X';
+    use_cmd_vel = false;
+  }
+
   if (use_cmd_vel) {
     // Differential drive kinematics:
     // v_r = v + w * (WHEEL_BASE / 2)
@@ -229,6 +244,9 @@ void publishOdom() {
   float velL = (pwmL / 255.0) * (MAX_RPM / 60.0) * WHEEL_CIRCUMFERENCE;
   float linearVel  = (velR + velL) / 2.0;
   float angularVel = (velR - velL) / WHEEL_BASE;
+  float gyro_z = 0.0f;
+  float accel_x = 0.0f;
+  float accel_y = 0.0f;
 
   Serial.print("o ");
   Serial.print(posX, 4);       Serial.print(" ");
@@ -237,12 +255,18 @@ void publishOdom() {
   Serial.print(linearVel, 4);  Serial.print(" ");
   Serial.print(angularVel, 4); Serial.print(" ");
   
-  // Add IMU data for mapping: gyro_z, accel_x, accel_y
-  sensors_event_t a, g, temp;
-  mpu.getEvent(&a, &g, &temp);
-  Serial.print(g.gyro.z, 4);   Serial.print(" ");
-  Serial.print(a.acceleration.x, 4); Serial.print(" ");
-  Serial.println(a.acceleration.y, 4);
+  // Add IMU data for mapping: gyro_z, accel_x, accel_y.
+  // If IMU is absent/fails, publish zeros so ROS odom/TF still works.
+  if (imu_ok) {
+    sensors_event_t a, g, temp;
+    mpu.getEvent(&a, &g, &temp);
+    gyro_z = g.gyro.z;
+    accel_x = a.acceleration.x;
+    accel_y = a.acceleration.y;
+  }
+  Serial.print(gyro_z, 4);   Serial.print(" ");
+  Serial.print(accel_x, 4);  Serial.print(" ");
+  Serial.println(accel_y, 4);
 }
 
 // ---------------- ULTRASONIC + BUZZERS ----------------
@@ -331,6 +355,7 @@ void parseSerial() {
       cmd_vx = vx;
       cmd_wz = wz;
       use_cmd_vel = true;
+      lastCmdVelTime = millis();
     }
   } else {
     // Fallback: single-character teleop commands
