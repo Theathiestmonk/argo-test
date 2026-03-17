@@ -22,6 +22,16 @@ def generate_launch_description():
         output='screen',
     )
 
+    # Alias base_footprint_link to base_link for packages that still expect base_link.
+    base_alias_tf = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='base_footprint_to_base_link_tf',
+        arguments=['0', '0', '0', '0', '0', '0',
+                   'base_footprint_link', 'base_link'],
+        output='screen',
+    )
+
     # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB0 on the Pi
     lidar = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -61,23 +71,6 @@ def generate_launch_description():
             {
                 'serial_port': '/dev/ttyACM0',
                 'baud_rate': 115200,
-            }
-        ],
-    )
-
-    # Ultrasonic safety layer: /cmd_vel_nav -> /cmd_vel
-    ultrasonic_safety = Node(
-        package='nav_pkg',
-        executable='ultrasonic_safety',
-        name='ultrasonic_safety',
-        output='screen',
-        parameters=[
-            {
-                'nav_cmd_topic': '/cmd_vel_nav',
-                'output_cmd_topic': '/cmd_vel',
-                'ultrasonic_topic': '/ultrasonic',
-                'stop_distance': 0.3,
-                'recovery_ang_vel': 0.4,
             }
         ],
     )
@@ -134,13 +127,14 @@ def generate_launch_description():
     # Start Nav2 and frontier after TF + SLAM have had time to initialize.
     delayed_navigation_stack = TimerAction(
         period=12.0,
-        actions=[nav2, ultrasonic_safety, explore_node],
+        actions=[nav2, explore_node],
     )
 
     return LaunchDescription(
         [
             odom_node,
             laser_tf,
+            base_alias_tf,
             lidar,
             slam,
             slam_configure,

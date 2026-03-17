@@ -47,6 +47,7 @@ const float MAX_RAD_S          = 12.5;
 // -------- Motor PWM --------
 int pwmR = 0;
 int pwmL = 0;
+const int PWM_MIN_THRESHOLD = 85;
 
 // -------- Ultrasonic + Buzzer State --------
 float distC = 0.0f;
@@ -84,6 +85,7 @@ void publishOdom();
 void parseSerial();
 float getDistance(int trigPin, int echoPin);
 void updateUltrasonicAndBuzzers();
+int applyPwmDeadband(int pwm);
 
 // ---------------- SETUP ----------------
 void setup() {
@@ -173,6 +175,8 @@ void loop() {
       pwmR = (int)constrain((v_r / max_lin) * 255.0f, -255.0f, 255.0f);
       pwmL = (int)constrain((v_l / max_lin) * 255.0f, -255.0f, 255.0f);
     }
+    pwmR = applyPwmDeadband(pwmR);
+    pwmL = applyPwmDeadband(pwmL);
     currentAction = "CMD_VEL";
   } else {
     // KEYBOARD CONTROL LOGIC (W/A/S/D/X)
@@ -323,6 +327,13 @@ void setMotors(int speedRight, int speedLeft) {
   } else {
     analogWrite(RPWM2, -speedLeft); analogWrite(LPWM2, 0);
   }
+}
+
+int applyPwmDeadband(int pwm) {
+  if (pwm == 0) return 0;
+  if (pwm > 0 && pwm < PWM_MIN_THRESHOLD) return PWM_MIN_THRESHOLD;
+  if (pwm < 0 && pwm > -PWM_MIN_THRESHOLD) return -PWM_MIN_THRESHOLD;
+  return pwm;
 }
 
 void stopMotors() {
