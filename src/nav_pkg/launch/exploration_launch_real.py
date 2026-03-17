@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.actions import ExecuteProcess, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
@@ -110,9 +110,30 @@ def generate_launch_description():
         ],
     )
 
+    # Ensure slam_toolbox is explicitly configured and activated.
+    slam_configure = TimerAction(
+        period=4.0,
+        actions=[
+            ExecuteProcess(
+                cmd=['ros2', 'lifecycle', 'set', '/slam_toolbox', 'configure'],
+                output='screen',
+            )
+        ],
+    )
+
+    slam_activate = TimerAction(
+        period=6.0,
+        actions=[
+            ExecuteProcess(
+                cmd=['ros2', 'lifecycle', 'set', '/slam_toolbox', 'activate'],
+                output='screen',
+            )
+        ],
+    )
+
     # Start Nav2 and frontier after TF + SLAM have had time to initialize.
     delayed_navigation_stack = TimerAction(
-        period=8.0,
+        period=12.0,
         actions=[nav2, ultrasonic_safety, explore_node],
     )
 
@@ -122,6 +143,8 @@ def generate_launch_description():
             laser_tf,
             lidar,
             slam,
+            slam_configure,
+            slam_activate,
             delayed_navigation_stack,
         ]
     )
