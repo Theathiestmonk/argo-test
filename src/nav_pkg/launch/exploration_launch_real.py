@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
@@ -110,15 +110,19 @@ def generate_launch_description():
         ],
     )
 
+    # Start Nav2 and frontier after TF + SLAM have had time to initialize.
+    delayed_navigation_stack = TimerAction(
+        period=8.0,
+        actions=[nav2, ultrasonic_safety, explore_node],
+    )
+
     return LaunchDescription(
         [
+            odom_node,
             laser_tf,
             lidar,
             slam,
-            nav2,
-            odom_node,
-            ultrasonic_safety,
-            explore_node,
+            delayed_navigation_stack,
         ]
     )
 
