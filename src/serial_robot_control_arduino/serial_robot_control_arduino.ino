@@ -43,6 +43,8 @@ const float WHEEL_BASE         = 0.5;     // meters
 const float WHEEL_CIRCUMFERENCE = 0.3454; // meters
 const float MAX_RPM            = 70.0;    // RPM
 const float MAX_RAD_S          = 12.5;
+const bool ENABLE_DIRECT_MOTOR_TEST = false;
+const bool ENABLE_CMD_DEBUG = true;
 
 // -------- Motor PWM --------
 int pwmR = 0;
@@ -65,6 +67,7 @@ unsigned long lastOdomTime = 0;
 unsigned long lastStatTime  = 0;
 unsigned long lastOdomPublishTime = 0;
 unsigned long lastUltraTime = 0;
+unsigned long lastDebugPrintTime = 0;
 
 // ---------- CONTROL STATE ----------
 String currentAction = "STANDBY";
@@ -139,6 +142,14 @@ void setup() {
 void loop() {
   unsigned long now = millis();
 
+  if (ENABLE_DIRECT_MOTOR_TEST) {
+    setMotors(180, 180);
+    delay(3000);
+    setMotors(0, 0);
+    delay(2000);
+    return;
+  }
+
   // Handle incoming teleop commands over serial
   if (Serial.available()) {
     parseSerial();
@@ -177,6 +188,17 @@ void loop() {
     }
     pwmR = applyPwmDeadband(pwmR);
     pwmL = applyPwmDeadband(pwmL);
+    if (ENABLE_CMD_DEBUG && now - lastDebugPrintTime > 300) {
+      lastDebugPrintTime = now;
+      Serial.print("DBG CMD vx=");
+      Serial.print(cmd_vx, 3);
+      Serial.print(" wz=");
+      Serial.print(cmd_wz, 3);
+      Serial.print(" pwmR=");
+      Serial.print(pwmR);
+      Serial.print(" pwmL=");
+      Serial.println(pwmL);
+    }
     currentAction = "CMD_VEL";
   } else {
     // KEYBOARD CONTROL LOGIC (W/A/S/D/X)
@@ -367,6 +389,12 @@ void parseSerial() {
       cmd_wz = wz;
       use_cmd_vel = true;
       lastCmdVelTime = millis();
+      if (ENABLE_CMD_DEBUG) {
+        Serial.print("ACK C vx=");
+        Serial.print(vx, 3);
+        Serial.print(" wz=");
+        Serial.println(wz, 3);
+      }
     }
   } else {
     // Fallback: single-character teleop commands

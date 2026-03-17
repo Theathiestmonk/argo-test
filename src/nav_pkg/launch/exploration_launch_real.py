@@ -1,35 +1,32 @@
 import os
 
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import (
+    get_package_share_directory,
+    get_package_share_path,
+)
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import Command
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 
 
 def generate_launch_description():
     nav_pkg_share = get_package_share_directory('nav_pkg')
     slam_pkg_share = get_package_share_directory('slam_pkg')
-
-    # Static TF: base_footprint_link -> laser (lidar mounted at center, 0.1m above base)
-    # Adjust x/y/z if your LiDAR is not centered on the robot
-    laser_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='base_to_laser_tf',
-        arguments=['0.0', '0.0', '0.1', '0', '0', '0',
-                   'base_footprint_link', 'laser'],
+    urdf_path = get_package_share_path('robot_control_pkg') / 'urdf' / 'robot_argo.urdf'
+    robot_description = {
+        'robot_description': ParameterValue(
+            Command(['xacro ', str(urdf_path)]), value_type=str
+        )
+    }
+    robot_state_pub = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
         output='screen',
-    )
-
-    # Alias base_footprint_link to base_link for packages that still expect base_link.
-    base_alias_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='base_footprint_to_base_link_tf',
-        arguments=['0', '0', '0', '0', '0', '0',
-                   'base_footprint_link', 'base_link'],
-        output='screen',
+        parameters=[robot_description],
     )
 
     # LiDAR: CP210x (Silicon Labs) -> /dev/ttyUSB0 on the Pi
@@ -83,7 +80,7 @@ def generate_launch_description():
         output='screen',
         parameters=[
             {
-                'robot_base_frame': 'base_footprint_link',
+                'robot_base_frame': 'base_link',
                 'costmap_topic': '/global_costmap/costmap',
                 'costmap_updates_topic': '/global_costmap/costmap_updates',
                 'visualize': True,
@@ -133,8 +130,7 @@ def generate_launch_description():
     return LaunchDescription(
         [
             odom_node,
-            laser_tf,
-            base_alias_tf,
+            robot_state_pub,
             lidar,
             slam,
             slam_configure,

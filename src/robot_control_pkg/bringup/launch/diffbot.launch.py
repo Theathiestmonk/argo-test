@@ -13,8 +13,8 @@ from ament_index_python.packages import get_package_share_path
 def generate_launch_description():
     # Get URDF via xacro
     
-    # Get the urdf/xacro file path
-    path_to_urdf = get_package_share_path('robot_control_pkg')/'urdf'/'diffbot.urdf.xacro'
+    # Canonical real-robot model
+    path_to_urdf = get_package_share_path('robot_control_pkg')/'urdf'/'robot_argo.urdf'
 
     robot_description = {'robot_description': ParameterValue(Command(['xacro ', str(path_to_urdf)]), value_type=str)}
 
