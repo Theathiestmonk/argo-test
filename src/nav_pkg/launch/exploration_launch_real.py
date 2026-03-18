@@ -5,7 +5,7 @@ from ament_index_python.packages import (
     get_package_share_path,
 )
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess, IncludeLaunchDescription, TimerAction
+from launch.actions import IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command
 from launch_ros.actions import Node
@@ -72,6 +72,23 @@ def generate_launch_description():
         ],
     )
 
+    # Ultrasonic safety layer: /cmd_vel_nav -> /cmd_vel (filters nav commands by distance)
+    ultrasonic_safety = Node(
+        package='nav_pkg',
+        executable='ultrasonic_safety',
+        name='ultrasonic_safety',
+        output='screen',
+        parameters=[
+            {
+                'nav_cmd_topic': '/cmd_vel_nav',
+                'output_cmd_topic': '/cmd_vel',
+                'ultrasonic_topic': '/ultrasonic',
+                'stop_distance': 0.3,
+                'recovery_ang_vel': 0.4,
+            }
+        ],
+    )
+
     # Frontier exploration using explore_lite
     explore_node = Node(
         package='explore_lite',
@@ -100,31 +117,11 @@ def generate_launch_description():
         ],
     )
 
-    # Ensure slam_toolbox is explicitly configured and activated.
-    slam_configure = TimerAction(
-        period=4.0,
-        actions=[
-            ExecuteProcess(
-                cmd=['ros2', 'lifecycle', 'set', '/slam_toolbox', 'configure'],
-                output='screen',
-            )
-        ],
-    )
-
-    slam_activate = TimerAction(
-        period=6.0,
-        actions=[
-            ExecuteProcess(
-                cmd=['ros2', 'lifecycle', 'set', '/slam_toolbox', 'activate'],
-                output='screen',
-            )
-        ],
-    )
-
-    # Start Nav2 and frontier after TF + SLAM have had time to initialize.
+    # slam_real.launch.py auto-configures/activates slam_toolbox - no manual lifecycle needed.
+    # Start Nav2, ultrasonic_safety, and frontier after TF + SLAM have had time to initialize.
     delayed_navigation_stack = TimerAction(
         period=12.0,
-        actions=[nav2, explore_node],
+        actions=[nav2, ultrasonic_safety, explore_node],
     )
 
     return LaunchDescription(
@@ -133,8 +130,6 @@ def generate_launch_description():
             robot_state_pub,
             lidar,
             slam,
-            slam_configure,
-            slam_activate,
             delayed_navigation_stack,
         ]
     )
