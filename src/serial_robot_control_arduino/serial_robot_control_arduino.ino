@@ -231,15 +231,13 @@ void loop() {
   // Update dead reckoning continuously using exactly what the motors are doing
   updateDeadReckoning();
 
-  // Publish Odom over Serial to ROS2 (20Hz)
+  // Publish Odom over Serial to ROS2 (20Hz).
+  // Never run odom and ultrasonic in same iteration - avoids serial line interleaving.
   if (now - lastOdomPublishTime >= 50) {
     publishOdom();
     lastOdomPublishTime = now;
-  }
-
-  // Ultrasonic sensing and buzzer control.
-  // Skip blocking ultrasonic reads while actively following cmd_vel.
-  if (!use_cmd_vel && now - lastUltraTime >= 100) {
+  } else if (!use_cmd_vel && now - lastUltraTime >= 100) {
+    // Ultrasonic when not on cmd_vel; only when we did NOT just publish odom
     updateUltrasonicAndBuzzers();
     lastUltraTime = now;
   }

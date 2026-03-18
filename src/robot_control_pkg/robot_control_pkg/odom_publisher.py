@@ -40,10 +40,14 @@ class OdomPublisher(Node):
             f"topics=[{command_topic}, {cmd_vel_topic}]"
         )
         self.timer = self.create_timer(0.05, self.read_serial)
+        self.tf_timer = self.create_timer(0.02, self.publish_tf_continuously)  # 50Hz TF
 
         # State for IMU-based velocity integration
         self.last_time = self.get_clock().now()
         self.vx_imu = 0.0
+
+        # Last known pose for continuous TF (reduces extrapolation errors)
+        self.last_pose = None  # (x, y, theta)
 
     def cmd_callback(self, msg):
         try:
@@ -53,10 +57,11 @@ class OdomPublisher(Node):
             self.get_logger().error(f"Error writing String command: {exc}")
 
     def cmd_vel_callback(self, msg: Twist) -> None:
-        # Send the same protocol expected by the Arduino sketch: "C vx wz\n"
+        # Integer protocol for Arduino: "C vx_int wz_int\n"
         line = f'C {int(msg.linear.x * 1000)} {int(msg.angular.z * 1000)}\n'
         try:
             self.ser.write(line.encode('ascii'))
+            self.ser.flush()
         except Exception as exc:
             self.get_logger().error(f"Error writing cmd_vel command: {exc}")
 
@@ -95,12 +100,31 @@ class OdomPublisher(Node):
             except Exception as e:
                 self.get_logger().error(f"Serial Error: {e}")
 
+    def publish_tf_continuously(self):
+        """Publish odom->base_link TF at 50Hz using last known pose. Reduces tf extrapolation errors."""
+        if self.last_pose is None:
+            return
+        x, y, theta = self.last_pose
+        now = self.get_clock().now().to_msg()
+        t = TransformStamped()
+        t.header.stamp = now
+        t.header.frame_id = 'odom'
+        t.child_frame_id = 'base_link'
+        t.transform.translation.x = x
+        t.transform.translation.y = y
+        t.transform.rotation.z = math.sin(theta / 2)
+        t.transform.rotation.w = math.cos(theta / 2)
+        self.tf_broadcaster.sendTransform(t)
+
     def publish_data(self, x, y, theta, vx, wz, gz, ax, ay):
         now_time = self.get_clock().now()
         dt = (now_time - self.last_time).nanoseconds / 1e9
         if dt <= 0.0:
             dt = 1e-3
         self.last_time = now_time
+
+        # Store for continuous TF publishing
+        self.last_pose = (x, y, theta)
 
         # Integrate IMU linear acceleration to estimate forward speed
         self.vx_imu += ax * dt

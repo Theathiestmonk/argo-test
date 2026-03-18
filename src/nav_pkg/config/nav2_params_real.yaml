@@ -230,9 +230,8 @@ global_costmap:
         enabled: True
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.5
-        # Keep inflation small so frontier search BFS can find FREE_SPACE (cost=0) cells.
-        # frontier_search only traverses cost==0 cells; large inflation blocks frontier detection.
-        inflation_radius: 0.22
+        # Must be >= inscribed radius (0.391) to avoid collisions. Slightly higher for safety.
+        inflation_radius: 0.4
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: False ## I need to find a way to update this layer and remove obstacles that no longer exists
@@ -351,7 +350,7 @@ collision_monitor:
     cmd_vel_in_topic: "cmd_vel_smoothed"
     cmd_vel_out_topic: "cmd_vel"
     state_topic: "collision_monitor_state"
-    transform_tolerance: 0.2
+    transform_tolerance: 0.5  # Increased for Pi timing/tf extrapolation tolerance
     source_timeout: 2.0
     base_shift_correction: True
     stop_pub_timeout: 2.0
