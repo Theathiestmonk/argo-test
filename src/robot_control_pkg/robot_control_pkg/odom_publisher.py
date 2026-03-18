@@ -54,7 +54,7 @@ class OdomPublisher(Node):
 
     def cmd_vel_callback(self, msg: Twist) -> None:
         # Send the same protocol expected by the Arduino sketch: "C vx wz\n"
-        line = f'C {msg.linear.x:.3f} {msg.angular.z:.3f}\n'
+        line = f'C {int(msg.linear.x * 1000)} {int(msg.angular.z * 1000)}\n'
         try:
             self.ser.write(line.encode('ascii'))
         except Exception as exc:

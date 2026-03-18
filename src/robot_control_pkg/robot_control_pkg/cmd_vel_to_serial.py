@@ -43,7 +43,7 @@ class CmdVelToSerial(Node):
         vx = msg.linear.x
         wz = msg.angular.z
         # Protocol understood by Arduino: "C vx wz\n"
-        line = f'C {vx:.3f} {wz:.3f}\n'
+        line = f'C {int(vx * 1000)} {int(wz * 1000)}\n'
         try:
             self.ser.write(line.encode('ascii'))
         except Exception as exc:

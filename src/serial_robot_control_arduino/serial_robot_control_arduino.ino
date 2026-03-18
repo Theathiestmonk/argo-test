@@ -22,14 +22,14 @@ bool imu_ok = false;
 // -------- Ultrasonic Sensor Pins (3 sensors) --------
 // HC-SR04 style sensors: TRIG = output, ECHO = input
 // Center sensor
-#define TRIG_C 22
-#define ECHO_C 23
+#define TRIG_C 24
+#define ECHO_C 25
 // Left sensor
-#define TRIG_L 27
-#define ECHO_L 25
+#define TRIG_L 26
+#define ECHO_L 27
 // Right sensor
-#define TRIG_R 26
-#define ECHO_R 24
+#define TRIG_R 3
+#define ECHO_R 4
 
 // -------- Buzzer Pins (3 buzzers) --------
 // Each buzzer goes HIGH when its corresponding sensor is below threshold
@@ -78,7 +78,10 @@ float cmd_vx = 0.0;   // linear velocity (m/s)
 float cmd_wz = 0.0;   // angular velocity (rad/s)
 bool use_cmd_vel = false;
 unsigned long lastCmdVelTime = 0;
-const unsigned long CMD_VEL_TIMEOUT_MS = 350;
+const unsigned long CMD_VEL_TIMEOUT_MS = 1000;
+const int CMD_RX_BUF_SIZE = 64;
+char cmdRxBuf[CMD_RX_BUF_SIZE];
+int cmdRxIdx = 0;
 
 // -------- Function Prototypes --------
 void setMotors(int speedRight, int speedLeft);
@@ -86,6 +89,7 @@ void stopMotors();
 void updateDeadReckoning();
 void publishOdom();
 void parseSerial();
+void handleCommandLine(const char* line);
 float getDistance(int trigPin, int echoPin);
 void updateUltrasonicAndBuzzers();
 int applyPwmDeadband(int pwm);
@@ -150,10 +154,8 @@ void loop() {
     return;
   }
 
-  // Handle incoming teleop commands over serial
-  if (Serial.available()) {
-    parseSerial();
-  }
+  // Always service serial parser quickly.
+  parseSerial();
 
   // PWM Mapping (0 - 255)
   int forwardSpeed = 50; 
@@ -235,8 +237,9 @@ void loop() {
     lastOdomPublishTime = now;
   }
 
-  // Ultrasonic sensing and buzzer control (10 Hz)
-  if (now - lastUltraTime >= 100) {
+  // Ultrasonic sensing and buzzer control.
+  // Skip blocking ultrasonic reads while actively following cmd_vel.
+  if (!use_cmd_vel && now - lastUltraTime >= 100) {
     updateUltrasonicAndBuzzers();
     lastUltraTime = now;
   }
@@ -303,7 +306,7 @@ float getDistance(int trigPin, int echoPin) {
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
 
-  long duration = pulseIn(echoPin, HIGH, 30000UL); // timeout 30 ms
+  long duration = pulseIn(echoPin, HIGH, 12000UL); // timeout 12 ms
   if (duration <= 0) {
     return 9.99f;  // treat as "far away" (meters)
   }
@@ -315,11 +318,8 @@ float getDistance(int trigPin, int echoPin) {
 void updateUltrasonicAndBuzzers() {
   // Measure distances in meters
   distC = getDistance(TRIG_C, ECHO_C);
-  delay(20);
   distL = getDistance(TRIG_L, ECHO_L);
-  delay(20);
   distR = getDistance(TRIG_R, ECHO_R);
-  delay(20);
 
   // Buzzers: HIGH when closer than threshold
   digitalWrite(BUZZER_C, distC < ULTRA_THRESHOLD);
@@ -369,46 +369,59 @@ void stopMotors() {
 //  - Numeric velocity commands from ROS: "C vx wz\n"
 //      where vx is linear x [m/s], wz is angular z [rad/s]
 void parseSerial() {
-  if (Serial.available() <= 0) {
-    return;
+  while (Serial.available() > 0) {
+    char ch = (char)Serial.read();
+    if (ch == '\r') continue;
+
+    if (ch == '\n') {
+      if (cmdRxIdx > 0) {
+        cmdRxBuf[cmdRxIdx] = '\0';
+        handleCommandLine(cmdRxBuf);
+        cmdRxIdx = 0;
+      }
+      continue;
+    }
+
+    if (cmdRxIdx < CMD_RX_BUF_SIZE - 1) {
+      cmdRxBuf[cmdRxIdx++] = ch;
+    } else {
+      // Overflow protection: drop malformed line and restart.
+      cmdRxIdx = 0;
+    }
   }
+}
 
-  // Peek the first non-whitespace character to decide the mode
-  char first = Serial.peek();
-
-  if (first == 'C') {
-    // Read the whole line "C vx wz"
-    String line = Serial.readStringUntil('\n');
-
-    // Parse with sscanf-style logic
-    char cmdChar;
-    float vx, wz;
-    int parsed = sscanf(line.c_str(), "%c %f %f", &cmdChar, &vx, &wz);
-    if (parsed == 3 && cmdChar == 'C') {
-      cmd_vx = vx;
-      cmd_wz = wz;
+void handleCommandLine(const char* line) {
+  if (line[0] == 'C') {
+    int vx_int = 0, wz_int = 0;
+    int parsed = sscanf(line, "C %d %d", &vx_int, &wz_int);
+    if (parsed == 2) {
+      cmd_vx = vx_int / 1000.0f;
+      cmd_wz = wz_int / 1000.0f;
       use_cmd_vel = true;
+      lastCommand = 'X';
       lastCmdVelTime = millis();
       if (ENABLE_CMD_DEBUG) {
         Serial.print("ACK C vx=");
-        Serial.print(vx, 3);
+        Serial.print(cmd_vx, 3);
         Serial.print(" wz=");
-        Serial.println(wz, 3);
+        Serial.println(cmd_wz, 3);
       }
     }
-  } else {
-    // Fallback: single-character teleop commands
-    char cmd = Serial.read();
+    return;
+  }
+  // Single-character teleop commands
+  char cmd = line[0];
+  if (cmd >= 'a' && cmd <= 'z') cmd = cmd - 'a' + 'A';
 
-    // Teleop keys override cmd_vel mode
-    if (cmd == 'W' || cmd == 'A' || cmd == 'S' || cmd == 'D' || cmd == 'X') {
-      lastCommand = cmd;
-      use_cmd_vel = false;
-    }
+  if (cmd == 'W' || cmd == 'A' || cmd == 'S' || cmd == 'D' || cmd == 'X') {
+    lastCommand = cmd;
+    use_cmd_vel = false;
+  }
 
-    // Reset pose if needed
-    if (cmd == 'r') {
-      posX = 0; posY = 0; theta = 0;
-    }
+  if (cmd == 'R') {
+    posX = 0;
+    posY = 0;
+    theta = 0;
   }
 }
